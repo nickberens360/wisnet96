@@ -40,8 +40,8 @@ export default {
       } else {
         return this.posts.find(el => el.slug === this.slug);
       }
-
     }
+
   },
   data() {
     return {
@@ -51,6 +51,11 @@ export default {
   created() {
     this.$store.dispatch("getPosts");
   },
+  head() {
+    return {
+      title: 'wisnet 96'
+    }
+  }
 };
 </script>
 
