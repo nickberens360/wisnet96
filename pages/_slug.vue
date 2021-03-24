@@ -1,6 +1,6 @@
 <!--TODO: Needs to be refactor because it's repeating the code in Index.vue-->
 <template>
-  <page-layout></page-layout>
+  <page-layout />
 </template>
 
 <script>

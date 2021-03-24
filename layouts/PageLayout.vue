@@ -7,14 +7,22 @@
           src="/dots.gif"
           class="dots"
       >
-      <img v-if="post.featured_img_url" :src="post.featured_img_url" alt="">
+      <img
+          v-if="post.featured_img_url"
+          :src="post.featured_img_url"
+          alt=""
+      >
     </div>
-    <call-out v-if="post.callout" :content="post.callout"></call-out>
+    <call-out
+        v-if="post.callout"
+        :content="post.callout"
+    />
     <div class="page-content">
       <section v-html="post.content.rendered"></section>
     </div>
   </div>
 </template>
+
 
 <script>
 import CallOut from "~/components/CallOut";
