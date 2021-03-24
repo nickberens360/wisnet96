@@ -20,6 +20,7 @@
 import CallOut from "~/components/CallOut";
 
 export default {
+  name: 'PageLayout',
   components: {CallOut},
   computed: {
     posts() {
