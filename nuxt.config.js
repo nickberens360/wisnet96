@@ -51,7 +51,8 @@ export default {
         "~/plugins/dateformat.js"
     ],
     generate: {
-        routes: dynamicRoutes
+        routes: dynamicRoutes,
+        fallback: true
     },
     /*
      ** Nuxt.js dev-modules
