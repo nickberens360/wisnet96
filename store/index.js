@@ -1,4 +1,4 @@
-const siteURL = "http://api-wisnet96.dev"
+const siteURL = "https://apiwisnet96.wpengine.com/"
 
 export const state = () => ({
     posts: [],
