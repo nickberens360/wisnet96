@@ -1,0 +1,28 @@
+$colors: (
+        'red': red,
+        'pink': #ff0066,
+        'orange': #ff6600,
+        'purple': #cc0099,
+        'blue-100': #0099cc,
+        'blue-200': #6633ff,
+        'blue-300': #0033ff,
+        'blue-350': #0147ad,
+        'blue-400': #0100ca,
+        'green-100': #00cc99,
+        'green-200': #00ff33,
+        'yellow': #ffff00,
+        'cream': #f2e1c0,
+        'gray-100': #fcfffc,
+        'gray-200': #ccc,
+        'gray-300': #bbbdc0,
+        'gray-350': #808080,
+        'gray-400': #5d5c5a,
+        'gray-500': #414042,
+        'gray-600': #2c2c2c,
+);
+
+:root {
+  @each $id, $color in $colors {
+    --wisnet-color-#{$id}: #{$color};
+  }
+}
