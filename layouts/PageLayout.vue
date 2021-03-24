@@ -20,6 +20,12 @@
     <div class="page-content">
       <section v-html="post.content.rendered"></section>
     </div>
+    <div class="page-footer">
+      <img
+          alt="wisnet 96 logo"
+          src="/dots.gif"
+      >
+    </div>
   </div>
 </template>
 

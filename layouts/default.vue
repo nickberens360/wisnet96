@@ -21,12 +21,6 @@
     </aside>
     <main>
       <nuxt />
-      <div class="page-footer">
-        <img
-            alt="wisnet 96 logo"
-            src="/dots.gif"
-        >
-      </div>
     </main>
     <button-round />
   </div>
