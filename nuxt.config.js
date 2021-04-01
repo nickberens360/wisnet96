@@ -13,7 +13,7 @@ export default {
     mode: "universal",
     target: 'static',
     env: {
-        baseUrl: process.env.NODE_ENV === 'production' ? 'https://apiwisnet96.wpengine.com' : 'http://api-wisnet96.dev'
+        baseUrl: process.env.NODE_ENV === 'production' ? 'https://apiwisnet96.wpengine.coms' : 'http://api-wisnet96.dev'
     },
     /*
      ** Headers of the page
