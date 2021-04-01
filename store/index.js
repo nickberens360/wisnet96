@@ -1,4 +1,7 @@
-const siteURL = "https://apiwisnet96.wpengine.com/"
+
+console.log(process.env.baseUrl);
+const siteURL = process.env.baseUrl;
+
 
 export const state = () => ({
     posts: [],
@@ -6,6 +9,7 @@ export const state = () => ({
     tags: [],
     apiBase: null
 })
+
 
 export const mutations = {
     updatePosts: (state, posts) => {

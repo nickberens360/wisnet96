@@ -42,7 +42,7 @@ export default {
     },
     post() {
       if (this.$route.path === '/') {
-        return this.posts.find(el => el.slug === 'homepage');
+        return this.posts.find(el => el.slug === 'index');
       } else {
         return this.posts.find(el => el.slug === this.slug);
       }
