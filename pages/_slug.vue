@@ -118,7 +118,7 @@ export default {
   padding-bottom: 30px;
 }
 
-.homepage, .services {
+.index, .services {
   strong {
     color: var(--wisnet-color-red)
   }
