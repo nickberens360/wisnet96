@@ -2,7 +2,7 @@
   <div class="page-header">
     <div v-if="$route.name === 'WisnetDevelopers'">
       <img
-        alt="wisnet 96 logo"
+        alt="dots"
         src="@/assets/dots.gif"
       >
       <br>

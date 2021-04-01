@@ -47,7 +47,6 @@ export default {
         return this.posts.find(el => el.slug === this.slug);
       }
     }
-
   },
   data() {
     return {
