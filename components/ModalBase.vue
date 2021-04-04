@@ -1,17 +1,18 @@
 <template>
   <div
-    class="modal-mask"
-    :class="modalClass"
+      :v-if="showModal"
+      class="modal-mask"
+      :class="modalClass"
   >
     <span
-      class="modal-click-off"
-      @click="$emit('close')"
+        class="modal-click-off"
+        @click="$emit('close')"
     />
     <div class="modal-wrapper">
       <div class="modal-container">
         <span
-          class="modal-default-button"
-          @click="$emit('close')"
+            class="modal-default-button"
+            @click="$emit('close')"
         >
           x
         </span>
@@ -45,6 +46,11 @@ export default {
       type: String,
       required: false,
       default: ''
+    }
+  },
+  data: function () {
+    return {
+      showModal: true
     }
   },
   emits: ['close']
@@ -123,6 +129,7 @@ export default {
 @media only screen and (max-width: 1050px) {
   .modal-container {
     max-width: 90%;
+
     h3 {
       font-size: 34px;
     }
@@ -138,11 +145,12 @@ export default {
   }
 }
 
-@media only screen and ( max-width: 960px ){
+@media only screen and (max-width: 960px) {
   .modal-container {
     max-width: 90%;
     height: 90vh;
     overflow: auto;
+
     &:after {
       display: none;
     }

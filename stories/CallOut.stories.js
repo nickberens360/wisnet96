@@ -1,7 +1,7 @@
 import CallOut from '@/components/CallOut.vue';
 
 export default {
-  title: 'Example/CallOut',
+  title: 'Components/CallOut',
   component: CallOut,
 
 };
