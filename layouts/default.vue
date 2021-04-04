@@ -41,11 +41,6 @@ export default {
     ModalBig,
     PageFooter
   },
-  data: function () {
-    return {
-      showModal: true
-    }
-  },
   computed: {
     menuItems() {
       return this.$store.state.menuItems;
