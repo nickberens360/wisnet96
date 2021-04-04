@@ -10,7 +10,7 @@
           alt="wisnet 96 logo"
           src="/wisnetlogo.gif"
       >
-      <nav-main />
+      <nav-main :menu-items="menuItems" />
       <div class="aside-footer">
         <img
             class="wisnet-logo"
@@ -45,6 +45,14 @@ export default {
     return {
       showModal: true
     }
+  },
+  computed: {
+    menuItems() {
+      return this.$store.state.menuItems;
+    },
+  },
+  created() {
+    this.$store.dispatch("getMenuItems");
   }
 }
 </script>

@@ -18,10 +18,11 @@
 <script>
 
 export default {
-  computed: {
-    menuItems() {
-      return this.$store.state.menuItems;
-    },
+  props: {
+    menuItems: {
+      type: Array,
+      required: false
+    }
   },
   methods: {
     removeApiBase(str) {
@@ -32,9 +33,9 @@ export default {
       return str.replace(url, '')
     }
   },
-  created() {
+  /*created() {
     this.$store.dispatch("getMenuItems");
-  }
+  }*/
 };
 </script>
 
