@@ -11,6 +11,7 @@
           src="/wisnetlogo.gif"
       >
       <nav-main :menu-items="menuItems" />
+
       <div class="aside-footer">
         <img
             class="wisnet-logo"

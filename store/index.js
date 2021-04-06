@@ -1,6 +1,6 @@
 
 console.log(process.env.baseUrl);
-const siteURL = process.env.baseUrl;
+export const siteURL = process.env.baseUrl;
 
 
 export const state = () => ({

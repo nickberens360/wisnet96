@@ -1,26 +1,25 @@
 <template>
-  <div :class="post.slug">
-    <div class="page-header">
+  <div :class="page.slug" class="page-layout">
+    <page-header>
       <img
-          v-if="post.slug === 'wisnet-developers'"
+          v-if="page.slug === 'wisnet-developers'"
           alt="wisnet 96 logo"
           src="/dots.gif"
           class="dots"
       >
       <img
-          v-if="post.featured_img_url"
-          :src="post.featured_img_url"
+          v-if="page.featured_img_url"
+          :src="page.featured_img_url"
           alt=""
       >
-    </div>
+    </page-header>
     <call-out
-        v-if="post.callout"
-        :content="post.callout"
+        v-if="page.callout"
+        :content="page.callout"
     />
-    <div class="page-content">
-      <section v-html="post.content.rendered"></section>
-    </div>
-    <div class="page-footer">
+    <h1 v-if="title">⭐ {{title}} ⭐</h1>
+    <div class="page-content" v-html="page.content.rendered"></div>
+    <div class="page-footer" slot="content">
       <img
           alt="wisnet 96 logo"
           src="/dots.gif"
@@ -31,41 +30,38 @@
 
 
 <script>
-import CallOut from "~/components/CallOut";
+import CallOut from "@/components/CallOut";
+import PageHeader from "@/components/PageHeader";
 
 export default {
   name: 'PageLayout',
-  components: {CallOut},
-  computed: {
-    posts() {
-      return this.$store.state.posts;
+  components: {CallOut, PageHeader},
+  props: {
+    page: {
+      type: Object,
+      required: false
     },
-    post() {
-      if (this.$route.path === '/') {
-        return this.posts.find(el => el.slug === 'index');
-      } else {
-        return this.posts.find(el => el.slug === this.slug);
-      }
-    }
-
-  },
-  data() {
-    return {
-      slug: this.$route.params.slug
-    };
-  },
-  created() {
-    this.$store.dispatch("getPosts");
-  },
-  head() {
-    return {
-      title: 'wisnet 96'
+    title: {
+      type: String,
+      required: false
     }
   }
 };
 </script>
 
 <style lang="scss">
+
+.page-layout {
+  h1 {
+    color: var(--wisnet-color-red);
+    text-align: center;
+  }
+}
+
+.index .page-content {
+  color: var(--wisnet-color-gray-200);
+}
+
 
 .has-text-align-center {
   text-align: center;
@@ -74,11 +70,13 @@ export default {
 .page-header {
   text-align: center;
   margin-bottom: 30px;
+
   img {
     display: block;
     max-width: 100%;
     margin: auto;
   }
+
   p {
     font-weight: bold;
   }
@@ -112,13 +110,13 @@ export default {
 }
 
 
-
 .page-footer {
   text-align: center;
   padding-bottom: 30px;
 }
 
-.homepage, .services {
+
+.index, .services {
   strong {
     color: var(--wisnet-color-red)
   }
@@ -126,9 +124,11 @@ export default {
 
 .make-a-page {
   color: var(--wisnet-color-green-200);
+
   h4, span {
     color: var(--wisnet-color-yellow);
   }
+
   h2 a {
     color: var(--wisnet-color-yellow);
     text-decoration: underline;
