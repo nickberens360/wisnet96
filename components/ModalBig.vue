@@ -58,7 +58,7 @@ export default {
     width: 100%;
     max-width: 1000px;
     padding: 3% 4%;
-    background: #fff url('/floppy.png');
+    background: #fff url('@/static/floppy.png');
     border-radius: 20px;
     color: var(--wisnet-color-blue-350);
     font-family: 'Spartan', sans-serif;
@@ -71,7 +71,7 @@ export default {
       display: block;
       width: 229px;
       height: 171px;
-      background: url('/modal-96.png');
+      background: url('@/static/modal-96.png');
       background-size: cover;
     }
   }

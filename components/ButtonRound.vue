@@ -1,26 +1,41 @@
 <template>
   <a
-    href="https://www.wisnet.com/"
-    target="_blank"
-    class="button-round"
+      :href="link.url"
+      :target="link.target"
+      class="button-round"
   >
     <div class="button-round__image">
       <img
-        alt="wisnet 96 logo"
-        src="/button-96.png"
+          alt="wisnet 96 logo"
+          :src="img.url"
       >
     </div>
     <div class="button-round__text">
-      <h4 class="button-round__heading">25 Years of wisnet!</h4>
-      <p>Learn more about the Geeks & Creatives</p>
+      <h4 class="button-round__heading">{{ heading }}</h4>
+      <p>{{ text }}</p>
     </div>
   </a>
 </template>
 
 <script>
 export default {
-  name: 'ButtonRound'
+  name: 'ButtonRound',
+  props: {
+    heading: {
+      type: String,
+    },
+    text: {
+      type: String,
+    },
+    img: {
+      type: Object,
+    },
+    link: {
+      type: Object,
+    },
+  }
 }
+
 </script>
 
 <style scoped lang="scss">

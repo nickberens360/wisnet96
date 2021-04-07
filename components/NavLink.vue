@@ -1,0 +1,94 @@
+<template>
+  <nuxt-link
+      exact :to="removeApiBase(url)"
+      :class="className"
+      class="nav-link"
+  >
+    {{ title }}
+  </nuxt-link>
+</template>
+
+<script>
+export default {
+name: "NavLink",
+  props: {
+    url: {
+      type: String
+    },
+    title: {
+      type: String
+    },
+    className: {
+      type: String
+    },
+
+  },
+  methods: {
+    removeApiBase(str) {
+      let pathArray = str.split('/');
+      let protocol = pathArray[0];
+      let host = pathArray[2];
+      let url = protocol + '//' + host;
+      return str.replace(url, '')
+    }
+  },
+}
+</script>
+
+<style scoped lang="scss">
+@import "@/assets/mixins/_triangle.scss";
+@import "@/assets/variables/_colors.scss";
+.nav-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  font-style: italic;
+
+  &:after {
+    content: '';
+    display: block;
+    margin-left: 8px;
+    @include triangle();
+  }
+  @each $id, $color in $colors {
+    &.nuxt-link-active.#{$id} {
+      color: var(--wisnet-color-#{$id});
+    }
+    &.#{$id}::after {
+        @include triangle(var(--wisnet-color-#{$id}));
+    }
+  }
+
+/*  &.orange {
+    color: var(--wisnet-color-orange);
+    &::after {
+      @include triangle(var(--wisnet-color-orange));
+    }
+  }
+
+
+
+  &.red:after {
+    @include triangle(var(--wisnet-color-red));
+  }
+
+  &.pink:after {
+    @include triangle(var(--wisnet-color-pink));
+  }
+
+  &.blue-100:after {
+    @include triangle(var(--wisnet-color-blue-100));
+  }
+
+  &.yellow:after {
+    @include triangle(var(--wisnet-color-yellow));
+  }*/
+
+}
+</style>

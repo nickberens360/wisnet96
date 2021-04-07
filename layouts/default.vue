@@ -10,7 +10,8 @@
           alt="wisnet 96 logo"
           src="/wisnetlogo.gif"
       >
-      <nav-main />
+      <nav-main :menu-items="menuItems" />
+
       <div class="aside-footer">
         <img
             class="wisnet-logo"
@@ -22,10 +23,18 @@
     <main>
       <nuxt />
     </main>
-    <button-round />
+    <button-round
+        v-if="button"
+        :button="button"
+        :heading="button.heading"
+        :text="button.text"
+        :link="button.link"
+        :img="button.image"
+    />
   </div>
   </div>
 </template>
+
 
 <script>
 // @ is an alias to /src
@@ -41,11 +50,19 @@ export default {
     ModalBig,
     PageFooter
   },
-  data: function () {
-    return {
-      showModal: true
-    }
-  }
+  computed: {
+    menuItems() {
+      return this.$store.state.menuItems;
+    },
+    button() {
+      return this.$store.state.options.button;
+    },
+
+  },
+  created() {
+    this.$store.dispatch("getMenuItems");
+    this.$store.dispatch("getOptions");
+  },
 }
 </script>
 

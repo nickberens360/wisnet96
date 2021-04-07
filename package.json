@@ -1,22 +1,31 @@
 {
-  "name": "wisnet-96",
-  "version": "1.0.0",
-  "description": "Headless WordPress with Nuxt",
-  "author": "geoffgraham and sdras",
-  "private": true,
-  "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
-  },
-  "dependencies": {
-    "axios": "^0.19.0",
-    "nuxt": "^2.0.0"
-  },
-  "devDependencies": {
-    "chromatic": "^5.7.1",
-    "node-sass": "^4.13.1",
-    "sass-loader": "^8.0.0"
-  }
+    "name": "wisnet-96",
+    "version": "1.0.0",
+    "description": "Headless WordPress with Nuxt",
+    "author": "geoffgraham and sdras",
+    "private": true,
+    "scripts": {
+        "dev": "nuxt",
+        "build": "nuxt build",
+        "start": "nuxt start",
+        "generate": "nuxt generate",
+        "storybook": "start-storybook -s ./static -p 6006",
+        "build-storybook": "build-storybook"
+    },
+    "dependencies": {
+        "@storybook/preset-scss": "^1.0.3",
+        "axios": "^0.19.0",
+        "nuxt": "^2.15.4"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.13.14",
+        "@storybook/addon-actions": "^6.2.2",
+        "@storybook/addon-essentials": "^6.2.2",
+        "@storybook/addon-links": "^6.2.2",
+        "@storybook/vue": "^6.2.2",
+        "babel-loader": "^8.2.2",
+        "node-sass": "^4.13.1",
+        "sass-loader": "^8.0.0",
+        "vue-loader": "^15.9.6"
+    }
 }
