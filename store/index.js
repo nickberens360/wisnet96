@@ -6,6 +6,7 @@ export const siteURL = process.env.baseUrl;
 export const state = () => ({
     posts: [],
     menuItems: [],
+    options: {},
     tags: [],
     apiBase: null
 })
@@ -15,6 +16,10 @@ export const mutations = {
     updatePosts: (state, posts) => {
         state.posts = posts
     },
+    updateOptions: (state, options) => {
+        state.options = options
+    },
+
     updateMenuItems: (state, menuItems) => {
         state.menuItems = menuItems
     },
@@ -50,7 +55,6 @@ export const actions = {
                     featured_img_url,
                     callout
                 }))
-
             commit("updatePosts", posts)
         } catch (err) {
             console.log(err)
@@ -66,6 +70,8 @@ export const actions = {
                 `${siteURL}/wp-json/wisnet96/menu`
             ).then(res => res.json())
 
+
+
             menuItems = menuItems
                 .map(({ID, menu_order, title, url, classes}) => ({
                     ID,
@@ -74,8 +80,23 @@ export const actions = {
                     url,
                     classes
                 }))
-
             commit("updateMenuItems", menuItems)
+        } catch (err) {
+            console.log(err)
+        }
+    },
+
+    async getOptions({state, commit, dispatch}) {
+        if (state.options.length) return
+
+        try {
+            let options = await fetch(
+                `${siteURL}/wp-json/acf/options`
+            ).then(res => res.json())
+
+            options = JSON.parse(JSON.stringify(options));
+
+            commit("updateOptions", options)
         } catch (err) {
             console.log(err)
         }

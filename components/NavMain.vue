@@ -32,6 +32,7 @@ export default {
       required: false
     }
   },
+  /* TODO: change to computed prop */
   methods: {
     arrayToString(array) {
       return array.join(' ');

@@ -23,10 +23,18 @@
     <main>
       <nuxt />
     </main>
-    <button-round />
+    <button-round
+        v-if="button"
+        :button="button"
+        :heading="button.heading"
+        :text="button.text"
+        :link="button.link"
+        :img="button.image"
+    />
   </div>
   </div>
 </template>
+
 
 <script>
 // @ is an alias to /src
@@ -46,10 +54,15 @@ export default {
     menuItems() {
       return this.$store.state.menuItems;
     },
+    button() {
+      return this.$store.state.options.button;
+    },
+
   },
   created() {
     this.$store.dispatch("getMenuItems");
-  }
+    this.$store.dispatch("getOptions");
+  },
 }
 </script>
 
