@@ -21,10 +21,6 @@
 export default {
   name: 'ButtonRound',
   props: {
-    button: {
-      type: Object,
-      required: false
-    },
     heading: {
       type: String,
     },
