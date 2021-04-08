@@ -41,6 +41,7 @@ export default {
 <style scoped lang="scss">
 .button-round {
   position: fixed;
+  z-index: 10;
   bottom: 40px;
   right: 40px;
   display: flex;
