@@ -25,7 +25,6 @@
     </main>
     <button-round
         v-if="button"
-        :button="button"
         :heading="button.heading"
         :text="button.text"
         :link="button.link"

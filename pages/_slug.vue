@@ -1,7 +1,7 @@
 <template>
 
   <div>
-    <page-layout :page="post" :title="post.title.rendered"/>
+    <page-layout v-if="post" :page="post" :title="post.title.rendered"/>
   </div>
 
 </template>

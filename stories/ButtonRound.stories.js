@@ -13,5 +13,16 @@ const Template = (args, { argTypes }) => ({
 });
 
 export const Default = Template.bind({});
+Default.args = {
+    heading: 'Heading',
+    text: 'Some text here',
+    img: {
+        url: '/button-96.png',
+    },
+    link: {
+        url: '#',
+        target: '_blank',
+    },
 
+};
 

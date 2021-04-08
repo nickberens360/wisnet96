@@ -21,10 +21,6 @@
 export default {
   name: 'ButtonRound',
   props: {
-    button: {
-      type: Object,
-      required: false
-    },
     heading: {
       type: String,
     },
@@ -45,6 +41,7 @@ export default {
 <style scoped lang="scss">
 .button-round {
   position: fixed;
+  z-index: 10;
   bottom: 40px;
   right: 40px;
   display: flex;
