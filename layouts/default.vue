@@ -5,19 +5,20 @@
     </transition>
     <div class="layout">
       <aside>
-        <app-logo
+        <base-img
             v-if="logo"
+            img-class="wisnet-logo"
             :img-src="logo.url"
             :img-alt="logo.alt"
         />
         <nav-main :menu-items="menuItems"/>
 
         <div class="aside-footer">
-          <img
-              class="wisnet-logo"
-              alt="wisnet 96 logo"
-              src="/aside-footer.png"
-          >
+          <base-img
+              v-if="locationImage"
+              :img-src="locationImage.url"
+              :img-alt="locationImage.alt"
+          />
         </div>
       </aside>
       <main>
@@ -41,7 +42,7 @@ import NavMain from '@/components/NavMain.vue'
 import ModalBig from '@/components/ModalBig.vue'
 import PageFooter from '@/components/PageFooter.vue'
 import ButtonRound from "~/components/ButtonRound";
-import AppLogo from "~/components/AppLogo";
+import BaseImg from "~/components/BaseImg";
 
 export default {
   components: {
@@ -49,7 +50,7 @@ export default {
     NavMain,
     ModalBig,
     PageFooter,
-    AppLogo
+    BaseImg
   },
   computed: {
     menuItems() {
@@ -61,6 +62,10 @@ export default {
     logo() {
       return this.$store.state.options.logo;
     },
+    locationImage() {
+      return this.$store.state.options.location_image;
+    },
+
 
 
   },

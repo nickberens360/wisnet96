@@ -1,6 +1,6 @@
 <template>
   <img
-      class="wisnet-logo"
+      :class="imgClass"
       :alt="imgAlt"
       :src="imgSrc"
   >
@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: "AppLogo",
+  name: "BaseImg",
   props: {
     imgSrc: {
       type: String,
@@ -17,7 +17,11 @@ export default {
     imgAlt: {
       type: String,
       required: false,
-      default: '_self'
+      default: ''
+    },
+    imgClass: {
+      type: String,
+      required: false
     },
   }
 
