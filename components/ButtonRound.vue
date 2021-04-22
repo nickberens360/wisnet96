@@ -56,6 +56,12 @@ export default {
   text-decoration: none;
 }
 
+.button-round__image {
+  img {
+    max-width: 109px;
+  }
+}
+
 .button-round__text {
   text-align: center;
   margin: auto;
