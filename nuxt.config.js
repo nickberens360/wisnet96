@@ -55,7 +55,8 @@ export default {
     generate: {
         routes: dynamicRoutes,
         fallback: true,
-        subFolders: false
+        subFolders: false,
+        cache: false
     },
     /*
      ** Nuxt.js dev-modules
@@ -68,6 +69,7 @@ export default {
         /*
          ** You can extend webpack config here
          */
+        cache: false,
         extend(config, ctx) {
         }
     },
