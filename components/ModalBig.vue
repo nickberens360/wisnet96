@@ -30,13 +30,6 @@
           @click="showModal = false"
           class="btn"
         >Enjoy the throwback</a>
-        <a
-            class="link-bold-block"
-            href="https://www.wisnet.com/"
-            target="_blank"
-        >
-          No, thanks. Tell me more about Geeks & Creatives
-        </a>
       </template>
     </modal-base>
   </transition>
