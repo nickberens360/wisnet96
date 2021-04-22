@@ -12,7 +12,7 @@
     </div>
     <div class="button-round__text">
       <h4 class="button-round__heading">{{ heading }}</h4>
-      <p v-html="text" />
+      <div v-html="text" />
     </div>
   </a>
 </template>
@@ -60,7 +60,6 @@ export default {
   text-align: center;
 
   p {
-    max-width: 200px;
     margin: auto;
     color: var(--wisnet-color-cream);
     text-decoration: underline;
