@@ -10,9 +10,9 @@
           :src="img.url"
       >
     </div>
-    <div class="button-round__text">
+    <div>
       <h4 class="button-round__heading">{{ heading }}</h4>
-      <div v-html="text" />
+      <div class="button-round__text" v-html="text"/>
     </div>
   </a>
 </template>
@@ -58,17 +58,15 @@ export default {
 
 .button-round__text {
   text-align: center;
-
-  p {
-    margin: auto;
-    color: var(--wisnet-color-cream);
-    text-decoration: underline;
-    font-weight: bold;
-    line-height: 1.25;
-  }
+  margin: auto;
+  color: var(--wisnet-color-cream);
+  text-decoration: underline;
+  font-weight: bold;
+  line-height: 1.25;
 }
 
 .button-round__heading {
+  text-align: center;
   font-size: 21px;
   font-weight: 900;
   margin-top: 0;
