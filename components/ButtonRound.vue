@@ -12,7 +12,7 @@
     </div>
     <div class="button-round__text">
       <h4 class="button-round__heading">{{ heading }}</h4>
-      <p>{{ text }}</p>
+      <p v-html="text" />
     </div>
   </a>
 </template>

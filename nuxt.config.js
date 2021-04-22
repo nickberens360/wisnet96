@@ -55,7 +55,8 @@ export default {
     ],
     generate: {
         routes: dynamicRoutes,
-        fallback: true
+        fallback: true,
+        subFolders: false
     },
     /*
      ** Nuxt.js dev-modules
@@ -70,5 +71,5 @@ export default {
          */
         extend(config, ctx) {
         }
-    }
+    },
 }

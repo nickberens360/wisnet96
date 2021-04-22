@@ -10,7 +10,7 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "storybook": "start-storybook -s ./static -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -s assets",
     "chromatic": "npx chromatic --project-token 7c6847535cee --exit-zero-on-changes"
   },
   "dependencies": {
