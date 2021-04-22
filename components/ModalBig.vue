@@ -22,14 +22,21 @@
           <li>community &amp; culture</li>
           <li> Geeks &amp; Creative</li>
         </ul>
-        <p>Enjoy the Throwback!</p>
+<!--        <p>Enjoy the Throwback!</p>-->
       </template>
       <template #footer>
         <a
-          href="https://www.wisnet.com/"
-          target="_blank"
+          href="#"
+          @click="showModal = false"
           class="btn"
-        >Tell me more about Geeks &amp; Creatives</a>
+        >Enjoy the throwback</a>
+        <a
+            class="link-bold-block"
+            href="https://www.wisnet.com/"
+            target="_blank"
+        >
+          No, thanks. Tell me more about Geeks & Creatives
+        </a>
       </template>
     </modal-base>
   </transition>
@@ -52,6 +59,12 @@ export default {
 </script>
 
 <style lang="scss">
+.link-bold-block {
+  display: block;
+  font-weight: bold;
+  margin-top: 15px;
+  color: #f26729;
+}
 .modal-big {
   .modal-container {
     position: relative;
