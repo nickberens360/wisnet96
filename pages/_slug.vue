@@ -13,6 +13,11 @@ import PageLayout from "@/layouts/PageLayout";
 
 export default {
   components: {PageLayout},
+  data() {
+    return {
+      slug: this.$route.params.slug,
+    };
+  },
   computed: {
     posts() {
       return this.$store.state.posts;
@@ -25,18 +30,9 @@ export default {
       }
     }
   },
-  data() {
-    return {
-      slug: this.$route.params.slug
-    };
-  },
+
   created() {
     this.$store.dispatch("getPosts");
-  },
-  head() {
-    return {
-      title: 'wisnet 96'
-    }
   }
 };
 </script>

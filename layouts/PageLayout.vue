@@ -45,7 +45,20 @@ export default {
       type: String,
       required: false
     }
+  },
+  head() {
+    return {
+      title: `wisnet96 | ${this.title}`,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Home page description'
+        }
+      ]
+    }
   }
+
 };
 </script>
 
