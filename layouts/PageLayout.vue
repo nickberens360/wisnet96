@@ -46,6 +46,11 @@ export default {
       required: false
     }
   },
+  computed: {
+    metaDescription: function () {
+      return this.page.excerpt.rendered.replace(/(<([^>]+)>)/gi, "");
+    }
+  },
   head() {
     return {
       title: `wisnet96 | ${this.title}`,
@@ -53,9 +58,12 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Home page description'
+          content: this.metaDescription
         }
-      ]
+      ],
+      __dangerouslyDisableSanitizersByTagID: {
+        description: ['content']
+      }
     }
   }
 
