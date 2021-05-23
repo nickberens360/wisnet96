@@ -11,6 +11,7 @@ let dynamicRoutes = () => {
 
 export default {
     target: 'static',
+    ssr: false,
     env: {
         BASE_URL: process.env.NODE_ENV === 'production' ? 'https://apiwisnet96.wpengine.com' : 'http://api-wisnet96.dev'
     },
