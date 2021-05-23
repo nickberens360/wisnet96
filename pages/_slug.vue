@@ -10,9 +10,10 @@
 <script>
 
 import PageLayout from "@/layouts/PageLayout";
+import ButtonRound from "@/components/ButtonRound";
 
 export default {
-  components: {PageLayout},
+  components: {PageLayout, ButtonRound},
   data() {
     return {
       slug: this.$route.params.slug,
@@ -29,11 +30,8 @@ export default {
         return this.posts.find(el => el.slug === this.slug);
       }
     }
-  },
 
-  created() {
-    this.$store.dispatch("getPosts");
-  }
+  },
 };
 </script>
 

@@ -48,13 +48,12 @@ export default {
      ** Plugins to load before mounting the App
      */
     plugins: [
-        "~/plugins/posts.server.js",
-        "~/plugins/tags.server.js",
+        "~/plugins/data.server.js",
         "~/plugins/dateformat.js"
     ],
     generate: {
         routes: dynamicRoutes,
-        fallback: true,
+        fallback: false,
         subFolders: false,
         cache: false
     },
