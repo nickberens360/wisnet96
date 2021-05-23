@@ -65,13 +65,6 @@ export default {
     locationImage() {
       return this.$store.state.options.location_image;
     },
-
-
-
-  },
-  created() {
-    this.$store.dispatch("getMenuItems");
-    this.$store.dispatch("getOptions");
   },
 }
 </script>
