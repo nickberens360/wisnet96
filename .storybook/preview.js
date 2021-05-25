@@ -1,4 +1,4 @@
-import "../assets/main.scss";
+import "../assets/src/main.scss";
 import Vue from 'vue'
 import { configure } from '@storybook/vue'
 

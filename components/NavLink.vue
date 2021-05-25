@@ -36,8 +36,8 @@ name: "NavLink",
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/mixins/_triangle.scss";
-@import "@/assets/variables/_colors.scss";
+@import "@/assets/src/mixins/_triangle.scss";
+@import "@/assets/src/variables/_colors.scss";
 .nav-link {
   position: relative;
   display: flex;
@@ -64,31 +64,6 @@ name: "NavLink",
         @include triangle(var(--wisnet-color-#{$id}));
     }
   }
-
-/*  &.orange {
-    color: var(--wisnet-color-orange);
-    &::after {
-      @include triangle(var(--wisnet-color-orange));
-    }
-  }
-
-
-
-  &.red:after {
-    @include triangle(var(--wisnet-color-red));
-  }
-
-  &.pink:after {
-    @include triangle(var(--wisnet-color-pink));
-  }
-
-  &.blue-100:after {
-    @include triangle(var(--wisnet-color-blue-100));
-  }
-
-  &.yellow:after {
-    @include triangle(var(--wisnet-color-yellow));
-  }*/
 
 }
 </style>
