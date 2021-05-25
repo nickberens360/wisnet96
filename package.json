@@ -1,33 +1,36 @@
 {
-  "name": "wisnet-96",
-  "version": "1.0.0",
-  "description": "Headless WordPress with Nuxt",
-  "author": "Nick Berens",
-  "private": true,
-  "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
-    "storybook": "start-storybook -s ./static -p 6006",
-    "build-storybook": "build-storybook -s assets",
-    "chromatic": "npx chromatic --project-token 7c6847535cee --exit-zero-on-changes"
-  },
-  "dependencies": {
-    "@storybook/preset-scss": "^1.0.3",
-    "axios": "^0.19.0",
-    "nuxt": "^2.15.4"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.13.14",
-    "@storybook/addon-actions": "^6.2.5",
-    "@storybook/addon-essentials": "^6.2.5",
-    "@storybook/addon-links": "^6.2.5",
-    "@storybook/vue": "^6.2.5",
-    "babel-loader": "^8.2.2",
-    "chromatic": "^5.7.1",
-    "node-sass": "^4.13.1",
-    "sass-loader": "^8.0.0",
-    "vue-loader": "^15.9.6"
-  }
+    "name": "wisnet-96",
+    "version": "1.0.0",
+    "description": "Headless WordPress with Nuxt",
+    "author": "Nick Berens",
+    "private": true,
+    "scripts": {
+        "dev": "nuxt",
+        "build": "nuxt build",
+        "start": "nuxt start",
+        "generate": "nuxt generate",
+        "storybook": "start-storybook -s ./static -p 6006",
+        "build-storybook": "build-storybook -s assets",
+        "chromatic": "npx chromatic --project-token 7c6847535cee --exit-zero-on-changes"
+    },
+    "dependencies": {
+        "@storybook/preset-scss": "^1.0.3",
+        "axios": "^0.19.0",
+        "bootstrap": "^4.3.1",
+        "jquery": "^3.4.1",
+        "nuxt": "^2.15.4",
+        "popper.js": "^1.0.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.13.14",
+        "@storybook/addon-actions": "^6.2.5",
+        "@storybook/addon-essentials": "^6.2.5",
+        "@storybook/addon-links": "^6.2.5",
+        "@storybook/vue": "^6.2.5",
+        "babel-loader": "^8.2.2",
+        "chromatic": "^5.7.1",
+        "node-sass": "^4.13.1",
+        "sass-loader": "^8.0.0",
+        "vue-loader": "^15.9.6"
+    }
 }
