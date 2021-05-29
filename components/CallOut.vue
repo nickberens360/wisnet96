@@ -21,7 +21,7 @@ export default {
     position: relative;
     max-width: 360px;
     margin: auto auto 30px;
-    padding: 20px 40px 40px;
+    padding: 20px 40px;
     background: var(--wisnet-color-blue-400);
     border: 5px outset var(--wisnet-color-gray-350);
     color: #fff;
@@ -38,6 +38,9 @@ export default {
       border-right: 2px solid var(--wisnet-color-gray-350);
       border-bottom: 2px solid var(--wisnet-color-gray-350);
       border-left: 2px solid var(--wisnet-color-gray-600);
+    }
+    p {
+      margin-bottom: 0;
     }
   }
 

@@ -47,7 +47,7 @@ export default {
   width: 195px;
   padding: 25px 0;
   text-align: right;
-  ::v-deep .nav-link {
+  ::v-deep .nav-main-link {
     justify-content: flex-end;
   }
 }

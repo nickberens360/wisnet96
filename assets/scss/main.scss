@@ -1,7 +1,9 @@
-@import "normalize";
+//@import "normalize";
 @import "variables/colors";
 @import "mixins/mixins";
+@import "bootstrap";
+@import "windows95/windows95";
 @import "global";
 @import "layout";
-@import "transitions";
 @import "page";
+@import "transitions";

@@ -2,7 +2,7 @@
   <nuxt-link
       exact :to="removeApiBase(url)"
       :class="className"
-      class="nav-link"
+      class="nav-main-link"
   >
     {{ title }}
   </nuxt-link>
@@ -36,9 +36,9 @@ name: "NavLink",
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/src/mixins/_triangle.scss";
-@import "@/assets/src/variables/_colors.scss";
-.nav-link {
+@import "@/assets/scss/mixins/_triangle.scss";
+@import "@/assets/scss/variables/_colors.scss";
+.nav-main-link {
   position: relative;
   display: flex;
   align-items: center;

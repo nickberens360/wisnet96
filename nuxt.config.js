@@ -1,4 +1,5 @@
 import axios from "axios"
+import { resolve } from 'path'
 
 let dynamicRoutes = () => {
     const routes = axios
@@ -14,6 +15,9 @@ export default {
     env: {
         BASE_URL: process.env.NODE_ENV === 'production' ? 'https://apiwisnet96.wpengine.com' : 'http://api-wisnet96.dev'
     },
+    alias: {
+        'images': resolve(__dirname, './assets/images'),
+    },
     /*
      ** Headers of the page
      */
@@ -28,12 +32,10 @@ export default {
                 content: process.env.npm_package_description || ""
             }
         ],
-        link: [
-            {rel: "icon", type: "image/x-icon", href: "/favicon.ico"},
-            {
-                rel: "stylesheet",
-                href: "https://fonts.googleapis.com/css?family=Alata|Open+Sans&display=swap"
-            }
+        script: [
+            { src: 'https://code.jquery.com/jquery-3.5.1.slim.min.js', body: true },
+            { src: 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js', body: true },
+            { src: '/js/pixel.js', body: true }
         ]
     },
     /*
@@ -43,12 +45,15 @@ export default {
     /*
      ** Global CSS
      */
-    css: ["~/assets/src/main.scss"],
+    css: ["~/assets/scss/main.scss"],
     /*
      ** Plugins to load before mounting the App
      */
     plugins: [
         "~/plugins/data.server.js",
+        /*"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js",
+        "https://code.jquery.com/jquery-3.5.1.min.js",
+        "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js",*/
         "~/plugins/dateformat.js"
     ],
     generate: {

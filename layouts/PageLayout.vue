@@ -73,6 +73,7 @@ export default {
 <style lang="scss">
 
 .page-layout {
+  font-family: serif;
   h1 {
     color: var(--wisnet-color-red);
     text-align: center;
