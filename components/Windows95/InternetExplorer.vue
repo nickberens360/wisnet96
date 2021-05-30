@@ -1,11 +1,10 @@
 <template>
   <div>
-    <div id="dragMe" class="card card-tertiary internet-explorer">
-      <InternetExplorerHeader id="dragMeheader"/>
+    <div id="drag" class="card card-tertiary internet-explorer">
+      <InternetExplorerHeader id="dragheader"/>
       <div class="card-body">
         <slot/>
       </div>
-
     </div>
   </div>
 </template>
@@ -21,7 +20,7 @@ export default {
   },
   mounted: function () {
     this.$nextTick(function () {
-      this.drag(document.getElementById('dragMe'));
+      this.drag(document.getElementById('drag'));
     })
 
 

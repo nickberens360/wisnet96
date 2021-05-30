@@ -50,10 +50,10 @@ export default {
      ** Plugins to load before mounting the App
      */
     plugins: [
-        "~/plugins/data.server.js",
         /*"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js",
         "https://code.jquery.com/jquery-3.5.1.min.js",
         "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js",*/
+        "~/plugins/data.server.js",
         "~/plugins/dateformat.js"
     ],
     generate: {

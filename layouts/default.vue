@@ -5,11 +5,7 @@
       <modal-big />
     </transition>
 
-
-
-
     <InternetExplorer>
-
         <div class="layout">
           <aside>
             <base-img
@@ -18,7 +14,7 @@
                 :img-src="logo.url"
                 :img-alt="logo.alt"
             />
-            <nav-main :menu-items="menuItems"/>
+            <nav-main :menu-items="menuItems" />
 
             <div class="aside-footer">
               <base-img
@@ -31,45 +27,26 @@
           <main>
             <nuxt/>
           </main>
-<!--          <button-round
-              v-if="button"
-              :heading="button.heading"
-              :text="button.text"
-              :link="button.link"
-              :img="button.image"
-          />-->
+
         </div>
 
     </InternetExplorer>
 
+    <button-round
+        v-if="button"
+        :heading="button.heading"
+        :text="button.text"
+        :link="button.link"
+        :img="button.image"
+    />
 
 
     <footer>
-      <nav id="navbar-footer" class="navbar navbar-main navbar-expand-lg navbar-dark justify-content-between navbar-footer">
-        <ul class="navbar-nav navbar-nav-hover flex-row align-items-center">
-          <li class="nav-item">
-            <a href="index.html" class="nav-link" role="button">
-              <span class="nav-link-inner-text">📺 Start</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="docs/introduction.html" class="nav-link" role="button">
-              <span class="nav-link-inner-text">📕 Docs</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="login.html" class="nav-link" role="button">
-              <span class="nav-link-inner-text">Login</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="register.html" class="nav-link" role="button">
-              <span class="nav-link-inner-text">Register</span>
-            </a>
-          </li>
-        </ul>
+      <WindowsNavbar
+          :nav-items="menuItems"
+      >
         <div class="time text-center">8:40 am</div>
-      </nav>
+      </WindowsNavbar>
     </footer>
 
   </div>
@@ -83,6 +60,7 @@ import ModalBig from '@/components/ModalBig.vue'
 import PageFooter from '@/components/PageFooter.vue'
 import ButtonRound from "~/components/ButtonRound";
 import BaseImg from "~/components/BaseImg";
+import WindowsNavbar from "~/components/Windows95/WindowsNavbar";
 import InternetExplorer from "~/components/Windows95/InternetExplorer";
 
 export default {
@@ -92,7 +70,8 @@ export default {
     ModalBig,
     PageFooter,
     BaseImg,
-    InternetExplorer
+    InternetExplorer,
+    WindowsNavbar
   },
   computed: {
     menuItems() {

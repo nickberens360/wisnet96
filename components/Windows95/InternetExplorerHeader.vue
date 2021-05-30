@@ -15,7 +15,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark justify-content-between">
       <div class="form-group d-flex  align-items-center justify-content-between">
         <label for="default" class="mr-3">Address</label>
-        <input id="default" type="text" class="form-control w-100" value="www.wisnet96.com">
+        <input id="default" type="text" class="form-control w-100" :value="currentRouteName">
       </div>
     </nav>
   </div>
@@ -23,11 +23,26 @@
 
 <script>
 
-
 export default {
   name: "InternetExplorerHeader",
   props: {
-    id: ''
+    id:{
+      type: String,
+      required: false
+    },
+    address: {
+      type: String,
+      required: false
+    }
+  },
+  computed: {
+    currentRouteName() {
+
+
+      return 'www.wisnet96.com' +this.$route.fullPath
+      /*let path = this.$route.path;
+      return window.location.origin + "/" + path*/
+    }
   }
 }
 </script>

@@ -3,6 +3,7 @@ console.log(process.env.BASE_URL);
 export const siteURL = process.env.BASE_URL;
 
 
+
 export const state = () => ({
     posts: [],
     menuItems: [],

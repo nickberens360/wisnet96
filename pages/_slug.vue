@@ -10,10 +10,9 @@
 <script>
 
 import PageLayout from "@/layouts/PageLayout";
-import ButtonRound from "@/components/ButtonRound";
 
 export default {
-  components: {PageLayout, ButtonRound},
+  components: {PageLayout},
   data() {
     return {
       slug: this.$route.params.slug,

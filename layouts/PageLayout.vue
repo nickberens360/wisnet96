@@ -1,5 +1,8 @@
 <template>
-  <div :class="page.slug" class="page-layout">
+  <div
+      :class="page.slug"
+      class="page-layout"
+  >
     <page-header>
       <img
           v-if="page.slug === 'wisnet-developers'"
@@ -74,6 +77,7 @@ export default {
 
 .page-layout {
   font-family: serif;
+  color: var(--wisnet-color-gray-200);
   h1 {
     color: var(--wisnet-color-red);
     text-align: center;
