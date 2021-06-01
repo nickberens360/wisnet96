@@ -6,6 +6,7 @@ export const siteURL = process.env.BASE_URL;
 
 export const state = () => ({
     posts: [],
+    throwbacks: [],
     menuItems: [],
     options: {},
     tags: [],
@@ -17,6 +18,10 @@ export const mutations = {
     updatePosts: (state, posts) => {
         state.posts = posts
     },
+    updateThrowbacks: (state, throwbacks) => {
+        state.throwbacks = throwbacks
+    },
+
     updateOptions: (state, options) => {
         state.options = options
     },
@@ -57,6 +62,32 @@ export const actions = {
                     callout
                 }))
             commit("updatePosts", posts)
+        } catch (err) {
+            console.log(err)
+        }
+    },
+    async getThrowbacks({state, commit, dispatch}) {
+        if (state.throwbacks.length) return
+
+        try {
+            let throwbacks = await fetch(
+                `${siteURL}/wp-json/wp/v2/throwback/`
+            ).then(res => res.json())
+
+
+            throwbacks = throwbacks
+                .filter(el => el.status === "publish")
+                .map(({id, slug, title, excerpt, date, tags, content, acf}) => ({
+                    id,
+                    slug,
+                    title,
+                    excerpt,
+                    date,
+                    tags,
+                    content,
+                    acf
+                }))
+            commit("updateThrowbacks", throwbacks)
         } catch (err) {
             console.log(err)
         }

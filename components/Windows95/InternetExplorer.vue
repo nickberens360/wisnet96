@@ -1,12 +1,12 @@
 <template>
-  <div>
+
     <div id="drag" class="card card-tertiary internet-explorer">
-      <InternetExplorerHeader id="dragheader"/>
+      <InternetExplorerHeader id="handle"/>
       <div class="card-body">
         <slot/>
       </div>
     </div>
-  </div>
+
 </template>
 
 <script>
@@ -20,20 +20,19 @@ export default {
   },
   mounted: function () {
     this.$nextTick(function () {
-      this.drag(document.getElementById('drag'));
+      this.drag('drag', 'handle');
     })
-
-
   },
   methods: {
-    drag(elmnt) {
+    drag(el, handle) {
+      let dragEl = document.getElementById(el);
       let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-      if (document.getElementById(elmnt.id + "header")) {
+      if (document.getElementById(handle)) {
         /* if present, the header is where you move the DIV from:*/
-        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+        document.getElementById(handle).onmousedown = dragMouseDown;
       } else {
         /* otherwise, move the DIV from anywhere inside the DIV:*/
-        elmnt.onmousedown = dragMouseDown;
+        document.getElementById(el).onmousedown = dragMouseDown;
       }
 
       function dragMouseDown(e) {
@@ -56,8 +55,8 @@ export default {
         pos3 = e.clientX;
         pos4 = e.clientY;
         // set the element's new position:
-        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+        dragEl.style.top = (dragEl.offsetTop - pos2) + "px";
+        dragEl.style.left = (dragEl.offsetLeft - pos1) + "px";
       }
 
       function closeDragElement() {
@@ -70,22 +69,29 @@ export default {
 }
 </script>
 
+<!--<style>
+.internet-explorer {
+  background: white;
+}
+</style>-->
+
 <style lang="scss" scoped>
 .internet-explorer {
   position: absolute;
-  transform: translateX(-50%);
+  top: 30px;
   resize: both;
   overflow: auto;
   max-width: 960px;
+  width: 100%;
   max-height: 90vh;
   height: 750px;
   margin: auto;
-  background-color: black;
 
   .card-body {
     height: 100%;
     resize: both;
     overflow: auto;
+    padding: 0;
   }
 }
 </style>

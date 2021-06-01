@@ -5,16 +5,18 @@
     </div>
     <nav class="navbar navbar-main navbar-expand-lg navbar-dark justify-content-between navbar-footer">
       <ul class="navbar-nav navbar-nav-hover flex-row align-items-center">
-        <li class="nav-item"><a href="index.html" role="button" class="nav-link"><span class="nav-link-inner-text">📺 Start</span></a></li>
-        <li class="nav-item"><a href="docs/introduction.html" role="button" class="nav-link"><span class="nav-link-inner-text">📕 Docs</span></a></li>
-        <li class="nav-item"><a href="login.html" role="button" class="nav-link"><span class="nav-link-inner-text">Login</span></a></li>
-        <li class="nav-item"><a href="register.html" role="button" class="nav-link"><span class="nav-link-inner-text">Register</span></a></li>
+        <li class="nav-item">
+          <button class="btn" @click="$router.go(-1)">Back</button>
+        </li>
+        <li class="nav-item">
+          <button class="btn" @click="$router.go(+1)">Forward</button>
+        </li>
       </ul>
-      <div class="time text-center">11:41 am</div>
+      <div class="time text-center"></div>
     </nav>
     <nav class="navbar navbar-expand-lg navbar-dark justify-content-between">
       <div class="form-group d-flex  align-items-center justify-content-between">
-        <label for="default" class="mr-3">Address</label>
+        <label for="default" class="mr-3 ml-2 d-flex flex-row align-items-center"><span class="mr-2 position-relative bottom-1 font-medium">🌎</span> Address</label>
         <input id="default" type="text" class="form-control w-100" :value="currentRouteName">
       </div>
     </nav>
@@ -26,7 +28,7 @@
 export default {
   name: "InternetExplorerHeader",
   props: {
-    id:{
+    id: {
       type: String,
       required: false
     },
@@ -36,10 +38,9 @@ export default {
     }
   },
   computed: {
+
     currentRouteName() {
-
-
-      return 'www.wisnet96.com' +this.$route.fullPath
+      return 'www.wisnet96.com' + this.$route.fullPath
       /*let path = this.$route.path;
       return window.location.origin + "/" + path*/
     }

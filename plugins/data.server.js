@@ -5,5 +5,8 @@ export default async ({store}) => {
     await wait(1000);
     await store.dispatch('getMenuItems');
     await wait(1000);
-    await store.dispatch('getOptions')
+    await store.dispatch('getOptions');
+    await wait(1000);
+    await store.dispatch('getThrowbacks');
+
 };

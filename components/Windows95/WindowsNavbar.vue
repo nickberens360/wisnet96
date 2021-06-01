@@ -3,12 +3,28 @@
     <ul class="navbar-nav navbar-nav-hover flex-row align-items-center">
       <li
           class="nav-item"
+      >
+        <nuxt-link
+            exact to="/"
+            class="nav-link"
+            role="button"
+        >
+          <span class="nav-link-inner-text">Home</span>
+        </nuxt-link>
+      </li>
+
+      <li
+          class="nav-item"
           v-for="item in navItems"
           :key="item.ID"
       >
-        <a href="index.html" class="nav-link" role="button">
-          <span class="nav-link-inner-text">Item</span>
-        </a>
+        <nuxt-link
+            exact :to="'/throwback/'+item.slug"
+            class="nav-link"
+            role="button"
+        >
+         <span class="nav-link-inner-text">{{ item.title.rendered }}</span>
+        </nuxt-link>
       </li>
     </ul>
     <slot/>
