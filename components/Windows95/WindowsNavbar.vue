@@ -15,6 +15,18 @@
 
       <li
           class="nav-item"
+      >
+        <nuxt-link
+            exact to="/page/about-wisconsin-networks/"
+            class="nav-link"
+            role="button"
+        >
+          <span class="nav-link-inner-text">wisnet 96</span>
+        </nuxt-link>
+      </li>
+
+      <li
+          class="nav-item"
           v-for="item in navItems"
           :key="item.ID"
       >

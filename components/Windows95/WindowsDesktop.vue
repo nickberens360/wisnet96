@@ -1,5 +1,5 @@
 <template>
-  <div class="desktop-95 bg-secondary">
+  <div class="desktop-95">
 
     <transition name="modal">
       <modal-big/>
@@ -13,9 +13,9 @@
 
 
 
-    <InternetExplorer>
+
       <slot/>
-    </InternetExplorer>
+
 
 <!--        <button-round
             v-if="button"
@@ -42,7 +42,6 @@ import ModalBig from '@/components/ModalBig.vue'
 import PageFooter from '@/components/PageFooter.vue'
 import ButtonRound from "~/components/ButtonRound";
 import WindowsNavbar from "~/components/Windows95/WindowsNavbar";
-import InternetExplorer from "~/components/Windows95/InternetExplorer";
 import DesktopIcon from "@/components/Windows95/DesktopIcon";
 
 export default {
@@ -51,7 +50,6 @@ export default {
     ButtonRound,
     ModalBig,
     PageFooter,
-    InternetExplorer,
     WindowsNavbar,
     DesktopIcon
   },

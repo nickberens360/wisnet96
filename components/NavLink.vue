@@ -1,6 +1,6 @@
 <template>
   <nuxt-link
-      :to="'/96'+removeApiBase(url)"
+      :to="'/page'+removeApiBase(url)"
       :class="className"
       class="nav-main-link"
   >

@@ -1,6 +1,6 @@
 <template>
 
-    <h1>My path is: {{ $route.path }}</h1>
+    <h1>My path is: {{ $route.path }} </h1>
 
 </template>
 

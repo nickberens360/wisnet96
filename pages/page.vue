@@ -1,8 +1,10 @@
 <template>
-  <div class="layout">
-    <PageSidebar/>
-    <nuxt-child :key="$route.name" />
-  </div>
+  <InternetExplorer>
+    <div class="layout">
+      <PageSidebar/>
+      <nuxt-child :key="$route.name"/>
+    </div>
+  </InternetExplorer>
 
 </template>
 
@@ -10,10 +12,11 @@
 <script>
 
 import PageSidebar from "@/components/PageSidebar";
+import InternetExplorer from "@/components/Windows95/InternetExplorer";
 
 export default {
   layout: 'default',
-  components: {PageSidebar},
+  components: {PageSidebar, InternetExplorer},
 };
 </script>
 

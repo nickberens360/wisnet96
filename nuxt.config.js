@@ -19,7 +19,7 @@ export default {
         'images': resolve(__dirname, './assets/images'),
     },
     /*router: {
-        base: '/96/'
+        base: '/page/'
     },*/
 
     /*
