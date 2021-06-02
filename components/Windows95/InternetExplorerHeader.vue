@@ -84,6 +84,10 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    span {
+      color: red;
+      font-weight: bold;
+    }
   }
 }
 

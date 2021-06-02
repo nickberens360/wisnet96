@@ -24,8 +24,14 @@ label {
   padding: 5px;
 }
 
-.btn {
+.btn,
+.nav-link {
   background: #C0C0C0;
+  &:active,
+  &:focus,
+  &:visited {
+    color: black !important;
+  }
 }
 
 

@@ -9,7 +9,7 @@
             class="nav-link"
             role="button"
         >
-          <span class="nav-link-inner-text">Home</span>
+          <span class="nav-link-inner-text">🏠 Start</span>
         </nuxt-link>
       </li>
 
@@ -35,7 +35,7 @@
             class="nav-link"
             role="button"
         >
-         <span class="nav-link-inner-text">{{ item.title.rendered }}</span>
+          <span class="nav-link-inner-text">{{ item.title.rendered }}</span>
         </nuxt-link>
       </li>
     </ul>
@@ -67,6 +67,12 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+.navbar {
+  .navbar-nav {
+    .nav-link {
+      font-size: 20px;
+    }
+  }
+}
 </style>
