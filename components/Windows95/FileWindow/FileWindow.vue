@@ -66,7 +66,7 @@ export default {
   height: 750px;
   margin: auto;
   .card-header {
-    padding-left: 18px;
+    padding-left: 8px;
     span {
       font-weight: bold;
     }
