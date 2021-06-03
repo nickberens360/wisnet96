@@ -86,7 +86,7 @@ export default {
     width: 70px;
   }
 
-  font-size: 50px;
+  font-size: 70px;
 }
 
 a.dragstart{pointer-events: none;}

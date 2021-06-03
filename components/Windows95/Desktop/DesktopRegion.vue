@@ -28,5 +28,10 @@ export default {
       top: 0;
       left: 0;
     }
+    &.bottom-left {
+      bottom: 80px;
+      left: 0;
+    }
+
   }
 </style>

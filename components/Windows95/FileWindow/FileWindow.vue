@@ -67,6 +67,7 @@ export default {
   margin: auto;
 
   .card-body {
+    position: relative;
     height: 100%;
     resize: both;
     overflow: auto;

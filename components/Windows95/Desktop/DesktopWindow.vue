@@ -32,6 +32,20 @@
       </DesktopIcon>
     </DesktopRegion>
 
+    <DesktopRegion position="bottom-left">
+      <DesktopIcon
+          id="welcome"
+          link="/"
+      >
+        <template v-slot:icon>
+          🗒️
+        </template>
+        <template v-slot:text>
+          Welcome
+        </template>
+      </DesktopIcon>
+    </DesktopRegion>
+
 
 
 
@@ -101,6 +115,10 @@ body {
   justify-content: center;
   align-items: center;
   padding: 20px;
+  background-image: url('@/static/wisnet96-logo-NEW.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 500px;
 
 }
 

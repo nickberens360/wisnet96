@@ -1,20 +1,20 @@
 <template>
   <div>
-    <WindowsDesktop>
+    <DesktopWindow>
         <nuxt />
-    </WindowsDesktop>
+    </DesktopWindow>
 
   </div>
 </template>
 
 
 <script>
-import WindowsDesktop from "@/components/Windows95/Desktop/DesktopWindow";
+import DesktopWindow from "@/components/Windows95/Desktop/DesktopWindow";
 
 
 export default {
   components: {
-    WindowsDesktop
+    DesktopWindow
   }
 }
 </script>

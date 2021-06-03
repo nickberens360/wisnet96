@@ -1,14 +1,15 @@
 <template>
 
   <FileWindow
-      class="bg-white"
-      id="welcome"
-      title-id="welcome-handle"
+      :id="$route.name"
+      :title-id="$route.name+'-handle'"
+      class="file-window--md"
       title="Welcome"
+      style="max-width: 755px;"
   >
     <template v-slot:content>
       <div class="text-center">
-        <img src="https://i.imgur.com/ErWuQ2t.gif" alt="">
+        <img src="https://i.imgur.com/ErWuQ2t.gif" style="margin-top: -20px;" alt="">
         <h2 style="color: red">Welcome to wisnet '96 edition</h2>
         <br>
         <p>To celebrate our 25 years of going fearlessly into the 'net, we've revived our website from our dot-com era founding. From day one of our startup, we’ve paired extraordinary customer care
@@ -40,11 +41,16 @@ export default {
 </script>
 
 <style scoped lang="scss">
-#welcome {
+.file-window--md {
   max-width: 755px;
   /deep/ .card-body {
     padding: 20px;
+    background: #fff url('@/static/floppy.png');
   }
+  /*.btn-tertiary {
+    background-color: #000181;
+    color: white !important;
+  }*/
 
   p {
     font-size: 16px;
