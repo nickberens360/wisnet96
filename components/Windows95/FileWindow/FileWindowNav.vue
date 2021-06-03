@@ -8,13 +8,18 @@
         <button class="btn" @click="$router.go(+1)">Forward</button>
       </li>
     </ul>
-    <!--      <div class="time text-center"></div>-->
+    <div class="d-flex align-items-center">
+      <span class="font-small mr-2">Share:</span>
+      <a href="#" class="mr-2"><img src="/social/facebook.png" alt=""></a>
+      <a href="#" class="mr-2"><img src="/social/twitter.png" alt=""></a>
+      <a href="#" class="mr-2"><img src="/social/linkedin.png" alt=""></a>
+    </div>
   </nav>
 </template>
 
 <script>
 export default {
-name: 'FileWindowNav'
+  name: 'FileWindowNav'
 }
 </script>
 
