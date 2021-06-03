@@ -39,7 +39,8 @@
           class="mb-100"
       >
         <template v-slot:icon>
-          🚧
+<!--          🚧-->
+          <img src="https://lh3.googleusercontent.com/proxy/xzfGjmqhiJjdToWO2QTJnmGORjs4y_d8OOYhhemHNWDPqcP6ya9Z-PJsfgRaCAuu53YMVxWPdFTTvVgT_6x8cDJe9IwNBnOf6wKhFNlQfVO7eFqKIj8y4AvZ_whCZQdOlP86BSDruVj4LHupTwrOhGahPBXL-A" alt="">
         </template>
         <template v-slot:text>
           Make a Page
