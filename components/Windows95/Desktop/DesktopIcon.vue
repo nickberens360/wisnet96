@@ -1,14 +1,23 @@
 <template>
-  <div  class="icon-button-container">
-    <a id="icon-drag" href="#" class="icon-button">
-    <span id="icon-handle" class="icon-button__icon">
-<!--      🌎-->
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Rotating_globe.gif" alt="">
-    </span>
+  <div class="icon-button-container">
+
+    <NuxtLink
+        :id="id"
+        class="icon-button"
+        :to="link"
+    >
+      <span
+          :id="id+'-handle'"
+          class="icon-button__icon"
+      >
+        <slot name="icon"/>
+      </span>
       <span class="icon-button__text">
-      Grande Cheese
-    </span>
-    </a>
+        <slot name="text"/>
+      </span>
+    </NuxtLink>
+
+
   </div>
 </template>
 
@@ -17,10 +26,21 @@ import dragDrop from '@/components/mixins/drag-drop'
 
 export default {
   name: "IconButton",
+  props: {
+    link: {
+      type: String,
+      required: false
+    },
+    id: {
+      type: String,
+      required: true,
+    },
+
+  },
   mixins: [dragDrop],
   mounted: function () {
     this.$nextTick(function () {
-      this.dragDrop('icon-drag', 'icon-handle');
+      this.dragDrop(this.id, this.id+'-handle');
     })
   },
 }
@@ -30,9 +50,10 @@ export default {
 
 .icon-button-container {
   position: relative;
-  width: 50px;
-  height: 70px;
+  width: 70px;
+  height: 80px;
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .icon-button {
@@ -44,6 +65,7 @@ export default {
 
   color: white;
   font-size: 12px;
+  font-weight: bold;
 
   &:hover {
     border: none;
@@ -52,17 +74,21 @@ export default {
 
 .icon-button__icon,
 .icon-button__text {
-  &:hover {
+  /deep/ &:hover {
     border: none;
   }
 }
 
 .icon-button__icon {
-  width: 50px;
-  img {
-    width: 100%;
+  margin-bottom: 5px;
+
+  /deep/ img {
+    width: 70px;
   }
+
   font-size: 50px;
 }
+
+a.dragstart{pointer-events: none;}
 
 </style>

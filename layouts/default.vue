@@ -9,7 +9,7 @@
 
 
 <script>
-import WindowsDesktop from "@/components/Windows95/WindowsDesktop";
+import WindowsDesktop from "@/components/Windows95/Desktop/DesktopWindow";
 
 
 export default {
@@ -20,7 +20,7 @@ export default {
 </script>
 
 <!--<style>
-.internet-explorer  {
+.file-window  {
   background: black;
 }
 </style>-->

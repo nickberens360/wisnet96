@@ -3,6 +3,7 @@ export default  {
         dragDrop(el, handle) {
             let dragEl = document.getElementById(el);
             let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+
             if (document.getElementById(handle)) {
                 /* if present, the header is where you move the DIV from:*/
                 document.getElementById(handle).onmousedown = dragMouseDown;
@@ -23,6 +24,8 @@ export default  {
             }
 
             function elementDrag(e) {
+                dragEl.classList.remove('dragstart')
+                dragEl.className = dragEl.className + ' dragstart';
                 e = e || window.event;
                 e.preventDefault();
                 // calculate the new cursor position:
@@ -31,11 +34,16 @@ export default  {
                 pos3 = e.clientX;
                 pos4 = e.clientY;
                 // set the element's new position:
-                dragEl.style.top = (dragEl.offsetTop - pos2) + "px";
-                dragEl.style.left = (dragEl.offsetLeft - pos1) + "px";
+                dragEl.style.top = (dragEl.offsetTop - pos2) + 'px';
+                dragEl.style.left = (dragEl.offsetLeft - pos1) + 'px';
             }
 
-            function closeDragElement() {
+            function closeDragElement(e) {
+                let k = document.querySelectorAll('.dragstart')
+                for(let i=0; i < k.length;i++){
+                    k[0].classList.remove('dragstart')
+                }
+                e.preventDefault();
                 /* stop moving when mouse button is released:*/
                 document.onmouseup = null;
                 document.onmousemove = null;

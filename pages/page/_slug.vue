@@ -40,8 +40,6 @@ import CallOut from "@/components/CallOut";
 import PageHeader from "@/components/PageHeader";
 import NavMain from '@/components/NavMain.vue';
 import BaseImg from "~/components/BaseImg";
-// import {FadeTransition} from 'vue2-transitions';
-// import PageSidebar from "@/components/PageSidebar";
 
 export default {
   layout: 'default',
@@ -62,16 +60,8 @@ export default {
       return this.$store.state.posts;
     },
     post() {
-      if (this.$route.path === '/') {
-        console.log(this.$route.path);
-        return this.posts.find(el => el.slug === 'index');
-      } else {
-        return this.posts.find(el => el.slug === this.slug);
-      }
-    },
-    isMaybeLoaded() {
-      return this.$route.params.slug === this.slug
-    },
+      return this.posts.find(el => el.slug === this.slug);
+    }
   },
 };
 </script>

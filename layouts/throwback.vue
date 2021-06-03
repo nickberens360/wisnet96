@@ -9,7 +9,7 @@
 
 
 <script>
-import WindowsDesktop from "@/components/Windows95/WindowsDesktop";
+import WindowsDesktop from "@/components/Windows95/Desktop/DesktopWindow";
 import PageSidebar from "@/components/PageSidebar";
 
 export default {
@@ -26,7 +26,7 @@ export default {
 </script>
 
 <style scoped>
-.internet-explorer  {
+.file-window  {
   background: white;
 }
 </style>

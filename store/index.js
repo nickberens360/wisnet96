@@ -77,7 +77,7 @@ export const actions = {
 
             throwbacks = throwbacks
                 .filter(el => el.status === "publish")
-                .map(({id, slug, title, excerpt, date, tags, content, acf}) => ({
+                .map(({id, slug, title, excerpt, date, tags, content, ACF}) => ({
                     id,
                     slug,
                     title,
@@ -85,7 +85,7 @@ export const actions = {
                     date,
                     tags,
                     content,
-                    acf
+                    ACF
                 }))
             commit("updateThrowbacks", throwbacks)
         } catch (err) {
