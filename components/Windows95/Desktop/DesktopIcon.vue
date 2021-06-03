@@ -4,7 +4,7 @@
     <NuxtLink
         :id="id"
         class="icon-button"
-        :to="link"
+        exact :to="link"
     >
       <span
           :id="id+'-handle'"

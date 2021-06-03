@@ -58,6 +58,9 @@ export default {
 .file-window-header {
   font-family: "Windows 95", sans-serif;
   font-weight: bold;
+  span {
+    font-weight: bold;
+  }
   .btn-close   {
     height: 24px;
     display: flex;

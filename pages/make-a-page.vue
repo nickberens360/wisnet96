@@ -11,6 +11,10 @@
     <template v-slot:content>
       <form action="#" class="mt-4">
 
+        <div class="text-center">
+          <img src="https://lh3.googleusercontent.com/proxy/xzfGjmqhiJjdToWO2QTJnmGORjs4y_d8OOYhhemHNWDPqcP6ya9Z-PJsfgRaCAuu53YMVxWPdFTTvVgT_6x8cDJe9IwNBnOf6wKhFNlQfVO7eFqKIj8y4AvZ_whCZQdOlP86BSDruVj4LHupTwrOhGahPBXL-A" alt="">
+        </div>
+
         <div class="form-group">
           <label for="email" class="mb-2">Email</label>
           <input id="email" type="email" class="form-control" placeholder="Your email" required="">

@@ -32,7 +32,7 @@ export default {
     },
     title: {
       type: String,
-      default: 'wisnet 96'
+      default: 'wisnet Explorer 96'
     },
     titleId: {
       type: String,
@@ -65,6 +65,12 @@ export default {
   max-height: 90vh;
   height: 750px;
   margin: auto;
+  .card-header {
+    padding-left: 18px;
+    span {
+      font-weight: bold;
+    }
+  }
 
   .card-body {
     position: relative;
