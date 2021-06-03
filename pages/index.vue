@@ -7,6 +7,7 @@
       title="Welcome"
       style="max-width: 755px;"
   >
+
     <template v-slot:content>
       <div class="text-center">
         <img src="https://i.imgur.com/ErWuQ2t.gif" alt="">
