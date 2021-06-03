@@ -9,7 +9,7 @@
   >
     <template v-slot:content>
       <div class="text-center">
-        <img src="https://i.imgur.com/ErWuQ2t.gif" style="margin-top: -20px;" alt="">
+        <img src="https://i.imgur.com/ErWuQ2t.gif" alt="">
         <h2 style="color: red">Welcome to wisnet '96 edition</h2>
         <br>
         <p>To celebrate our 25 years of going fearlessly into the 'net, we've revived our website from our dot-com era founding. From day one of our startup, we’ve paired extraordinary customer care
