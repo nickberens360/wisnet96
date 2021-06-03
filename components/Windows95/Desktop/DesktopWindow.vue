@@ -34,6 +34,18 @@
 
     <DesktopRegion position="bottom-left">
       <DesktopIcon
+          id="makeit"
+          link="/make-a-page"
+          class="mb-100"
+      >
+        <template v-slot:icon>
+          🚧
+        </template>
+        <template v-slot:text>
+          Make a Page
+        </template>
+      </DesktopIcon>
+      <DesktopIcon
           id="welcome"
           link="/"
       >
