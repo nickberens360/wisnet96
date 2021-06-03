@@ -56,6 +56,10 @@ export default {
   text-align: center;
 }
 
+.dragstart {
+  background: blue;
+}
+
 .icon-button {
   position: absolute;
   display: flex;
