@@ -41,6 +41,7 @@ export default {
 
 <style scoped lang="scss">
 #welcome {
+  max-width: 755px;
   /deep/ .card-body {
     padding: 20px;
   }
