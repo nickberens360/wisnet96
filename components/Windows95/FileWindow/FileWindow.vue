@@ -1,23 +1,24 @@
 <template>
 
-    <div
-        :id="id"
-        :class="{fullscreen: isFullScreen}"
-        class="card card-tertiary file-window"
-    >
-      <div :id="titleId" class="card-header file-window-header d-flex justify-content-between align-items-center">
-        <span><slot name="title">{{ title }}</slot></span>
-
+  <div
+      :id="id"
+      :class="{fullscreen: isFullScreen}"
+      class="card card-tertiary file-window"
+  >
+    <div :id="titleId" class="card-header file-window-header d-flex justify-content-between align-items-center">
+      <span><slot name="title">{{ title }}</slot></span>
+      <div class="d-flex justify-content-end file-window__controls">
+        <button @click="isFullScreen = !isFullScreen" class="file-window__controls btn btn-sm btn-close mr-2 p-2 position-relative font-weight-bold" aria-hidden="true">&#9634;</button>
         <nuxt-link to="/desktop" class="btn btn-sm btn-close p-2" aria-label="Close">
           <span class="position-relative font-weight-bold" aria-hidden="true">X</span>
         </nuxt-link>
       </div>
-      <slot name="header"/>
-      <div class="card-body">
-        <button @click="isFullScreen = !isFullScreen" class="position-relative font-weight-bold" aria-hidden="true">Full</button>
-        <slot name="content"></slot>
-      </div>
     </div>
+    <slot name="header"/>
+    <div class="card-body">
+      <slot name="content"></slot>
+    </div>
+  </div>
 
 </template>
 
@@ -53,7 +54,7 @@ export default {
   },
   mixins: [dragDrop],
   methods: {
-    goFullScreen: function() {
+    goFullScreen: function () {
       this.isFullScreen = !this.isFullScreen;
     }
   },
@@ -62,7 +63,6 @@ export default {
       this.dragDrop(this.id, this.titleId);
     })
   },
-
 
 
 }
@@ -78,12 +78,14 @@ export default {
   overflow: auto;
   max-width: 960px;
   width: 100%;
-  max-height: 90vh;
-  height: 800px;
+  max-height: 85vh;
+  height: 100%;
   margin: auto;
+
   &.file-window--sm {
     max-width: 500px;
   }
+
   &.file-window--md {
     max-width: 755px;
   }
@@ -98,8 +100,10 @@ export default {
     width: 100% !important;
     max-height: unset !important;
   }
+
   .card-header {
     padding-left: 8px;
+
     span {
       font-weight: bold;
     }
@@ -111,6 +115,13 @@ export default {
     resize: both;
     overflow: auto;
     padding: 0;
+  }
+  .file-window__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    line-height: 1;
   }
 }
 </style>

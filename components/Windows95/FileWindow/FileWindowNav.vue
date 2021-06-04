@@ -2,10 +2,10 @@
   <nav class="navbar navbar-main navbar-expand-lg navbar-dark justify-content-between navbar-footer">
     <ul class="navbar-nav navbar-nav-hover flex-row align-items-center">
       <li class="nav-item">
-        <button class="btn" @click="$router.go(-1)">Back</button>
+        <button class="btn" @click="$router.go(-1)">&#9664</button>
       </li>
       <li class="nav-item">
-        <button class="btn" @click="$router.go(+1)">Forward</button>
+        <button class="btn" @click="$router.go(+1)">&#9654;</button>
       </li>
     </ul>
     <div class="d-flex align-items-center">
