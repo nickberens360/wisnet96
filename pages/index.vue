@@ -42,8 +42,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.file-window--md {
-  max-width: 755px;
+.file-window {
   /deep/ .card-body {
     padding: 20px;
     background: #fff url('@/static/floppy.png');

@@ -18,6 +18,7 @@ export default {
     alias: {
         'images': resolve(__dirname, './assets/images'),
     },
+
     /*router: {
         base: '/page/'
     },*/

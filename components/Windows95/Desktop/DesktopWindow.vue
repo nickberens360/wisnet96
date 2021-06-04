@@ -40,7 +40,7 @@
       >
         <template v-slot:icon>
 <!--          🚧-->
-          <img src="https://lh3.googleusercontent.com/proxy/xzfGjmqhiJjdToWO2QTJnmGORjs4y_d8OOYhhemHNWDPqcP6ya9Z-PJsfgRaCAuu53YMVxWPdFTTvVgT_6x8cDJe9IwNBnOf6wKhFNlQfVO7eFqKIj8y4AvZ_whCZQdOlP86BSDruVj4LHupTwrOhGahPBXL-A" alt="">
+          <img src="/animated-gifs-under-construction-227.gif.pagespeed.ce.TM2vvZ_QxI.gif" alt="">
         </template>
         <template v-slot:text>
           Make a Page
@@ -127,7 +127,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
   background-image: url('@/static/wisnet96-logo-NEW.png');
   background-repeat: no-repeat;
   background-position: center center;
