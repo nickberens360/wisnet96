@@ -80,7 +80,7 @@
           class="mb-100"
       >
         <template v-slot:icon>
-          <img src="http://www.helpfarm.com/blog/content/binary/lego_flux_capacitor.gif" alt="">
+          <img src="https://www.helpfarm.com/blog/content/binary/lego_flux_capacitor.gif" alt="">
 
         </template>
         <template v-slot:text>
