@@ -75,7 +75,7 @@
         </template>
       </DesktopIcon>
       <DesktopIcon
-          id="team-folder"
+          id="back-to"
           link="www.wisnet.com"
           class="mb-100"
       >
