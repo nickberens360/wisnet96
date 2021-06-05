@@ -32,6 +32,10 @@ export default {
       bottom: 80px;
       left: 0;
     }
+    &.top-right {
+      top: 0;
+      right: 0;
+    }
 
   }
 </style>

@@ -60,18 +60,39 @@
     </DesktopRegion>
 
 
+    <DesktopRegion position="top-right">
+      <DesktopIcon
+          id="team-folder"
+          link="/team"
+          class="mb-100"
+      >
+        <template v-slot:icon>
+          <!--          🚧-->
+          <img src="/open-folder.png" alt="">
+        </template>
+        <template v-slot:text>
+          Meet the Team
+        </template>
+      </DesktopIcon>
+      <DesktopIcon
+          id="team-folder"
+          link="www.wisnet.com"
+          class="mb-100"
+      >
+        <template v-slot:icon>
+          <img src="http://www.helpfarm.com/blog/content/binary/lego_flux_capacitor.gif" alt="">
+
+        </template>
+        <template v-slot:text>
+          Back to 2021
+        </template>
+      </DesktopIcon>
+    </DesktopRegion>
+
 
 
     <slot/>
 
-
-    <!--        <button-round
-                v-if="button"
-                :heading="button.heading"
-                :text="button.text"
-                :link="button.link"
-                :img="button.image"
-            />-->
 
 
     <DesktopNavbar

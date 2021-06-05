@@ -1,6 +1,8 @@
 <template>
   <div class="icon-button-container">
 
+    <a :href="link"></a>
+
     <NuxtLink
         :id="id"
         class="icon-button"
@@ -35,6 +37,10 @@ export default {
       type: String,
       required: true,
     },
+    isExternalLink: {
+      type: Boolean,
+    },
+
 
   },
   mixins: [dragDrop],
@@ -86,7 +92,7 @@ export default {
 .icon-button__icon {
   margin-bottom: 5px;
 
-  /deep/ img {
+  /deep/ img, iframe {
     width: 70px;
   }
 

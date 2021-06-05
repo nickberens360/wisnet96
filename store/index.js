@@ -7,6 +7,7 @@ export const siteURL = process.env.BASE_URL;
 export const state = () => ({
     posts: [],
     throwbacks: [],
+    team: [],
     menuItems: [],
     options: {},
     tags: [],
@@ -21,6 +22,10 @@ export const mutations = {
     updateThrowbacks: (state, throwbacks) => {
         state.throwbacks = throwbacks
     },
+    updateTeam: (state, team) => {
+        state.team = team
+    },
+
 
     updateOptions: (state, options) => {
         state.options = options
@@ -88,6 +93,29 @@ export const actions = {
                     ACF
                 }))
             commit("updateThrowbacks", throwbacks)
+        } catch (err) {
+            console.log(err)
+        }
+    },
+    async getTeam({state, commit, dispatch}) {
+        if (state.team.length) return
+
+        try {
+            let team = await fetch(
+                `https://www.wisnet.com/wp-json/wp/v2/team/`
+            ).then(res => res.json())
+
+
+            team = team
+                .filter(el => el.status === "publish")
+                .map(({id, slug, title, content, featured_img_url}) => ({
+                    id,
+                    slug,
+                    title,
+                    featured_img_url,
+                    content
+                }))
+            commit("updateTeam", team)
         } catch (err) {
             console.log(err)
         }

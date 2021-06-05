@@ -8,5 +8,7 @@ export default async ({store}) => {
     await store.dispatch('getOptions');
     await wait(1000);
     await store.dispatch('getThrowbacks');
+    await wait(1000);
+    await store.dispatch('getTeam');
 
 };

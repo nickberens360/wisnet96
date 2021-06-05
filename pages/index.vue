@@ -5,7 +5,6 @@
       :title-id="$route.name+'-handle'"
       class="file-window--md"
       title="Welcome"
-      style="max-width: 755px;"
   >
 
     <template v-slot:content>
