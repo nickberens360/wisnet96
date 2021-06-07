@@ -27,7 +27,7 @@
           <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Rotating_globe.gif" alt="">
         </template>
         <template v-slot:text>
-          {{ item.title.rendered }}
+          <div v-html="item.title.rendered "></div>
         </template>
       </DesktopIcon>
     </DesktopRegion>
