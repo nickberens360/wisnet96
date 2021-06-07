@@ -2,13 +2,22 @@
   <InternetExplorer
       :id="$route.name"
       :title-id="$route.name"
-      :style=" `background-image: url(${post.ACF.background_image.url})` "
+      :style=" `background: url(${post.ACF.background_image.url } )` "
       class="text-center"
   >
 
-    <img :src="post.ACF.logo.url" alt="">
+<!--    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
+
+    <img
+        :src="post.ACF.logo.url"
+        alt=""
+    >
     <h1 v-if="post.title.rendered">{{ post.title.rendered }}</h1>
-    <div v-html="post.content.rendered"/>
+    <div
+        v-if="post.content.rendered"
+        v-html="post.content.rendered"
+    />
     <img src="https://www.thekidunderscore.com/uploads/1/3/6/4/136404316/image-1_orig.gif" alt="">
 
   </InternetExplorer>

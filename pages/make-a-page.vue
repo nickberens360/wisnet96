@@ -14,29 +14,9 @@
           <img src="/animated-gifs-under-construction-227.gif.pagespeed.ce.TM2vvZ_QxI.gif" alt="">
         </div>
 
-        <div class="form-group">
-          <label for="email" class="mb-2">Email</label>
-          <input id="email" type="email" class="form-control" placeholder="Your email" required="">
-        </div>
+        <iframe :src="`${apiBaseUrl}/gfembed/?f=2`" width="100%" height="500" frameBorder="0" class="gfiframe"></iframe>
+        <script :src="`${apiBaseUrl}/wp-content/plugins/gravity-forms-iframe/assets/scripts/gfembed.min.js`" type="text/javascript"></script>
 
-        <div class="form-group">
-          <label for="password" class="mb-2">Input</label>
-          <input id="password" type="password" class="form-control" required="">
-        </div>
-
-        <div class="form-group">
-          <label for="password" class="mb-2">Input</label>
-          <input id="password" type="password" class="form-control" required="">
-        </div>
-
-        <div class="form-group">
-          <label for="password" class="mb-2">Logo</label>
-          <input style="background: none !important; border: none !important;" id="file" type="file" required="">
-        </div>
-
-
-
-        <button type="submit" class="btn btn-block btn-primary">Submit</button>
       </form>
     </template>
   </FileWindow>
@@ -51,6 +31,11 @@ import FileWindow from "@/components/Windows95/FileWindow/FileWindow";
 export default {
   layout: 'default',
   components: {FileWindow},
+  computed: {
+    apiBaseUrl() {
+      return process.env.BASE_URL;
+    },
+  },
 };
 </script>
 
