@@ -48,7 +48,10 @@
               class="nav-link"
               role="button"
           >
-            <span class="nav-link-inner-text">{{ item.title.rendered }}</span>
+            <span
+                v-html="item.title.rendered "
+                class="nav-link-inner-text"
+            />
           </nuxt-link>
         </li>
       </ul>
