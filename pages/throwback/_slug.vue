@@ -13,7 +13,10 @@
         :src="post.ACF.logo.url"
         alt=""
     >
-    <h1 v-if="post.title.rendered">{{ post.title.rendered }}</h1>
+    <h1
+        v-if="post.title.rendered"
+        v-html="post.title.rendered"
+    />
     <div
         v-if="post.content.rendered"
         v-html="post.content.rendered"
