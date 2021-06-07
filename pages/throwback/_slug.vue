@@ -21,7 +21,7 @@
         v-if="post.content.rendered"
         v-html="post.content.rendered"
     />
-    <img src="https://www.thekidunderscore.com/uploads/1/3/6/4/136404316/image-1_orig.gif" alt="">
+<!--    <img src="https://www.thekidunderscore.com/uploads/1/3/6/4/136404316/image-1_orig.gif" alt="">-->
 
   </InternetExplorer>
 
