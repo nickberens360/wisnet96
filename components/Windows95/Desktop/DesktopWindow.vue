@@ -26,10 +26,8 @@
         <template v-slot:icon>
           <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Rotating_globe.gif" alt="">
         </template>
-        <template
-            v-slot:text
-            v-html="item.title.rendered "
-        >
+        <template v-slot:text>
+          {{ item.title.rendered }}
         </template>
       </DesktopIcon>
     </DesktopRegion>
