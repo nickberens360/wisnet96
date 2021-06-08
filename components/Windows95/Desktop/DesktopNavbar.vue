@@ -1,7 +1,32 @@
 <template>
   <footer>
     <nav class="desktop-navbar navbar navbar-main navbar-expand-lg navbar-dark justify-content-between navbar-footer">
-      <ul class="navbar-nav navbar-nav-hover flex-row align-items-center">
+
+
+<!--      <div class="dropdown dropup show nav-item">
+        <a
+            class="nav-link btn p-2"
+            href="#"
+            role="button"
+            id="dropdownMenuLink"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+        >
+          Dropdown link
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>-->
+
+      <ul class="navbar-nav navbar-nav-hover flex-row align-items-center position-relative">
+
+
+
         <li
             class="nav-item"
         >
@@ -40,18 +65,13 @@
 
         <li
             class="nav-item"
-            v-for="item in navItems"
-            :key="item.ID"
         >
           <nuxt-link
-              exact :to="'/throwback/'+item.slug"
+              exact to="/throwback"
               class="nav-link"
               role="button"
           >
-            <span
-                v-html="item.title.rendered "
-                class="nav-link-inner-text"
-            />
+            <span class="nav-link-inner-text">Throwbacks</span>
           </nuxt-link>
         </li>
       </ul>
@@ -91,8 +111,13 @@ export default {
   right: 0;
   bottom: 0;
   left: 0;
+  .btn {
+    font-size: 20px;
+    line-height: 1;
+    padding: 4px 10px;
+  }
   .navbar-nav {
-    .nav-link {
+    .nav-link, {
       font-size: 20px;
     }
   }
