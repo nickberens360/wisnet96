@@ -39,7 +39,6 @@
           class="mb-100"
       >
         <template v-slot:icon>
-<!--          🚧-->
           <img src="/animated-gifs-under-construction-227.gif.pagespeed.ce.TM2vvZ_QxI.gif" alt="">
         </template>
         <template v-slot:text>
@@ -89,10 +88,30 @@
       </DesktopIcon>
     </DesktopRegion>
 
+    <DesktopRegion
+        position="bottom-right"
+        style="width: 420px; min-height: 178px;"
+    >
+      <FileWindow
+          id="back-to-wisnet"
+          title-id="back-to-wisnet-handle"
+          class="file-window--sm"
+      >
+        <template v-slot:content>
+          <button-round
+              v-if="button"
+              :heading="button.heading"
+              :text="button.text"
+              :link="button.link"
+              :img="button.image"
+          />
+        </template>
+
+      </FileWindow>
+    </DesktopRegion>
 
 
     <slot/>
-
 
 
     <DesktopNavbar
@@ -113,6 +132,7 @@ import ButtonRound from "@/components/ButtonRound";
 import DesktopNavbar from "@/components/Windows95/Desktop/DesktopNavbar";
 import DesktopIcon from "@/components/Windows95/Desktop/DesktopIcon";
 import DesktopRegion from "@/components/Windows95/Desktop/DesktopRegion";
+import FileWindow from "@/components/Windows95/FileWindow/FileWindow";
 
 export default {
   name: "DesktopWindow",
@@ -122,7 +142,8 @@ export default {
     PageFooter,
     DesktopNavbar,
     DesktopIcon,
-    DesktopRegion
+    DesktopRegion,
+    FileWindow
   },
 
   computed: {
@@ -142,6 +163,7 @@ export default {
 body {
   overflow: hidden;
 }
+
 .desktop-95 {
   height: 100vh;
   display: flex;
@@ -152,7 +174,11 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 500px;
-
+  /deep/ .back-to-wisnet-handle {
+    .file-window__controls {
+      display: none !important;
+    }
+  }
 }
 
 .windows-desktop-icons {

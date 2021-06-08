@@ -36,6 +36,10 @@ export default {
       top: 0;
       right: 0;
     }
+    &.bottom-right {
+      bottom: 100px;
+      right: 60px;
+    }
 
   }
 </style>
