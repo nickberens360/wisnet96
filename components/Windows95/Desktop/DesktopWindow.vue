@@ -96,6 +96,7 @@
           :show-controls="false"
           id="back-to-wisnet"
           title-id="back-to-wisnet-handle"
+          title="Learn More"
           class="file-window--sm"
           style="background: var(--wisnet-color-orange);"
       >
