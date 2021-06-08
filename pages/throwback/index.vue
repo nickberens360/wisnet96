@@ -10,18 +10,6 @@
 
       <div class="p-4 d-flex flex-wrap justify-content-around">
         <DesktopIcon
-            id="wisnet96"
-            link="/page/about-wisconsin-networks"
-            link-color="blue"
-        >
-          <template v-slot:icon>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Rotating_globe.gif" alt="">
-          </template>
-          <template v-slot:text>
-            wisnet 96
-          </template>
-        </DesktopIcon>
-        <DesktopIcon
             v-for="item in posts"
             :key="item.ID"
             :id="item.slug"

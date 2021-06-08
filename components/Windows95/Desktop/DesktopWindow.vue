@@ -30,6 +30,17 @@
           Meet the Team
         </template>
       </DesktopIcon>
+      <DesktopIcon
+          id="wisnet96"
+          link="/page/about-wisconsin-networks"
+      >
+        <template v-slot:icon>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Rotating_globe.gif" alt="">
+        </template>
+        <template v-slot:text>
+          wisnet 96
+        </template>
+      </DesktopIcon>
     </DesktopRegion>
 
     <DesktopRegion position="bottom-left">
