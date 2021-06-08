@@ -24,7 +24,7 @@
             :id="item.slug"
         >
           <NuxtLink :to="'/throwback/'+item.slug">
-            {{ item.title.rendered }}
+            <span v-html="item.title.rendered" />
           </NuxtLink>
         </li>
       </ul>
