@@ -2,7 +2,7 @@
   <InternetExplorer
       :id="$route.name"
       :title-id="$route.name"
-      :style=" `background: url(${post.ACF.background_image.url } )` "
+      :style=" `background: white url(${post.ACF.background_image.url } )` "
       class="text-center"
   >
 
