@@ -7,23 +7,27 @@
   >
 
     <template v-slot:content>
-
-      <div class="p-4 d-flex flex-wrap justify-content-around">
-        <DesktopIcon
+      <img
+          src="https://media4.giphy.com/media/TfjLMgZ50avqazGWaH/giphy.gif?cid=ecf05e47o4hlifltlqy2ygldalfk1s8n4dti6uaiaiv2wjuy&rid=giphy.gif&ct=g"
+          style="max-width: 300px;"
+          alt=""
+      >
+      <br>
+      <br>
+      <h2 style="color: red; margin-bottom: 40px">Client Throwbacks</h2>
+      <p>Click on a hyperlink below to checkout some of our client's 90s websites</p>
+      <br>
+      <ul class="text-left">
+        <li
             v-for="item in posts"
             :key="item.ID"
             :id="item.slug"
-            :link="'/throwback/'+item.slug"
-            link-color="blue"
         >
-          <template v-slot:icon>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Rotating_globe.gif" alt="">
-          </template>
-          <template v-slot:text>
+          <NuxtLink :to="'/throwback/'+item.slug">
             {{ item.title.rendered }}
-          </template>
-        </DesktopIcon>
-      </div>
+          </NuxtLink>
+        </li>
+      </ul>
 
     </template>
 
@@ -54,7 +58,14 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.file-window {
+  /deep/ .card-body {
+    padding: 20px;
+    background: #fff url('@/static/floppy.png');
+  }
+}
+
 /*.color-blue {
   .icon-button {
     color: blue !important;

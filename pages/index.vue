@@ -46,10 +46,6 @@ export default {
     padding: 20px;
     background: #fff url('@/static/floppy.png');
   }
-  /*.btn-tertiary {
-    background-color: #000181;
-    color: white !important;
-  }*/
 
   p {
     font-size: 16px;
