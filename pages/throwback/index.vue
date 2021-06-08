@@ -15,7 +15,7 @@
       <br>
       <br>
       <h2 style="color: red; margin-bottom: 40px">Client Throwbacks</h2>
-      <p>Click on a hyperlink below to checkout some of our client's 90s websites</p>
+      <p>Click on a hyperlink below to checkout some of our client's Throwback websites!</p>
       <br>
       <ul class="text-left">
         <li
