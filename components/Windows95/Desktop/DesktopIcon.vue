@@ -14,7 +14,9 @@
       >
         <slot name="icon"/>
       </span>
-      <span class="icon-button__text">
+      <span
+          class="icon-button__text"
+          :style="{ color: linkColor }">
         <slot name="text"/>
       </span>
     </NuxtLink>
@@ -33,6 +35,12 @@ export default {
       type: String,
       required: false
     },
+    linkColor: {
+      type: String,
+      required: false,
+      default: 'white'
+    },
+
     id: {
       type: String,
       required: true,
@@ -46,7 +54,7 @@ export default {
   mixins: [dragDrop],
   mounted: function () {
     this.$nextTick(function () {
-      this.dragDrop(this.id, this.id+'-handle');
+      this.dragDrop(this.id, this.id + '-handle');
     })
   },
 }
@@ -73,7 +81,7 @@ export default {
   align-items: center;
   justify-content: space-between;
 
-  color: white;
+  //color: white;
   font-size: 12px;
   font-weight: bold;
 
@@ -89,6 +97,7 @@ export default {
   }
 }
 
+
 .icon-button__icon {
   margin-bottom: 5px;
 
@@ -99,6 +108,8 @@ export default {
   font-size: 70px;
 }
 
-a.dragstart{pointer-events: none;}
+a.dragstart {
+  pointer-events: none;
+}
 
 </style>

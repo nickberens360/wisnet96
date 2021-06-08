@@ -5,29 +5,29 @@
       <modal-big/>
     </transition>
 
-    <DesktopRegion>
+    <DesktopRegion position="top-left">
       <DesktopIcon
-          id="wisnet96"
-          link="/page/about-wisconsin-networks"
+          id="throwback-folder"
+          link="/throwback"
+          class="mb-100"
       >
         <template v-slot:icon>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Rotating_globe.gif" alt="">
+          <img src="/open-folder.png" alt="">
         </template>
         <template v-slot:text>
-          wisnet 96
+          Throwbacks
         </template>
       </DesktopIcon>
       <DesktopIcon
-          v-for="item in throwbackLinks"
-          :key="item.ID"
-          :id="item.slug"
-          :link="'/throwback/'+item.slug"
+          id="team-folder"
+          link="/team"
+          class="mb-100"
       >
         <template v-slot:icon>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Rotating_globe.gif" alt="">
+          <img src="/open-folder.png" alt="">
         </template>
         <template v-slot:text>
-          <div v-html="item.title.rendered "></div>
+          Meet the Team
         </template>
       </DesktopIcon>
     </DesktopRegion>
@@ -60,19 +60,6 @@
 
 
     <DesktopRegion position="top-right">
-      <DesktopIcon
-          id="team-folder"
-          link="/team"
-          class="mb-100"
-      >
-        <template v-slot:icon>
-          <!--          🚧-->
-          <img src="/open-folder.png" alt="">
-        </template>
-        <template v-slot:text>
-          Meet the Team
-        </template>
-      </DesktopIcon>
       <DesktopIcon
           id="back-to"
           link="www.wisnet.com"
@@ -162,7 +149,7 @@ export default {
 </script>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 body {
   overflow: hidden;
 }
@@ -177,10 +164,8 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 500px;
-  /deep/ .back-to-wisnet-handle {
-    .file-window__controls {
-      display: none !important;
-    }
+  /deep/ .icon-button {
+    color: white !important;
   }
 }
 
