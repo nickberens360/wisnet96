@@ -93,9 +93,11 @@
         style="width: 420px; min-height: 178px;"
     >
       <FileWindow
+          :show-controls="false"
           id="back-to-wisnet"
           title-id="back-to-wisnet-handle"
           class="file-window--sm"
+          style="background: var(--wisnet-color-orange);"
       >
         <template v-slot:content>
           <button-round

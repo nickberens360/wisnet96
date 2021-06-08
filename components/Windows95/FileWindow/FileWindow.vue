@@ -7,7 +7,9 @@
   >
     <div :id="titleId" class="card-header file-window-header d-flex justify-content-between align-items-center">
       <span><slot name="title">{{ title }}</slot></span>
-      <div class="d-flex justify-content-end file-window__controls">
+      <div
+          v-if="showControls"
+          class="d-flex justify-content-end file-window__controls">
         <button @click="isFullScreen = !isFullScreen" class="file-window__controls btn btn-sm btn-close mr-2 p-2 position-relative font-weight-bold" aria-hidden="true">&#9634;</button>
         <nuxt-link to="/desktop" class="btn btn-sm btn-close p-2" aria-label="Close">
           <span class="position-relative font-weight-bold" aria-hidden="true">X</span>
@@ -45,7 +47,13 @@ export default {
       type: String,
       required: true,
       default: 'title'
-    }
+    },
+    showControls: {
+      type: Boolean,
+      required: false,
+      default: true
+    },
+
   },
   data: function () {
     return {
