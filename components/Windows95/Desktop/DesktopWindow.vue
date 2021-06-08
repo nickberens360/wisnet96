@@ -1,15 +1,14 @@
 <template>
   <div class="desktop-95">
 
-    <transition name="modal">
+<!--    <transition name="modal">
       <modal-big/>
-    </transition>
+    </transition>-->
 
     <DesktopRegion position="top-left">
       <DesktopIcon
           id="throwback-folder"
           link="/throwback"
-          class="mb-100"
       >
         <template v-slot:icon>
           <img src="/open-folder.png" alt="">
@@ -21,7 +20,6 @@
       <DesktopIcon
           id="team-folder"
           link="/team"
-          class="mb-100"
       >
         <template v-slot:icon>
           <img src="/open-folder.png" alt="">
@@ -47,7 +45,6 @@
       <DesktopIcon
           id="makeit"
           link="/make-a-page"
-          class="mb-100"
       >
         <template v-slot:icon>
           <img src="/animated-gifs-under-construction-227.gif.pagespeed.ce.TM2vvZ_QxI.gif" alt="">
@@ -139,7 +136,6 @@ export default {
   name: "DesktopWindow",
   components: {
     ButtonRound,
-    ModalBig,
     PageFooter,
     DesktopNavbar,
     DesktopIcon,

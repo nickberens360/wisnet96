@@ -1,7 +1,8 @@
 <template>
-  <div class="icon-button-container">
-
-    <a :href="link"></a>
+  <div
+      class="icon-button-container"
+      v-bind:style="{ height: containerHeight + 'px', width: containerWidth + 'px' }"
+  >
 
     <NuxtLink
         :id="id"
@@ -30,6 +31,12 @@ import dragDrop from '@/components/mixins/drag-drop'
 
 export default {
   name: "IconButton",
+  data: function () {
+    return {
+      containerHeight: '',
+      containerWidth: '',
+    }
+  },
   props: {
     link: {
       type: String,
@@ -51,9 +58,20 @@ export default {
 
 
   },
+  methods: {
+    matchWidth() {
+      console.log(document.getElementById(this.id).offsetWidth);
+      this.containerWidth = document.getElementById(this.id).offsetWidth
+    },
+    matchHeight() {
+      this.containerHeight = document.getElementById(this.id).offsetHeight
+    }
+  },
   mixins: [dragDrop],
   mounted: function () {
     this.$nextTick(function () {
+      this.matchHeight();
+      this.matchWidth();
       this.dragDrop(this.id, this.id + '-handle');
     })
   },
@@ -64,9 +82,7 @@ export default {
 
 .icon-button-container {
   position: relative;
-  width: 70px;
-  height: 80px;
-  margin-bottom: 40px;
+  margin: auto;
   text-align: center;
 }
 
