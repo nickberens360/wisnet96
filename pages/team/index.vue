@@ -54,12 +54,19 @@ export default {
 };
 </script>
 
-<style lang="scss">
-  .team-member {
-    &:last-of-type {
-      margin-right: auto;
-    }
+<style lang="scss" scoped>
+.file-window {
+  /deep/ .card-body {
+    padding: 20px;
+    background: #fff url('@/static/floppy.png');
   }
+}
+
+.team-member {
+  &:last-of-type {
+    margin-right: auto;
+  }
+}
 </style>
 
 
