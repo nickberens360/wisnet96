@@ -9,9 +9,17 @@
       </li>
     </ul>
     <div class="d-flex align-items-center">
+
       <span class="font-small mr-2">Share:</span>
       <a href="#" class="mr-2"><img src="/social/facebook.png" alt=""></a>
-      <a href="#" class="mr-2"><img src="/social/twitter.png" alt=""></a>
+      <a
+          :href="`https://twitter.com/share?text=Checkout our throwback!&url=https://www.wisnet96.com${path}`"
+          target="_blank"
+          class="mr-2"
+      >
+        <img src="/social/twitter.png" alt="">
+      </a>
+
       <a href="#" class="mr-2"><img src="/social/linkedin.png" alt=""></a>
     </div>
   </nav>
@@ -19,7 +27,22 @@
 
 <script>
 export default {
-  name: 'FileWindowNav'
+  name: 'FileWindowNav',
+  data() {
+    return {
+      path: '',
+    };
+  },
+  computed: {
+    twitterShare() {
+      // console.log(encodeURIComponent(`https://www.wisnet96.com/${this.$route.params.slug}`));
+
+      return this.$route.query
+    }
+  },
+  mounted() {
+    this.path = this.$route.path
+  }
 }
 </script>
 

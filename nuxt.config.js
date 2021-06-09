@@ -39,6 +39,7 @@ export default {
         ],
         script: [
             { src: 'https://code.jquery.com/jquery-3.5.1.slim.min.js', body: true },
+            { src: 'https://platform.twitter.com/widgets.js', body: true },
             { src: 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js', body: true },
             { src: '/js/pixel.js', body: true }
         ]
@@ -55,9 +56,6 @@ export default {
      ** Plugins to load before mounting the App
      */
     plugins: [
-        /*"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js",
-        "https://code.jquery.com/jquery-3.5.1.min.js",
-        "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js",*/
         "~/plugins/data.server.js",
         "~/plugins/dateformat.js"
     ],

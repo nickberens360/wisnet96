@@ -8,8 +8,9 @@
   >
     <div class="text-center">
       <img
-          style="max-width: 300px;"
+          v-if="post.featured_img_url"
           :src="post.featured_img_url"
+          style="max-width: 300px;"
           class="mb-3"
           alt=""
       >

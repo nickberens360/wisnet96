@@ -2,13 +2,12 @@
   <InternetExplorer
       :id="$route.name"
       :title-id="$route.name"
-      :style=" `background: white url(${post.ACF.background_image.url } )` "
+      :style=" `background: ${bgImg}` "
       class="text-center"
   >
 
 <!--    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
-
 
     <img
         :src="post.ACF.logo.url"
@@ -39,7 +38,8 @@ export default {
   components: {InternetExplorer},
   data() {
     return {
-      slug: this.$route.params.slug
+      slug: this.$route.params.slug,
+      bgImg: ''
     };
   },
   computed: {
@@ -50,6 +50,13 @@ export default {
       return this.posts.find(el => el.slug === this.slug);
     }
   },
+  mounted() {
+    if (this.post.ACF.background_image.url) {
+      this.bgImg = `url(${this.post.ACF.background_image.url})`
+    } else {
+      this.bgImg = 'white'
+    }
+  }
 };
 </script>
 
