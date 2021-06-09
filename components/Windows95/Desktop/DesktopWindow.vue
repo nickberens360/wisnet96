@@ -167,7 +167,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url('@/static/wisnet96-logo-NEW.png');
+  background-image: url(https://apiwisnet96.wpengine.com/wp-content/uploads/2021/06/wisnet96-logo-NEW2.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 500px;
