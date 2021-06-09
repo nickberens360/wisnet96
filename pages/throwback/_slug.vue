@@ -39,9 +39,11 @@ export default {
   data() {
     return {
       slug: this.$route.params.slug,
-      bgImg: ''
+      bgImg: '',
+      // metaTitle: ''
     };
   },
+
   computed: {
     posts() {
       return this.$store.state.throwbacks;
@@ -51,12 +53,27 @@ export default {
     }
   },
   mounted() {
+    /*if (this.post.title.rendered) {
+      this.metaTitle = this.post.title.rendered
+    } else {
+      this.metaTitle = 'Stuff'
+    }*/
     if (this.post.ACF.background_image.url) {
       this.bgImg = `url(${this.post.ACF.background_image.url})`
     } else {
-      this.bgImg = 'white'
+      this.bgImg = 'white';
     }
-  }
+  },
+  /*head: {
+    title: 'wisnet96 | '+ this.metaTitle,
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Home page description'
+      }
+    ],
+  }*/
 };
 </script>
 
