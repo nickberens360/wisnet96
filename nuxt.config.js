@@ -46,7 +46,7 @@ export default {
             },
             {
                 property: "og:image",
-                content: "http://graphics8.nytimes.com/images/2011/12/08/technology/bits-newtwitter/bits-newtwitter-tmagArticle.jpg"
+                content: "/wisnet96-og-image.jpg"
             },
 
 
