@@ -46,7 +46,7 @@ export default {
             },
             {
                 property: "og:image",
-                content: "/wisnet96-og-image.jpg"
+                content: "https://www.wisnet96.com/wisnet96-og-image.jpg"
             },
 
 
