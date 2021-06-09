@@ -102,7 +102,7 @@ export const actions = {
 
         try {
             let team = await fetch(
-                `https://www.wisnet.com/wp-json/wp/v2/team/`
+                `https://www.wisnet.com/wp-json/wp/v2/team?per_page=20`
             ).then(res => res.json())
 
 
