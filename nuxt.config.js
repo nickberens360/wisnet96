@@ -35,7 +35,22 @@ export default {
                 hid: "description",
                 name: "description",
                 content: process.env.npm_package_description || ""
-            }
+            },
+            {
+                name: "twitter:card",
+                content: "summary"
+            },
+            {
+                property: "og:title",
+                content: "Enjoy our Throwback"
+            },
+            {
+                property: "og:image",
+                content: "http://graphics8.nytimes.com/images/2011/12/08/technology/bits-newtwitter/bits-newtwitter-tmagArticle.jpg"
+            },
+
+
+
         ],
         script: [
             { src: 'https://code.jquery.com/jquery-3.5.1.slim.min.js', body: true },
