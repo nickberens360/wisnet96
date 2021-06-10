@@ -85,7 +85,7 @@ export default {
 
 <style lang="scss" scoped>
 .site-logo {
-  max-width: 200px;
+  max-width: 300px;
   margin-bottom: 20px;
   margin-top: 20px;
 
