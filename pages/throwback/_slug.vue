@@ -47,7 +47,7 @@ export default {
   data() {
     return {
       slug: this.$route.params.slug,
-      bgImg: '',
+      bgImg: 'url(/clouds2.jpeg)',
       // metaTitle: ''
     };
   },
@@ -68,8 +68,6 @@ export default {
     }*/
     if (this.post.ACF.background_image.url) {
       this.bgImg = `url(${this.post.ACF.background_image.url})`
-    } else {
-      this.bgImg = 'url(/clouds2.jpeg)';
     }
   },
   /*head: {
