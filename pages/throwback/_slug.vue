@@ -92,6 +92,7 @@ export default {
   display: block;
 
 }
+
 marquee {
   display: block;
   max-width: 300px;
@@ -102,6 +103,7 @@ h1 {
   font-size: 30px;
   margin-bottom: 20px;
 }
+
 .site-content {
   max-width: 700px;
   background: #fff;
@@ -109,10 +111,14 @@ h1 {
   padding: 20px;
   text-align: left;
   font-size: 14px;
-  p {
-    border: 4px solid #04ff46;
+
+  /deep/ p {
+    border: 4px solid #04ff46 !important;
+    padding: 10px;
+    border-radius: 10px;
   }
 }
+
 
 </style>
 
