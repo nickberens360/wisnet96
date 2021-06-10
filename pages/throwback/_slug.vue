@@ -9,14 +9,15 @@
     <!--    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
 
-    <img
-        :src="post.ACF.logo.url"
-        alt=""
-        class="site-logo"
-    >
+
     <div
         class="site-content"
     >
+      <img
+          :src="post.ACF.logo.url"
+          alt=""
+          class="site-logo"
+      >
       <marquee behavior="scroll" direction="">
         <h1
             v-if="post.title.rendered"
@@ -47,7 +48,7 @@ export default {
   data() {
     return {
       slug: this.$route.params.slug,
-      bgImg: 'url(/clouds2.jpeg)',
+      bgImg: 'url(/bg90s.jpeg)',
       // metaTitle: ''
     };
   },
@@ -86,8 +87,9 @@ export default {
 <style lang="scss" scoped>
 .site-logo {
   max-width: 300px;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  max-height: 200px;
+  margin: auto auto 20px;
+  display: block;
 
 }
 marquee {
@@ -101,9 +103,9 @@ h1 {
   margin-bottom: 20px;
 }
 .site-content {
-  max-width: 500px;
+  max-width: 700px;
   background: #fff;
-  margin: auto;
+  margin: 40px auto auto;
   padding: 20px;
   text-align: left;
   font-size: 14px;
