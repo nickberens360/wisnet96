@@ -102,6 +102,7 @@ marquee {
 h1 {
   font-size: 30px;
   margin-bottom: 20px;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
 .site-content {
