@@ -69,7 +69,7 @@ export default {
     if (this.post.ACF.background_image.url) {
       this.bgImg = `url(${this.post.ACF.background_image.url})`
     } else {
-      this.bgImg = 'url(https://media2.giphy.com/media/FlodpfQUBSp20/giphy.gif?cid=ecf05e47qgez7zsbcfli44kytg47mld8cva20puz1umiwe35&rid=giphy.gif&ct=g)';
+      this.bgImg = 'url(/clouds2.jpeg)';
     }
   },
   /*head: {
