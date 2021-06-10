@@ -3,7 +3,7 @@
     <nav class="desktop-navbar navbar navbar-main navbar-expand-lg navbar-dark justify-content-between navbar-footer">
 
 
-<!--      <div class="dropdown dropup show nav-item">
+      <div class="dropdown dropup show nav-item mr-1">
         <a
             class="nav-link btn p-2"
             href="#"
@@ -21,9 +21,9 @@
           <a class="dropdown-item" href="#">Another action</a>
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
-      </div>-->
+      </div>
 
-      <ul class="navbar-nav navbar-nav-hover flex-row align-items-center position-relative">
+      <ul class="navbar-nav navbar-nav-hover flex-row align-items-center position-relative mr-auto">
 
 
 
