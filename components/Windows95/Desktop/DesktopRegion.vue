@@ -42,4 +42,18 @@ export default {
     }
 
   }
+  @media only screen and ( max-width: 895px ){
+    .desktop-region {
+      position: relative;
+      padding: 40px;
+      &.bottom-left {
+        bottom: auto;
+      }
+      &.bottom-right {
+        bottom: auto;
+        right: auto;
+      }
+
+    }
+  }
 </style>
