@@ -89,6 +89,7 @@ export default {
   max-height: 85vh;
   height: 100%;
   margin: auto;
+  z-index: 999;
 
   &.file-window--sm {
     max-width: 500px;

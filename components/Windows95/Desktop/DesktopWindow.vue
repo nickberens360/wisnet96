@@ -73,7 +73,7 @@
           title-id="back-to-wisnet-handle"
           title="Learn More"
           class="file-window--sm"
-          style="background: var(--wisnet-color-orange); max-height: 200px;"
+          style="background: var(--wisnet-color-orange); max-height: 200px; z-index: 2"
       >
         <template v-slot:content>
           <button-round
