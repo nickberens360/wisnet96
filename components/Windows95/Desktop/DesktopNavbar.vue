@@ -144,6 +144,8 @@ export default {
 
 <style scoped lang="scss">
 
+
+
 .dropdown-96 {
   display: flex;
   //align-items: center;
@@ -180,6 +182,7 @@ export default {
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 9999;
 
   .btn {
     font-size: 20px;
