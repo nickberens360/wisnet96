@@ -20,26 +20,16 @@ export default {
 }
 </script>
 
+
 <style scoped lang="scss">
   .desktop-region {
-    position: absolute;
-    padding: 40px;
-    &.top-left {
-      top: 0;
-      left: 0;
-    }
-    &.bottom-left {
-      bottom: 80px;
-      left: 0;
-    }
-    &.top-right {
-      top: 0;
-      right: 0;
-    }
-    &.bottom-right {
-      bottom: 100px;
-      right: 60px;
-    }
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
 
   }
   @media only screen and ( max-width: 895px ){

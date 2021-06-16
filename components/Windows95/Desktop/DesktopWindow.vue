@@ -1,113 +1,105 @@
 <template>
   <div class="desktop-95">
 
-<!--    <transition name="modal">
-      <modal-big/>
-    </transition>-->
+    <div class="desktop-region-container">
+      <div class="desktop-region-quadrant">
+        <DesktopIcon
+            id="throwback-folder"
+            link="/throwback"
+        >
+          <template v-slot:icon>
+            <img src="/open-folder.png" alt="">
+          </template>
+          <template v-slot:text>
+            Throwbacks
+          </template>
+        </DesktopIcon>
+        <DesktopIcon
+            id="team-folder"
+            link="/team"
+        >
+          <template v-slot:icon>
+            <img src="/open-folder.png" alt="">
+          </template>
+          <template v-slot:text>
+            Meet the Team
+          </template>
+        </DesktopIcon>
+        <DesktopIcon
+            id="wisnet96"
+            link="/page/about-wisconsin-networks"
+        >
+          <template v-slot:icon>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Rotating_globe.gif" alt="">
+          </template>
+          <template v-slot:text>
+            wisnet 96
+          </template>
+        </DesktopIcon>
+      </div>
+      <div class="desktop-region-quadrant align-items-end" style="justify-self: end;">
+        <DesktopIcon
+            id="back-to"
+            link="www.wisnet.com"
+            class="mb-100"
+        >
+          <template v-slot:icon>
+            <img src="/flux.gif" alt="">
 
-    <DesktopRegion position="top-left">
-      <DesktopIcon
-          id="throwback-folder"
-          link="/throwback"
-      >
-        <template v-slot:icon>
-          <img src="/open-folder.png" alt="">
-        </template>
-        <template v-slot:text>
-          Throwbacks
-        </template>
-      </DesktopIcon>
-      <DesktopIcon
-          id="team-folder"
-          link="/team"
-      >
-        <template v-slot:icon>
-          <img src="/open-folder.png" alt="">
-        </template>
-        <template v-slot:text>
-          Meet the Team
-        </template>
-      </DesktopIcon>
-      <DesktopIcon
-          id="wisnet96"
-          link="/page/about-wisconsin-networks"
-      >
-        <template v-slot:icon>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Rotating_globe.gif" alt="">
-        </template>
-        <template v-slot:text>
-          wisnet 96
-        </template>
-      </DesktopIcon>
-    </DesktopRegion>
-
-    <DesktopRegion position="bottom-left">
-      <DesktopIcon
-          id="makeit"
-          link="/make-a-page"
-      >
-        <template v-slot:icon>
-          <img src="/animated-gifs-under-construction-227.gif.pagespeed.ce.TM2vvZ_QxI.gif" alt="">
-        </template>
-        <template v-slot:text>
-          Make a Page
-        </template>
-      </DesktopIcon>
-      <DesktopIcon
-          id="welcome"
-          link="/"
-      >
-        <template v-slot:icon>
-          🗒️
-        </template>
-        <template v-slot:text>
-          Welcome
-        </template>
-      </DesktopIcon>
-    </DesktopRegion>
+          </template>
+          <template v-slot:text>
+            Back to 2021
+          </template>
+        </DesktopIcon>
+      </div>
+      <div class="desktop-region-quadrant" >
+        <DesktopIcon
+            id="makeit"
+            link="/make-a-page"
+        >
+          <template v-slot:icon>
+            <img src="/animated-gifs-under-construction-227.gif.pagespeed.ce.TM2vvZ_QxI.gif" alt="">
+          </template>
+          <template v-slot:text>
+            Make a Page
+          </template>
+        </DesktopIcon>
+        <DesktopIcon
+            id="welcome"
+            link="/"
+        >
+          <template v-slot:icon>
+            🗒️
+          </template>
+          <template v-slot:text>
+            Welcome
+          </template>
+        </DesktopIcon>
+      </div>
 
 
-    <DesktopRegion position="top-right">
-      <DesktopIcon
-          id="back-to"
-          link="www.wisnet.com"
-          class="mb-100"
-      >
-        <template v-slot:icon>
-          <img src="/flux.gif" alt="">
+      <div class="desktop-region-quadrant align-items-end" style="justify-self: end; min-width: 420px;">
+        <FileWindow
+            :show-controls="false"
+            id="back-to-wisnet"
+            title-id="back-to-wisnet-handle"
+            title="Learn More"
+            class="file-window--sm"
+            style="background: var(--wisnet-color-orange); max-height: 200px;"
+        >
+          <template v-slot:content>
+            <button-round
+                v-if="button"
+                :heading="button.heading"
+                :text="button.text"
+                :link="button.link"
+                :img="button.image"
+            />
+          </template>
 
-        </template>
-        <template v-slot:text>
-          Back to 2021
-        </template>
-      </DesktopIcon>
-    </DesktopRegion>
-
-    <DesktopRegion
-        position="bottom-right"
-        style="width: 420px; min-height: 178px;"
-    >
-      <FileWindow
-          :show-controls="false"
-          id="back-to-wisnet"
-          title-id="back-to-wisnet-handle"
-          title="Learn More"
-          class="file-window--sm"
-          style="background: var(--wisnet-color-orange);"
-      >
-        <template v-slot:content>
-          <button-round
-              v-if="button"
-              :heading="button.heading"
-              :text="button.text"
-              :link="button.link"
-              :img="button.image"
-          />
-        </template>
-
-      </FileWindow>
-    </DesktopRegion>
-
+        </FileWindow>
+      </div>
+    </div>
 
     <slot/>
 
@@ -171,10 +163,35 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 500px;
+  overflow: hidden;
+
   /deep/ .icon-button {
     color: white !important;
   }
 }
+
+.desktop-region-container  {
+  //border: 1px solid red;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat( 2, 50% );
+  grid-template-rows: 55% 45%;
+  //grid-template-rows: repeat(2, 50% );
+  height: calc(100vh - 54px);
+  margin-bottom: auto;
+  justify-items: left;
+}
+
+.desktop-region-quadrant {
+  //border: 1px solid red;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
 
 .windows-desktop-icons {
   position: relative;
@@ -185,8 +202,4 @@ body {
     margin-bottom: 20px;
   }
 }
-
-/*.page-footer {
-  padding-top: 30px;
-}*/
 </style>

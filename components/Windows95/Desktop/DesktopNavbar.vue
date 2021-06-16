@@ -23,7 +23,7 @@
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
           <div class="dropdown-96">
             <div class="dropdown-title">
-              <span>wisnet&nbsp;96</span>
+              <span><strong>wisnet</strong>&nbsp;96</span>
             </div>
             <div class="dropdown-content">
               <NuxtLink
@@ -34,13 +34,13 @@
               </NuxtLink>
               <NuxtLink
                   class="dropdown-item"
-                  to="/page/about-wisconsin-networks/"
+                  to="/welcome"
               >
                 <span class="link-icon">👋</span> Welcome
               </NuxtLink>
               <NuxtLink
                   class="dropdown-item"
-                  to="/desktop"
+                  to="/page/about-wisconsin-networks/"
               >
                 <span class="link-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Rotating_globe.gif" alt=""></span> wisnet 96
               </NuxtLink>
