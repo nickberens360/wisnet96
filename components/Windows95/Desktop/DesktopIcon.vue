@@ -1,7 +1,7 @@
 <template>
   <div
       class="icon-button-container"
-
+      v-bind:style="{ height: containerHeight + 'px', width: containerWidth + 'px' }"
   >
 
     <NuxtLink
@@ -82,8 +82,9 @@ export default {
 
 .icon-button-container {
   position: relative;
+  //margin: 0 auto;
   text-align: center;
-  padding: 0 15px;
+
 }
 
 .dragstart {
@@ -91,14 +92,12 @@ export default {
 }
 
 .icon-button {
-  position: relative;
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin-right: auto;
-
-  //color: white;
+  padding: 0 15px;
   font-size: 12px;
   font-weight: bold;
 

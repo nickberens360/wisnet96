@@ -34,7 +34,7 @@
               </NuxtLink>
               <NuxtLink
                   class="dropdown-item"
-                  to="/welcome"
+                  to="/"
               >
                 <span class="link-icon">👋</span> Welcome
               </NuxtLink>
@@ -201,7 +201,7 @@ export default {
   }
 
 }
-@media only screen and ( max-width: 895px ){
+@media only screen and ( max-width: 960px ){
   .navbar-nav {
     display: none;
   }

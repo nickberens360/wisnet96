@@ -92,6 +92,7 @@ export default {
 
   &.file-window--sm {
     max-width: 500px;
+    top: auto;
   }
 
   &.file-window--md {

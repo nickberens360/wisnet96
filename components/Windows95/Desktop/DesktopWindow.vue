@@ -36,23 +36,6 @@
             wisnet 96
           </template>
         </DesktopIcon>
-      </div>
-      <div class="desktop-region-quadrant align-items-end" style="justify-self: end;">
-        <DesktopIcon
-            id="back-to"
-            link="www.wisnet.com"
-            class="mb-100"
-        >
-          <template v-slot:icon>
-            <img src="/flux.gif" alt="">
-
-          </template>
-          <template v-slot:text>
-            Back to 2021
-          </template>
-        </DesktopIcon>
-      </div>
-      <div class="desktop-region-quadrant" >
         <DesktopIcon
             id="makeit"
             link="/make-a-page"
@@ -76,33 +59,46 @@
           </template>
         </DesktopIcon>
       </div>
-
-
-      <div class="desktop-region-quadrant align-items-end" style="justify-self: end; min-width: 420px;">
-        <FileWindow
-            :show-controls="false"
-            id="back-to-wisnet"
-            title-id="back-to-wisnet-handle"
-            title="Learn More"
-            class="file-window--sm"
-            style="background: var(--wisnet-color-orange); max-height: 200px;"
+      <div class="desktop-region-quadrant" style="justify-self: flex-end">
+        <DesktopIcon
+            id="back-to"
+            link="www.wisnet.com"
+            class="mb-100"
         >
-          <template v-slot:content>
-            <button-round
-                v-if="button"
-                :heading="button.heading"
-                :text="button.text"
-                :link="button.link"
-                :img="button.image"
-            />
-          </template>
+          <template v-slot:icon>
+            <img src="/flux.gif" alt="">
 
-        </FileWindow>
+          </template>
+          <template v-slot:text>
+            Back to 2021
+          </template>
+        </DesktopIcon>
       </div>
     </div>
 
     <slot/>
 
+    <div style="position: absolute; width: 420px; height: 178px; bottom: 70px; right: 15px; ">
+      <FileWindow
+          :show-controls="false"
+          id="back-to-wisnet"
+          title-id="back-to-wisnet-handle"
+          title="Learn More"
+          class="file-window--sm"
+          style="background: var(--wisnet-color-orange); max-height: 200px;"
+      >
+        <template v-slot:content>
+          <button-round
+              v-if="button"
+              :heading="button.heading"
+              :text="button.text"
+              :link="button.link"
+              :img="button.image"
+          />
+        </template>
+
+      </FileWindow>
+    </div>
 
     <DesktopNavbar
         :nav-items="throwbackLinks"
@@ -149,9 +145,6 @@ export default {
 
 
 <style lang="scss" scoped>
-body {
-  overflow: hidden;
-}
 
 .desktop-95 {
   height: 100vh;
@@ -168,22 +161,24 @@ body {
   /deep/ .icon-button {
     color: white !important;
   }
+  @media only screen and ( max-width: 960px ){
+    background-size: 250px;
+  }
 }
 
-.desktop-region-container  {
-  //border: 1px solid red;
+.desktop-region-container {
   width: 100%;
   display: grid;
   grid-template-columns: repeat( 2, 50% );
-  grid-template-rows: 55% 45%;
+  grid-template-rows: 100% 100%;
   //grid-template-rows: repeat(2, 50% );
   height: calc(100vh - 54px);
   margin-bottom: auto;
   justify-items: left;
+  overflow: hidden;
 }
 
 .desktop-region-quadrant {
-  //border: 1px solid red;
   padding: 20px;
   position: relative;
   display: flex;
