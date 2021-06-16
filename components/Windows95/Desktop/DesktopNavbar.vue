@@ -54,8 +54,15 @@
           </div>
 
         </div>
-      </div>
 
+      </div>
+      <nuxt-link
+          exact to="/learn-more"
+          class="nav-link btn p-2 mr-auto hidden-desktop"
+          role="button"
+      >
+        <span class="nav-link-inner-text">Learn More</span>
+      </nuxt-link>
       <ul class="navbar-nav navbar-nav-hover flex-row align-items-center position-relative mr-auto">
 
         <li
@@ -201,9 +208,17 @@ export default {
   }
 
 }
+
+.hidden-desktop {
+  display: none;
+}
+
 @media only screen and ( max-width: 960px ){
   .navbar-nav {
     display: none;
+  }
+  .hidden-desktop {
+    display: block;
   }
 }
 </style>

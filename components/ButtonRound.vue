@@ -40,17 +40,11 @@ export default {
 
 <style scoped lang="scss">
 .button-round {
-  /*position: fixed;
-  z-index: 10;
-  bottom: 40px;
-  right: 40px;*/
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  /*max-width: 390px;*/
   padding: 15px;
-  //border-radius: 100px 20px 20px 100px;
   background: var(--wisnet-color-orange);
   text-decoration: none;
 }

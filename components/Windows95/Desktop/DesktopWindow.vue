@@ -59,26 +59,14 @@
           </template>
         </DesktopIcon>
       </div>
-      <div class="desktop-region-quadrant" style="justify-self: flex-end">
-        <DesktopIcon
-            id="back-to"
-            link="www.wisnet.com"
-            class="mb-100"
-        >
-          <template v-slot:icon>
-            <img src="/flux.gif" alt="">
+<!--      <div class="desktop-region-quadrant" style="justify-self: flex-end">
 
-          </template>
-          <template v-slot:text>
-            Back to 2021
-          </template>
-        </DesktopIcon>
-      </div>
+      </div>-->
     </div>
 
     <slot/>
 
-    <div style="position: absolute; width: 420px; height: 178px; bottom: 70px; right: 15px; ">
+    <div class="hidden-mobile" style="position: absolute; width: 420px; height: 178px; bottom: 70px; right: 15px; ">
       <FileWindow
           :show-controls="false"
           id="back-to-wisnet"
@@ -163,6 +151,9 @@ export default {
   }
   @media only screen and ( max-width: 960px ){
     background-size: 250px;
+    .hidden-mobile {
+      display: none;
+    }
   }
 }
 
