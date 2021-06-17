@@ -24,12 +24,16 @@ label {
   padding: 5px;
 }
 
+
+
+
 .btn,
 .nav-link {
   display: inline-flex;
   align-items: center;
   background: #C0C0C0;
   color: black;
+  //line-height: 1;
   &:hover,
   &:active,
   &:focus,
@@ -73,3 +77,19 @@ label {
   }
 }
 
+.btn-icon {
+  display: flex !important;
+  flex-direction: column;
+  max-height: unset !important;
+  width: 75px;
+  line-height: 1;
+}
+
+.btn-icon__icon {
+  font-size: 18px;
+  //color: blue;
+}
+
+*-handle {
+
+}

@@ -33,24 +33,7 @@ export default {
     currentRouteDisplay() {
       return this.$route.fullPath
     }
-  },
-  /*methods: {
-    submit(e){
-      console.log(e);
-      if (e.keyCode === 13) {
-        this.$router.push('/page/portfolio/');
-      }
-    }
-  }*/
-  /*methods: {
-    validateEmailAddress: function(e, path) {
-      if (e.keyCode === 13) {
-        this.$router.push({
-          path: path
-        })
-      }
-    },
-  }*/
+  }
 }
 </script>
 
