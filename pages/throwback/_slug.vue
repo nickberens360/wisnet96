@@ -23,8 +23,6 @@
             <span>Visit our Site</span>
             </a>
           </div>
-          
-
 
         </div>
       </div>
@@ -34,6 +32,7 @@
         <div class="site-header">
           <div style="background: white; display: inline-block">
           <img
+              v-if="post.ACF.logo.url"
               :src="post.ACF.logo.url"
               alt=""
               class="site-logo"
