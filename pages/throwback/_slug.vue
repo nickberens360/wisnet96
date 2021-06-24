@@ -16,7 +16,7 @@
           <img style="display: block; margin-top: auto;" src="https://web.archive.org/web/20090830162952/http://geocities.com/afdeling_humor/_borders/counter.gif" alt="">
           <img src="https://web.archive.org/web/20091023170716/http://www.geocities.com/chrisetta/gifs/link.gif" alt="">
           <div class="site-sidebar__group">
-            <a :href="post.ACF.website">
+            <a v-if="post.ACF.website" :href="post.ACF.website" target="_blank">
             <div style="width:100%">
               <img src="https://web.archive.org/web/20090821185927/http://geocities.com/SiliconValley/Peaks/8552/reviews/images/computer.gif" alt="">
             </div>
