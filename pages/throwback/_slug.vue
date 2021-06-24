@@ -20,7 +20,7 @@
             <div style="width:100%">
               <img src="https://web.archive.org/web/20090821185927/http://geocities.com/SiliconValley/Peaks/8552/reviews/images/computer.gif" alt="">
             </div>
-            <span>View our Site</span>
+            <span>Visit our Site</span>
             </a>
           </div>
 
