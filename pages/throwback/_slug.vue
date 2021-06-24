@@ -23,6 +23,7 @@
             <span>Visit our Site</span>
             </a>
           </div>
+          
 
 
         </div>
@@ -53,6 +54,10 @@
             v-if="post.content.rendered"
             v-html="post.content.rendered"
         />
+        </div>
+
+        <div class="text-center mt-50">
+          <img src="https://web.archive.org/web/20091021190620/http://www.geocities.com/erector180/hamster62.gif" alt="">
         </div>
 
 
@@ -156,6 +161,7 @@ export default {
   border: 2px solid red;
   border-radius: 10px;
   padding: 10px;
+  align-items: center;
 }
 marquee {
   display: block;
