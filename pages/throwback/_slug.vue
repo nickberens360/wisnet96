@@ -50,7 +50,7 @@
 
         </div>
 
-        <div class="site-content-main" :style=" `background: ${bgImg};`   ">
+        <div class="site-content-main" :style=" `background-image: ${bgImg};`   ">
           <div class="text-center">
             <img src="https://web.archive.org/web/20091021190620/http://www.geocities.com/erector180/hamster62.gif" alt="">
           </div>
@@ -199,10 +199,9 @@ h1 {
 }
 
 .site-content-main {
-  background: #fff;
+  background-size: 100px;
   border-radius: 10px;
   border: 2px solid red;
-  background-size: 100%;
   padding: 40px 20px;
 }
 
