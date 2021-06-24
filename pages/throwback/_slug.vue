@@ -50,6 +50,7 @@
 
         </div>
 
+        <img style="width: 100%" src="https://web.archive.org/web/20091021204400/http://www.geocities.com/defenders_chapter2/firebar.gif" alt="">
         <div class="site-content-main" :style=" `background-image: ${bgImg};`   ">
           <div class="text-center">
             <img src="https://web.archive.org/web/20091021190620/http://www.geocities.com/erector180/hamster62.gif" alt="">
