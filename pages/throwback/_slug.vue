@@ -120,7 +120,7 @@ export default {
 .site-logo {
   max-width: 200px;
   max-height: 150px;
-  margin: auto auto 20px;
+  margin: auto;
   display: block;
 
 }
