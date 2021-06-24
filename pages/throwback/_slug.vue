@@ -51,7 +51,7 @@
 
         </div>
 
-        <img style="width: 100%" src="/firebar.gif" alt="">
+<!--        <img style="width: 100%" src="/firebar.gif" alt="">-->
 
         <div class="site-content-main" :style=" `background-image: ${bgImg};`   ">
           <div class="text-center">
