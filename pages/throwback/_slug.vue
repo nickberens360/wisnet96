@@ -13,8 +13,8 @@
 
       <div class="site-sidebar">
         <div class="site-sidebar__container">
-          <img style="display: block; margin-top: auto;" src="https://web.archive.org/web/20090830162952/http://geocities.com/afdeling_humor/_borders/counter.gif" alt="">
-          <img src="https://web.archive.org/web/20091023170716/http://www.geocities.com/chrisetta/gifs/link.gif" alt="">
+          <img style="display: block; margin-top: auto;" src="/counter.gif" alt="">
+          <img src="/link.gif" alt="">
           <div class="site-sidebar__group">
             <a v-if="post.ACF.website" :href="post.ACF.website" target="_blank">
             <div style="width:100%">
@@ -24,7 +24,7 @@
             </a>
           </div>
           <br>
-          <img src="https://web.archive.org/web/20090727154617/http://www.geocities.com/donald_ufo/tr1.gif" alt="">
+          <img src="/tr1.gif" alt="">
 
         </div>
       </div>
@@ -46,14 +46,14 @@
                 v-html="post.title.rendered"
             />
           </marquee>
-          <img src="https://web.archive.org/web/20091024094134/http://www.geocities.com/liquordepot1/welcome13d.gif" alt="">
+          <img src="/welcome13d.gif" alt="">
 
         </div>
 
-        <img style="width: 100%" src="https://web.archive.org/web/20091021204400/http://www.geocities.com/defenders_chapter2/firebar.gif" alt="">
+        <img style="width: 100%" src="/firebar.gif" alt="">
         <div class="site-content-main" :style=" `background-image: ${bgImg};`   ">
           <div class="text-center">
-            <img src="https://web.archive.org/web/20091021190620/http://www.geocities.com/erector180/hamster62.gif" alt="">
+            <img src="/hamster62.gif" alt="">
           </div>
         <div
             v-if="post.content.rendered"
@@ -62,7 +62,7 @@
         </div>
 
         <div class="text-center mt-50">
-          <img src="https://web.archive.org/web/20091026092737/http://geocities.com/pleather_pidgeons/ufo.gif" alt="">
+          <img src="/ufo.gif" alt="">
         </div>
 
 
