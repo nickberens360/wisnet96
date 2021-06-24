@@ -186,6 +186,7 @@ h1 {
 
   /deep/ p, /deep/ ul {
     //border: 4px solid #04ff46 !important;
+    font-size: 18px;
     background: white;
     padding: 10px;
     border-radius: 10px;
