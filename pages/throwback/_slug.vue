@@ -137,7 +137,7 @@ export default {
   min-height: 100%;
   padding-right: 20px;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
-  background: black url("https://web.archive.org/web/20091019204838/http://www.geocities.com/rotkwe/background.gif");
+  background: black url("/background.gif");
 }
 
 .site-sidebar {
