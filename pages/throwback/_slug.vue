@@ -62,7 +62,11 @@
         </div>
 
         <div class="text-center mt-50">
-          <img src="/ufo.gif" alt="">
+          <img src="/spaceship.gif" alt="">
+          <img src="/spaceship.gif" alt="">
+          <img src="/spaceship.gif" alt="">
+          <img src="/spaceship.gif" alt="">
+          <img src="/spaceship.gif" alt="">
         </div>
 
 
