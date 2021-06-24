@@ -185,7 +185,7 @@ h1 {
   font-size: 14px;
 
   /deep/ p, /deep/ ul {
-    border: 4px solid #04ff46 !important;
+    //border: 4px solid #04ff46 !important;
     background: white;
     padding: 10px;
     border-radius: 10px;
