@@ -23,6 +23,8 @@
             <span>Visit our Site</span>
             </a>
           </div>
+          <br>
+          <img src="https://web.archive.org/web/20090727154617/http://www.geocities.com/donald_ufo/tr1.gif" alt="">
 
         </div>
       </div>
@@ -44,11 +46,14 @@
                 v-html="post.title.rendered"
             />
           </marquee>
-          <img src="https://web.archive.org/web/20091020105715/http://hk.geocities.com/winhk2002/image/welcome9.gif" alt="">
+          <img src="https://web.archive.org/web/20091024094134/http://www.geocities.com/liquordepot1/welcome13d.gif" alt="">
 
         </div>
 
         <div class="site-content-main" :style=" `background: ${bgImg};`   ">
+          <div class="text-center">
+            <img src="https://web.archive.org/web/20091021190620/http://www.geocities.com/erector180/hamster62.gif" alt="">
+          </div>
         <div
             v-if="post.content.rendered"
             v-html="post.content.rendered"
@@ -56,7 +61,7 @@
         </div>
 
         <div class="text-center mt-50">
-          <img src="https://web.archive.org/web/20091021190620/http://www.geocities.com/erector180/hamster62.gif" alt="">
+          <img src="https://web.archive.org/web/20091026092737/http://geocities.com/pleather_pidgeons/ufo.gif" alt="">
         </div>
 
 
