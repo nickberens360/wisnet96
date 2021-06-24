@@ -31,6 +31,7 @@
       <div
           class="site-content"
       >
+
         <div class="site-header">
           <div style="background: white; display: inline-block">
           <img
@@ -51,6 +52,7 @@
         </div>
 
         <img style="width: 100%" src="/firebar.gif" alt="">
+
         <div class="site-content-main" :style=" `background-image: ${bgImg};`   ">
           <div class="text-center">
             <img src="/hamster62.gif" alt="">
@@ -204,7 +206,7 @@ h1 {
 }
 
 .site-content-main {
-  background-size: 100px;
+  background-size: 25%;
   border-radius: 10px;
   border: 2px solid red;
   padding: 40px 20px;
