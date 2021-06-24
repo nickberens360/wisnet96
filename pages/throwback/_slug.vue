@@ -184,7 +184,7 @@ h1 {
   text-align: left;
   font-size: 14px;
 
-  /deep/ p {
+  /deep/ p, /deep/ ul {
     border: 4px solid #04ff46 !important;
     background: white;
     padding: 10px;
