@@ -128,7 +128,7 @@ export default {
     resize: both;
     overflow: auto;
     padding: 0;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-family: 'Comic Neue', cursive;
   }
   .file-window__controls {
     display: flex;
