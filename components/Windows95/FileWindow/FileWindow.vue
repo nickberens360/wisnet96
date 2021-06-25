@@ -91,7 +91,9 @@ export default {
   margin: auto;
   z-index: 999;
   @media only screen and ( max-width: 600px ){
-    margin-top: 60px;
+    //margin-top: 10px;
+    max-height: 75vh;
+    max-width: 95% !important;
   }
 
   &.file-window--sm {
