@@ -226,9 +226,8 @@ export default {
 }
 
 @media only screen and ( max-width: 600px ){
-  .navbar-nav {
-    display: none;
-    .time {
+  .navbar {
+   /deep/ .time {
       display: none;
     }
   }
