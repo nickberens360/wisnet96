@@ -18,11 +18,6 @@ export default {
     alias: {
         'images': resolve(__dirname, './assets/images'),
     },
-
-    /*router: {
-        base: '/page/'
-    },*/
-
     /*
      ** Headers of the page
      */
@@ -48,15 +43,18 @@ export default {
                 property: "og:image",
                 content: "https://www.wisnet96.com/wisnet96-og-image.jpg"
             },
-
-
-
         ],
         script: [
             { src: 'https://code.jquery.com/jquery-3.5.1.slim.min.js', body: true },
             { src: 'https://platform.twitter.com/widgets.js', body: true },
             { src: 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js', body: true },
             { src: '/js/pixel.js', body: true }
+        ],
+        link: [
+            {
+                rel: 'stylesheet',
+                href: 'https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap'
+            }
         ]
     },
     /*

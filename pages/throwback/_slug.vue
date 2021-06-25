@@ -41,7 +41,7 @@
               class="site-logo"
           >
           </div>
-          <marquee behavior="scroll" direction="">
+          <marquee behavior="scroll">
             <h1
                 v-if="post.title.rendered"
                 v-html="post.title.rendered"
@@ -138,7 +138,9 @@ export default {
   display: flex;
   min-height: 100%;
   padding-right: 20px;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  //font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-family: 'Comic Neue', cursive;
+  font-weight: 700;
   background: black url("/background.gif");
 }
 
@@ -182,6 +184,7 @@ marquee {
 
 h1 {
   font-size: 30px;
+  font-weight: 700;
   margin-bottom: 0;
   color: white;
 
