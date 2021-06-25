@@ -132,6 +132,10 @@ export default {
     padding: 0;
     font-family: 'Comic Neue', cursive;
     font-weight: bold;
+    a {
+      font-weight: bold;
+      text-decoration: underline;
+    }
   }
   .file-window__controls {
     display: flex;

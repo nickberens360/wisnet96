@@ -47,6 +47,10 @@ export default {
     padding: 20px !important;
     background: #fff url('@/static/floppy.png');
   }
+  @media only screen and ( max-width: 600px ){
+    max-height: 75vh;
+    margin-top: 30px;
+  }
 
   p {
     font-size: 16px;
