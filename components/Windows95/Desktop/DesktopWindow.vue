@@ -132,7 +132,8 @@ export default {
 <style lang="scss" scoped>
 
 .desktop-95 {
-  height: 100vh;
+  //height: 100vh;
+  height: calc(100vh - 54px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -160,10 +161,10 @@ export default {
 
 .desktop-region-container {
   width: 100%;
+  height: 100%;
   display: grid;
   grid-template-columns: repeat( 2, 50% );
   grid-template-rows: 100% 100%;
-  height: calc(100vh - 54px);
   margin-bottom: auto;
   justify-items: left;
   overflow: hidden;
@@ -176,7 +177,7 @@ export default {
 }
 
 .desktop-region-quadrant {
-  padding: 20px;
+  padding: 0 20px 20px;
   position: relative;
   display: flex;
   flex-direction: column;

@@ -18,9 +18,9 @@
           <span class="emoji">📐</span> measured results & risk-tasking <br>
           <span class="emoji">🎲</span> play & hard work <br>
           <span class="emoji">🏘</span>️ community & culture <br>
-          <span class="emoji">🤓</span> Geeks & <span class="emoji">🧑‍🎨 </span>Creative</p>
+          <span class="emoji">🤓</span> Geeks & <span class="emoji">🧑‍🎨 </span>Creatives</p>
 
-        <NuxtLink exact to="/page/about-wisconsin-networks" class="btn btn-lg">
+        <NuxtLink exact to="/desktop" class="btn btn-lg">
           Enjoy the Throwback!
         </NuxtLink>
       </div>
@@ -54,6 +54,18 @@ export default {
 
   .emoji {
     font-size: 30px;
+  }
+  @media only screen and ( max-width: 960px ){
+    h2 {
+      font-size: 24px;
+      margin-bottom: 0;
+    }
+    p {
+      font-size: 12px;
+    }
+    .btn.btn-lg {
+      font-size: 12px;
+    }
   }
 }
 

@@ -39,11 +39,14 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style  lang="scss">
 .file-window {
   /deep/ .card-body {
     padding: 20px;
   }
+  /*iframe {
+    height: auto !important;
+  }*/
 
 }
 

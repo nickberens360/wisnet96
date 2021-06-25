@@ -212,9 +212,9 @@ h1 {
 }
 
 @media only screen and ( max-width: 840px ){
-  .hidden-mobile {
+  /*.hidden-mobile {
     display: none;
-  }
+  }*/
   .site-content-container {
     display: block;
   }

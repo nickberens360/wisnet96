@@ -81,15 +81,18 @@ export default {
 
 .file-window {
   position: absolute;
-  top: 30px;
+  //top: 60px;
   resize: both;
   overflow: auto;
   max-width: 960px;
   width: 100%;
   max-height: 85vh;
-  height: 100%;
+  //height: 100%;
   margin: auto;
   z-index: 999;
+  @media only screen and ( max-width: 600px ){
+    margin-top: 60px;
+  }
 
   &.file-window--sm {
     max-width: 500px;
@@ -125,6 +128,7 @@ export default {
     resize: both;
     overflow: auto;
     padding: 0;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
   }
   .file-window__controls {
     display: flex;
@@ -133,5 +137,6 @@ export default {
     font-weight: bold;
     line-height: 1;
   }
+
 }
 </style>

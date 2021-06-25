@@ -10,7 +10,7 @@
     </ul>
     <div class="d-flex align-items-center">
 
-      <span class="font-small mr-2">Share:</span>
+      <span class="font-small mr-2 share-label">Share:</span>
       <a
           :href="`https://www.facebook.com/sharer/sharer.php?u=https://www.wisnet96.com${path}`"
           class="mr-2"
@@ -58,6 +58,10 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+  @media only screen and ( max-width: 615px ){
+    .share-label {
+      display: none;
+    }
+  }
 </style>

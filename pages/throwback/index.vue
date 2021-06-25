@@ -8,7 +8,7 @@
 
     <template v-slot:content>
       <img
-          src="https://media4.giphy.com/media/TfjLMgZ50avqazGWaH/giphy.gif?cid=ecf05e47o4hlifltlqy2ygldalfk1s8n4dti6uaiaiv2wjuy&rid=giphy.gif&ct=g"
+          src="https://web.archive.org/web/19970225052545/http://www2.geocities.com:80/SoHo/1085/wwwdani.gif"
           style="max-width: 300px;"
           alt=""
       >
@@ -16,7 +16,7 @@
       <br>
       <h2 style="color: red; margin-bottom: 40px">Client Throwbacks</h2>
       <p>Click on a hyperlink below to checkout some of our client's Throwback websites!</p>
-      <br>
+
       <ul class="text-left">
         <li
             v-for="item in posts"
