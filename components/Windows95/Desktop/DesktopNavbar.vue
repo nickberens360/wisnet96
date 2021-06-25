@@ -28,25 +28,25 @@
             <div class="dropdown-content">
               <NuxtLink
                   class="dropdown-item"
-                  to="/desktop"
+                  exact to="/desktop"
               >
                 <span class="link-icon">🏠</span> Desktop
               </NuxtLink>
               <NuxtLink
                   class="dropdown-item"
-                  to="/"
+                  exact to="/"
               >
                 <span class="link-icon">👋</span> Welcome
               </NuxtLink>
               <NuxtLink
                   class="dropdown-item"
-                  to="/page/about-wisconsin-networks/"
+                  exact to="/page/about-wisconsin-networks/"
               >
                 <span class="link-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Rotating_globe.gif" alt=""></span> wisnet 96
               </NuxtLink>
               <NuxtLink
                   class="dropdown-item"
-                  to="/throwback"
+                  exact to="/throwback"
               >
                 <span class="link-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Rotating_globe.gif" alt=""></span> Throwbacks
               </NuxtLink>
