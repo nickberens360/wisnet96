@@ -134,6 +134,7 @@ export default {
 .desktop-95 {
   //height: 100%;
   //border: 10px solid red;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

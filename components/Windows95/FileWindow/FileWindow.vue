@@ -92,7 +92,7 @@ export default {
   z-index: 999;
   @media only screen and ( max-width: 600px ){
     top: 20px;
-    max-height: 75vh;
+    //max-height: 80vh;
     max-width: 95% !important;
   }
 
