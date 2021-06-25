@@ -224,4 +224,15 @@ export default {
     display: block;
   }
 }
+
+@media only screen and ( max-width: 600px ){
+  .navbar-nav {
+    display: none;
+    .time {
+      display: none;
+    }
+  }
+}
+
+
 </style>
