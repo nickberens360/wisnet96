@@ -129,11 +129,11 @@ export default {
 </script>
 
 
-<style lang="scss" scoped>
+<style lang="scss" >
 
 .desktop-95 {
-  //height: 100vh;
-  height: calc(100vh - 54px);
+  //height: 100%;
+  //border: 10px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -161,7 +161,8 @@ export default {
 
 .desktop-region-container {
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 54px);
+  //border: 10px solid green;
   display: grid;
   grid-template-columns: repeat( 2, 50% );
   grid-template-rows: 100% 100%;

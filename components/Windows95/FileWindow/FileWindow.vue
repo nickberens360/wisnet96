@@ -77,21 +77,21 @@ export default {
 </script>
 
 
-<style lang="scss" >
+<style lang="scss" scoped>
 
 .file-window {
   position: absolute;
-  top: 60px;
+  top: 20px;
   resize: both;
   overflow: auto;
   max-width: 960px;
   width: 100%;
   max-height: 85vh;
-  //height: 100%;
+  height: auto;
   margin: auto;
   z-index: 999;
   @media only screen and ( max-width: 600px ){
-    top: auto;
+    top: 20px;
     max-height: 75vh;
     max-width: 95% !important;
   }
