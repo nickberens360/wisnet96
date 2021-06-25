@@ -23,6 +23,7 @@
         <NuxtLink exact to="/desktop" class="btn btn-lg">
           Enjoy the Throwback!
         </NuxtLink>
+        <br>
       </div>
     </template>
   </FileWindow>
