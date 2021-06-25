@@ -14,17 +14,17 @@
       <div class="site-sidebar">
         <div class="site-sidebar__container">
           <img style="display: block; margin-top: auto;" src="/counter.gif" alt="">
-          <img src="/link.gif" alt="">
+          <img class="hidden-mobile" src="/link.gif" alt="">
           <div class="site-sidebar__group">
             <a v-if="post.ACF.website" :href="post.ACF.website" target="_blank">
             <div style="width:100%">
-              <img src="https://web.archive.org/web/20090821185927/http://geocities.com/SiliconValley/Peaks/8552/reviews/images/computer.gif" alt="">
+              <img class="hidden-mobile" src="https://web.archive.org/web/20090821185927/http://geocities.com/SiliconValley/Peaks/8552/reviews/images/computer.gif" alt="">
             </div>
             <span>Visit our Site</span>
             </a>
           </div>
-          <br>
-          <img src="/tr1.gif" alt="">
+
+          <img class="hidden-mobile mt-50" src="/tr1.gif" alt="">
 
         </div>
       </div>
@@ -50,8 +50,6 @@
           <img src="/welcome13d.gif" alt="">
 
         </div>
-
-<!--        <img style="width: 100%" src="/firebar.gif" alt="">-->
 
         <div class="site-content-main" :style=" `background-image: ${bgImg};`   ">
           <div class="text-center">
@@ -137,8 +135,6 @@ export default {
 .site-content-container {
   display: flex;
   min-height: 100%;
-  padding-right: 20px;
-  //font-family: "Comic Sans MS", "Comic Sans", cursive;
   font-family: 'Comic Neue', cursive;
   font-weight: 700;
   background: black url("/background.gif");
@@ -146,9 +142,7 @@ export default {
 
 .site-sidebar {
   flex: 200px;
-  /*background: black url("https://web.archive.org/web/20091019204838/http://www.geocities.com/rotkwe/background.gif");*/
   max-width: 200px;
-  margin-right: 20px;
   padding: 10px 15px;
 }
 
@@ -162,8 +156,10 @@ export default {
 
 .site-sidebar__group {
   a {
-    color: #fff;
-    font-size: 14px;
+    font-weight: bold;
+    font-size: 24px;
+    color: blue;
+    text-decoration: underline;
   }
 }
 
@@ -194,7 +190,7 @@ h1 {
 .site-content {
   flex: 100%;
   flex-grow: 1;
-  margin: 10px auto 20px;
+  padding: 20px;
 
   text-align: left;
   font-size: 14px;
@@ -213,6 +209,34 @@ h1 {
   border-radius: 10px;
   border: 2px solid red;
   padding: 40px 20px;
+}
+
+@media only screen and ( max-width: 840px ){
+  .hidden-mobile {
+    display: none;
+  }
+  .site-content-container {
+    display: block;
+  }
+  .site-sidebar {
+    max-width: 100%;
+    //display: none;
+  }
+  .site-sidebar__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: auto;
+  }
+}
+
+@media only screen and ( max-width: 625px ){
+  .site-header {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 
