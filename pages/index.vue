@@ -44,7 +44,7 @@ export default {
 <style scoped lang="scss">
 .file-window {
   /deep/ .card-body {
-    padding: 20px;
+    padding: 20px !important;
     background: #fff url('@/static/floppy.png');
   }
 

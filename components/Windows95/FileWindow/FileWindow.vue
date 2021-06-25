@@ -129,6 +129,7 @@ export default {
     overflow: auto;
     padding: 0;
     font-family: 'Comic Neue', cursive;
+    font-weight: bold;
   }
   .file-window__controls {
     display: flex;
