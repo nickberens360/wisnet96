@@ -59,9 +59,6 @@
           </template>
         </DesktopIcon>
       </div>
-<!--      <div class="desktop-region-quadrant" style="justify-self: flex-end">
-
-      </div>-->
     </div>
 
     <slot/>
@@ -155,6 +152,10 @@ export default {
       display: none;
     }
   }
+  @media only screen and ( max-width: 520px ){
+    background-size: 200px;
+    background-position: center 75%;
+  }
 }
 
 .desktop-region-container {
@@ -162,11 +163,16 @@ export default {
   display: grid;
   grid-template-columns: repeat( 2, 50% );
   grid-template-rows: 100% 100%;
-  //grid-template-rows: repeat(2, 50% );
   height: calc(100vh - 54px);
   margin-bottom: auto;
   justify-items: left;
   overflow: hidden;
+  @media only screen and ( max-width: 960px ){
+    display: block;
+    grid-template-columns: unset;
+    grid-template-rows: unset;
+    height: auto;
+  }
 }
 
 .desktop-region-quadrant {
@@ -176,6 +182,12 @@ export default {
   flex-direction: column;
   flex-wrap: wrap;
   height: 100%;
+  @media only screen and ( max-width: 960px ){
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0;
+  }
 }
 
 
