@@ -14,7 +14,6 @@
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           class="site-sidebar"
-          @submit.prevent="handleSubmit"
       >
         <input type="hidden" name="form-name" value="make-a-page" />
         <div class="site-sidebar__container">
@@ -75,7 +74,7 @@
               >
             </div>
             <div class="form-group">
-              <button class="submit">Submit</button>
+              <button type="submit">Submit</button>
 <!--              <button @click.prevent="submit" class="submit">Submit</button>-->
               <p v-if="errors" class="error">The form above has errors,
                 <br>please get your act together and resubmit
@@ -178,10 +177,11 @@ export default {
           )
           .join("&");
     },
-    handleSubmit () {
+    /*handleSubmit () {
       const axiosConfig = {
         header: { "Content-Type": "application/x-www-form-urlencoded" }
       };
+      console.log(this.formResponse);
       axios.post(
           "/",
           this.encode({
@@ -190,7 +190,7 @@ export default {
           }),
           axiosConfig
       );
-    },
+    },*/
 
     /*submit() {
       this.empty = !this.$v.formResponse.$anyDirty;
