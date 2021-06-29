@@ -23,6 +23,7 @@
               <input
                   v-model="formResponse.title"
                   id="title"
+                  name="title"
                   class="form-input"
                   type="text"
               >
@@ -32,6 +33,7 @@
               <input
                   v-model.lazy="$v.formResponse.email.$model"
                   id="email"
+                  name="email"
                   class="form-input"
                   type="email"
                   placeholder="youremail@emal.com"
@@ -48,6 +50,7 @@
               <input
                   v-model="formResponse.website"
                   id="website"
+                  name="website"
                   class="form-input"
                   type="text"
                   placeholder="https://www.yoursite.com/"
@@ -58,6 +61,7 @@
               <textarea
                   v-model="formResponse.content"
                   id="content"
+                  name="content"
                   class="form-input"
                   type="text"
                   placeholder="A paragraph or two about your organization"
@@ -69,6 +73,7 @@
               <input
                   @change="onFileChange"
                   id="logo"
+                  name="logo"
                   class="file-input"
                   type="file"
               >
