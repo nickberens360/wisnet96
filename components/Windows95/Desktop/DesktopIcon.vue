@@ -82,8 +82,10 @@ export default {
 
 .icon-button-container {
   position: relative;
-  //margin: 0 auto;
   text-align: center;
+  &:last-of-type {
+    margin-right: auto;
+  }
 
 }
 

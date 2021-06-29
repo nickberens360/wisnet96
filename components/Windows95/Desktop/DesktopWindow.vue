@@ -1,64 +1,62 @@
 <template>
   <div class="desktop-95">
 
-    <div class="desktop-region-container">
-      <div class="desktop-region-quadrant">
-        <DesktopIcon
-            id="throwback-folder"
-            link="/throwback"
-        >
-          <template v-slot:icon>
-            <img src="/open-folder.png" alt="">
-          </template>
-          <template v-slot:text>
-            Throwbacks
-          </template>
-        </DesktopIcon>
-        <DesktopIcon
-            id="team-folder"
-            link="/team"
-        >
-          <template v-slot:icon>
-            <img src="/open-folder.png" alt="">
-          </template>
-          <template v-slot:text>
-            Meet the Team
-          </template>
-        </DesktopIcon>
-        <DesktopIcon
-            id="wisnet96"
-            link="/page/about-wisconsin-networks"
-        >
-          <template v-slot:icon>
-            <img src="https://web.archive.org/web/20090829051611/http://www.geocities.com/santuariosfiliales/world_03.gif" alt="">
-          </template>
-          <template v-slot:text>
-            wisnet 96
-          </template>
-        </DesktopIcon>
-        <DesktopIcon
-            id="makeit"
-            link="/make-a-page"
-        >
-          <template v-slot:icon>
-            <img src="https://web.archive.org/web/20090829015037/http://www.geocities.com/nukinight2001/smashingcomputer.gif" alt="">
-          </template>
-          <template v-slot:text>
-            Make a Page
-          </template>
-        </DesktopIcon>
-        <DesktopIcon
-            id="welcome"
-            link="/"
-        >
-          <template v-slot:icon>
-            🗒️
-          </template>
-          <template v-slot:text>
-            Welcome
-          </template>
-        </DesktopIcon>
-      </div>
+    <div class="desktop-left">
+      <DesktopIcon
+          id="throwback-folder"
+          link="/throwback"
+      >
+        <template v-slot:icon>
+          <img src="/open-folder.png" alt="">
+        </template>
+        <template v-slot:text>
+          Throwbacks
+        </template>
+      </DesktopIcon>
+      <DesktopIcon
+          id="team-folder"
+          link="/team"
+      >
+        <template v-slot:icon>
+          <img src="/open-folder.png" alt="">
+        </template>
+        <template v-slot:text>
+          Meet the Team
+        </template>
+      </DesktopIcon>
+      <DesktopIcon
+          id="wisnet96"
+          link="/page/about-wisconsin-networks"
+      >
+        <template v-slot:icon>
+          <img src="https://web.archive.org/web/20090829051611/http://www.geocities.com/santuariosfiliales/world_03.gif" alt="">
+        </template>
+        <template v-slot:text>
+          wisnet 96
+        </template>
+      </DesktopIcon>
+      <DesktopIcon
+          id="makeit"
+          link="/make-a-page"
+      >
+        <template v-slot:icon>
+          <img src="https://web.archive.org/web/20090829015037/http://www.geocities.com/nukinight2001/smashingcomputer.gif" alt="">
+        </template>
+        <template v-slot:text>
+          Make a Page
+        </template>
+      </DesktopIcon>
+      <DesktopIcon
+          id="welcome"
+          link="/"
+      >
+        <template v-slot:icon>
+          🗒️
+        </template>
+        <template v-slot:text>
+          Welcome
+        </template>
+      </DesktopIcon>
     </div>
 
     <slot/>
@@ -132,9 +130,7 @@ export default {
 <style lang="scss" >
 
 .desktop-95 {
-  //height: 100%;
-  //border: 10px solid red;
-  height: 100vh;
+  height: calc(100vh - 54px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -156,37 +152,24 @@ export default {
   }
   @media only screen and ( max-width: 520px ){
     background-size: 200px;
-    background-position: center 75%;
+    background-position: center 85%;
   }
 }
 
-.desktop-region-container {
-  width: 100%;
-  height: calc(100vh - 54px);
-  //border: 10px solid green;
-  display: grid;
-  grid-template-columns: repeat( 2, 50% );
-  grid-template-rows: 100% 100%;
-  margin-bottom: auto;
-  justify-items: left;
-  overflow: hidden;
-  @media only screen and ( max-width: 960px ){
-    display: block;
-    grid-template-columns: unset;
-    grid-template-rows: unset;
-    height: auto;
-  }
-}
 
-.desktop-region-quadrant {
-  padding: 0 20px 20px;
-  position: relative;
+.desktop-left {
+  position: absolute;
+  left: 0;
+  top: 0;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  align-self: baseline;
   height: 100%;
+  padding: 0 20px 20px;
   @media only screen and ( max-width: 960px ){
     display: flex;
+    height: auto;
     flex-direction: row;
     justify-content: space-around;
     padding: 0;

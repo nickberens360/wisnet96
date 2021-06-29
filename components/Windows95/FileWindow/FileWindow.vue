@@ -81,17 +81,16 @@ export default {
 
 .file-window {
   position: absolute;
-  top: 20px;
   resize: both;
   overflow: auto;
   max-width: 960px;
   width: 100%;
   max-height: 85vh;
-  height: auto;
+  height: 100%;
   margin: auto;
   z-index: 999;
   @media only screen and ( max-width: 600px ){
-    top: 20px;
+    //top: 20px;
     //max-height: 80vh;
     max-width: 95% !important;
   }

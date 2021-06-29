@@ -8,12 +8,11 @@
 
     <template v-slot:content>
 
-      <div class="p-4 d-flex flex-wrap justify-content-between">
+      <div class="team-grid">
         <div
             v-for="item in posts"
             :key="item.id"
             class="p-2 mb-2 team-member"
-            style="width: 24%"
         >
           <NuxtLink
               :to="'team/'+item.slug" class="font-small"
@@ -41,11 +40,6 @@ import FileWindow from "@/components/Windows95/FileWindow/FileWindow";
 export default {
 
   components: {FileWindow},
-  /*data() {
-    return {
-      slug: this.$route.params.slug
-    };
-  },*/
   computed: {
     posts() {
       return this.$store.state.team;
@@ -62,9 +56,21 @@ export default {
   }
 }
 
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .team-member {
+  flex: 1 0 24%;
+  max-width: 24%;
   &:last-of-type {
     margin-right: auto;
+  }
+  @media only screen and ( max-width: 700px ){
+    flex: 1 0 49%;
+    max-width: 49%;
   }
 }
 </style>
