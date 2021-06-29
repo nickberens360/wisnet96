@@ -156,6 +156,7 @@ export default {
       display: flex;
       align-items: center;
       justify-content: center;
+      font-weight: bold;
     }
     .btn.has-fa {
       padding: 10px !important;

@@ -22,7 +22,8 @@
         "bootstrap": "^4.6.0",
         "nuxt": "^2.15.4",
         "nuxt-fontawesome": "^0.4.0",
-        "vue2-transitions": "^0.3.0"
+        "vue2-transitions": "^0.3.0",
+        "vuelidate": "^0.7.6"
     },
     "devDependencies": {
         "@babel/core": "^7.13.14",
