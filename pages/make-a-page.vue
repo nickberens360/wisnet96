@@ -186,7 +186,7 @@ export default {
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: this.encode({ 'form-name': 'contact', ...this.formResponse }),
+        body: this.encode({ 'form-name': 'make-a-page', ...this.formResponse }),
       })
           .then(() => alert('Success!'))
           .catch(error => alert(error));
