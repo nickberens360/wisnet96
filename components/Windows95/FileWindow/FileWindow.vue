@@ -10,7 +10,14 @@
       <div
           v-if="showControls"
           class="d-flex justify-content-end file-window__controls">
-        <button @click="isFullScreen = !isFullScreen" class="file-window__controls btn btn-sm btn-close mr-2 p-2 position-relative font-weight-bold" aria-hidden="true">&#9634;</button>
+        <button
+            @click="isFullScreen = !isFullScreen"
+            class="file-window__controls btn btn-sm btn-close mr-2 p-2 position-relative font-weight-bold has-fa"
+            aria-hidden="true">
+          <fa v-if="!isFullScreen" :icon="['far','window-maximize']"/>
+          <fa v-if="isFullScreen" :icon="['fas','window-minimize']"/>
+
+        </button>
         <nuxt-link to="/desktop" class="btn btn-sm btn-close p-2" aria-label="Close">
           <span class="position-relative font-weight-bold" aria-hidden="true">X</span>
         </nuxt-link>
@@ -89,7 +96,7 @@ export default {
   height: 100%;
   margin: auto;
   z-index: 999;
-  @media only screen and ( max-width: 600px ){
+  @media only screen and (max-width: 600px) {
     //top: 20px;
     //max-height: 80vh;
     max-width: 95% !important;
@@ -131,17 +138,32 @@ export default {
     padding: 0;
     font-family: 'Comic Neue', cursive;
     font-weight: bold;
+
     a {
       font-weight: bold;
       text-decoration: underline;
     }
   }
+
   .file-window__controls {
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
     line-height: 1;
+    .btn {
+      width: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .btn.has-fa {
+      padding: 10px !important;
+    }
+    svg {
+      height: 20px;
+      width: 20px;
+    }
   }
 
 }

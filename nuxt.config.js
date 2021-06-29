@@ -1,5 +1,5 @@
 import axios from "axios"
-import { resolve } from 'path'
+import {resolve} from 'path'
 
 /*let dynamicRoutes = () => {
     const routes = axios
@@ -45,10 +45,10 @@ export default {
             },
         ],
         script: [
-            { src: 'https://code.jquery.com/jquery-3.5.1.slim.min.js', body: true },
-            { src: 'https://platform.twitter.com/widgets.js', body: true },
-            { src: 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js', body: true },
-            { src: '/js/pixel.js', body: true }
+            {src: 'https://code.jquery.com/jquery-3.5.1.slim.min.js', body: true},
+            {src: 'https://platform.twitter.com/widgets.js', body: true},
+            {src: 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js', body: true},
+            {src: '/js/pixel.js', body: true}
         ],
         link: [
             {
@@ -78,10 +78,29 @@ export default {
         subFolders: false,
         cache: false
     },
+
     /*
      ** Nuxt.js dev-modules
      */
-    buildModules: [],
+    buildModules: [
+        ['nuxt-fontawesome', {
+            component: 'fa', //customize component name
+            imports: [
+                {
+                    set: '@fortawesome/free-solid-svg-icons',
+                    icons: ['fas']
+                },
+                {
+                    set: '@fortawesome/free-brands-svg-icons',
+                    icons: ['faGithub']
+                },
+                {
+                    set: '@fortawesome/free-regular-svg-icons',
+                    icons: ['far']
+                },
+            ]
+        }]
+    ],
     /*
      ** Build configuration
      */

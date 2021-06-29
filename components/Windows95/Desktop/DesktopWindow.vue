@@ -10,7 +10,8 @@
           <img src="/folder.gif" alt="">
         </template>
         <template v-slot:text>
-          Throwbacks
+          Throwbacks <font-awesome-icon :icon="['fas', 'adjust']"  />
+
         </template>
       </DesktopIcon>
       <DesktopIcon
