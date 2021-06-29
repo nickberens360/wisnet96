@@ -7,7 +7,7 @@
           link="/throwback"
       >
         <template v-slot:icon>
-          <img src="/open-folder.png" alt="">
+          <img src="/folder.gif" alt="">
         </template>
         <template v-slot:text>
           Throwbacks
@@ -18,7 +18,7 @@
           link="/team"
       >
         <template v-slot:icon>
-          <img src="/open-folder.png" alt="">
+          <img src="/folder.gif" alt="">
         </template>
         <template v-slot:text>
           Meet the Team
