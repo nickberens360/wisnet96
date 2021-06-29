@@ -79,7 +79,7 @@
               >
             </div>
             <div class="form-group">
-              <button type="submit">Submit</button>
+              <button type="submit" @click.prevent="handleSubmit">Send</button>
 <!--              <button @click.prevent="submit" class="submit">Submit</button>-->
               <p v-if="errors" class="error">The form above has errors,
                 <br>please get your act together and resubmit
@@ -106,7 +106,7 @@
             >
           </div>
           <marquee behavior="scroll">
-            <h1>{{ formResponse.title }}</h1>
+            <h1>{{formResponse.title}}</h1>
           </marquee>
           <img src="/welcome13d.gif" alt="">
         </div>
@@ -181,6 +181,15 @@ export default {
               key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
           )
           .join("&");
+    },
+    handleSubmit() {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: this.encode({ 'form-name': 'contact', ...this.formResponse }),
+      })
+          .then(() => alert('Success!'))
+          .catch(error => alert(error));
     },
     /*handleSubmit () {
       const axiosConfig = {
