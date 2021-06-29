@@ -14,6 +14,7 @@
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           class="site-sidebar"
+          @submit.prevent="handleSubmit"
       >
         <input type="hidden" name="form-name" value="make-a-page" />
         <div class="site-sidebar__container">
@@ -139,6 +140,7 @@
 import InternetExplorer from "@/components/Windows95/InternetExplorer/InternetExplorer";
 import {validationMixin} from 'vuelidate';
 import {required, email} from 'vuelidate/lib/validators';
+import axios from "axios";
 
 export default {
   mixins: [validationMixin],
@@ -170,7 +172,28 @@ export default {
   },
 
   methods: {
-    submit() {
+    encode (data) {
+      return Object.keys(data)
+          .map(
+              key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+          )
+          .join("&");
+    },
+    handleSubmit () {
+      const axiosConfig = {
+        header: { "Content-Type": "application/x-www-form-urlencoded" }
+      };
+      axios.post(
+          "/",
+          this.encode({
+            "form-name": "make-a-page",
+            ...this.formResponse
+          }),
+          axiosConfig
+      );
+    },
+
+    /*submit() {
       this.empty = !this.$v.formResponse.$anyDirty;
       this.errors = this.$v.formResponse.$anyError;
       this.uiState = "submit clicked";
@@ -178,7 +201,7 @@ export default {
         console.log(this.formResponse);
         this.uiState = "form submitted";
       }
-    },
+    },*/
     onFileChange(e) {
       const file = e.target.files[0];
       this.formResponse.logo = URL.createObjectURL(file);
