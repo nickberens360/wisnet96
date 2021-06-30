@@ -152,7 +152,6 @@
 import InternetExplorer from "@/components/Windows95/InternetExplorer/InternetExplorer";
 import {validationMixin} from 'vuelidate';
 import {required, email} from 'vuelidate/lib/validators';
-import axios from "axios";
 
 export default {
   mixins: [validationMixin],
@@ -192,7 +191,7 @@ export default {
           .join("&");
     },
     handleSubmit() {
-      fetch('/make-a-page', {
+      fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: this.encode({ 'form-name': 'make-a-page', ...this.formResponse }),
