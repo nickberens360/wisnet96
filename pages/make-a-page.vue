@@ -10,10 +10,13 @@
 
       <form
           name="make-a-page"
-          method="post"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           class="site-sidebar"
+          method="POST"
+          novalidate
+          enctype="multipart/form-data"
+          @submit.prevent="submit"
       >
         <input type="hidden" name="form-name" value="make-a-page" />
         <div class="site-sidebar__container">
@@ -71,7 +74,7 @@
             <div class="form-group text-left">
               <label for="logo">Upload Logo</label>
               <input
-                  @change="onFileChange"
+                  @change="processFile($event)"
                   id="logo"
                   name="logo"
                   class="file-input"
@@ -79,7 +82,7 @@
               >
             </div>
             <div class="form-group">
-              <button type="submit" class="btn" @click.prevent="handleSubmit">Send</button>
+              <button type="submit" class="btn">Send</button>
               <!--              <button @click.prevent="submit" class="submit">Submit</button>-->
               <p v-if="errors" class="error">The form above has errors,
                 <br>please get your act together and resubmit
@@ -150,6 +153,7 @@ export default {
   components: {InternetExplorer},
   data() {
     return {
+      formData: {},
       slug: this.$route.params.slug,
       bgImg: 'none',
       uiState: "submit not clicked",
@@ -175,14 +179,21 @@ export default {
   },
 
   methods: {
-    encode (data) {
-      return Object.keys(data)
-          .map(
-              key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-          )
-          .join("&");
+    processFile() {
+      this.formData.files = event.target.files;
     },
-    handleSubmit() {
+    encode(data) {
+      const formData = new FormData();
+      for (const key of Object.keys(data)) {
+        if (key === "files") {
+          formData.append(key, data[key][0]);
+        } else {
+          formData.append(key, data[key]);
+        }
+      }
+      return formData;
+    },
+    /*handleSubmit() {
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'multipart/form-data' },
@@ -190,6 +201,19 @@ export default {
       })
           .then(() => alert('Success!'))
           .catch(error => alert(error));
+    },*/
+    submit(e) {
+      fetch("/", {
+        method: "POST",
+        body: this.encode({
+          "form-name": e.target.getAttribute("name"),
+          ...this.formData
+        })
+      })
+          .then(res => {
+            res.json();
+          })
+          .catch(err => alert(err));
     },
     /*handleSubmit () {
       const axiosConfig = {
