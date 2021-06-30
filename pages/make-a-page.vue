@@ -193,7 +193,7 @@ export default {
         }
       }
       return formData;
-    }
+    },
     /*encode (data) {
       return Object.keys(data)
           .map(
