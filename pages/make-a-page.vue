@@ -31,7 +31,8 @@
             <div class="form-group text-left">
               <label for="logo">Upload Logo</label>
               <input
-                  @change="onFileChange"
+
+                  accept="image/*"
                   id="logo"
                   name="logo"
                   class="file-input"
@@ -203,8 +204,8 @@ export default {
       }
     },*/
     onFileChange(e) {
-      const file = e.target.files[0];
-      this.formResponse.logo = URL.createObjectURL(file);
+      /*const file = e.target.files[0];
+      this.formResponse.logo = URL.createObjectURL(file);*/
     }
   }
 
