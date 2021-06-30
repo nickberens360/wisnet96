@@ -109,16 +109,16 @@ export default {
     }
   },
   head: {
-    // title: this.metaTitle,
+    title: 'Yoooooo',
     meta: [
       {
         hid: 'description',
         name: 'description',
-        content: 'Home page description'
+        content: 'Test description'
       },
       {
         property: "og:image",
-        content: "https://www.wisnet96.com/wisnet96-og-image-test.jpg"
+        content: "/wisnet96-og-image-test.jpg"
       },
     ],
 
