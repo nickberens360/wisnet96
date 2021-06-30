@@ -205,6 +205,7 @@ export default {
     submit(e) {
       fetch("/", {
         method: "POST",
+        headers: { 'Content-Type': 'multipart/form-data' },
         body: this.encode({
           "form-name": e.target.getAttribute("name"),
           ...this.formData
