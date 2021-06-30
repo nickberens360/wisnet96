@@ -32,7 +32,6 @@
               <label for="logo">Upload Logo</label>
               <input
                   @change="onFileChange"
-                  :value="formResponse.logo"
                   id="logo"
                   name="logo"
                   class="file-input"
