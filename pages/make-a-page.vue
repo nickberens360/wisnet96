@@ -10,13 +10,10 @@
 
       <form
           name="make-a-page"
+          method="post"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           class="site-sidebar"
-          method="POST"
-          novalidate
-          enctype="multipart/form-data"
-          @submit.prevent="submit"
       >
         <input type="hidden" name="form-name" value="make-a-page" />
         <div class="site-sidebar__container">
@@ -32,16 +29,35 @@
               >
             </div>
             <div class="form-group text-left">
+              <label for="logo">Upload Logo</label>
+              <input
+                  @change="onFileChange"
+                  accept="image/*"
+                  id="logo"
+                  name="logo"
+                  class="form-input"
+                  type="file"
+              >
+
+            </div>
+            <div class="form-group text-left">
               <label for="email">Email*</label>
               <input
-                  v-model.lazy="$v.formResponse.email.$model"
+                  v-model="formResponse.email"
                   id="email"
                   name="email"
                   class="form-input"
                   type="email"
                   placeholder="youremail@emal.com"
-                  required
               >
+              <!--              <input
+                                v-model.lazy="$v.formResponse.email.$model"
+                                id="email"
+                                name="email"
+                                class="form-input"
+                                type="email"
+                                placeholder="youremail@emal.com"
+                            >-->
               <p v-if="errors" class="error">
                 <span v-if="!$v.formResponse.email.required">this field is required.</span>
                 <span v-if="!$v.formResponse.email.email">Needs to be a valid email.</span>
@@ -71,19 +87,9 @@
                   style="height: 150px !important; overflow-y: scroll"
               ></textarea>
             </div>
-            <div class="form-group text-left">
-              <label for="logo">Upload Logo</label>
-              <input
-                  @change="processFile($event)"
-                  id="logo"
-                  name="logo"
-                  class="file-input"
-                  type="file"
-              >
-            </div>
             <div class="form-group">
-              <button type="submit" class="btn">Send</button>
-              <!--              <button @click.prevent="submit" class="submit">Submit</button>-->
+              <button>Submit</button>
+
               <p v-if="errors" class="error">The form above has errors,
                 <br>please get your act together and resubmit
               </p>
@@ -146,14 +152,12 @@
 import InternetExplorer from "@/components/Windows95/InternetExplorer/InternetExplorer";
 import {validationMixin} from 'vuelidate';
 import {required, email} from 'vuelidate/lib/validators';
-import axios from "axios";
 
 export default {
   mixins: [validationMixin],
   components: {InternetExplorer},
   data() {
     return {
-      formData: {},
       slug: this.$route.params.slug,
       bgImg: 'none',
       uiState: "submit not clicked",
@@ -179,71 +183,11 @@ export default {
   },
 
   methods: {
-    processFile() {
-      this.formData.files = event.target.files;
-    },
-    encode(data) {
-      const formData = new FormData();
-      for (const key of Object.keys(data)) {
-        if (key === "files") {
-          formData.append(key, data[key][0]);
-        } else {
-          formData.append(key, data[key]);
-        }
-      }
-      return formData;
-    },
-    /*handleSubmit() {
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'multipart/form-data' },
-        body: this.encode({ 'form-name': 'make-a-page', ...this.formResponse }),
-      })
-          .then(() => alert('Success!'))
-          .catch(error => alert(error));
-    },*/
-    submit(e) {
-      fetch("/", {
-        method: "POST",
-        headers: { 'Content-Type': 'multipart/form-data' },
-        body: this.encode({
-          "form-name": e.target.getAttribute("name"),
-          ...this.formData
-        })
-      })
-          .then(res => {
-            res.json();
-          })
-          .catch(err => alert(err));
-    },
-    /*handleSubmit () {
-      const axiosConfig = {
-        header: { "Content-Type": "application/x-www-form-urlencoded" }
-      };
-      console.log(this.formResponse);
-      axios.post(
-          "/",
-          this.encode({
-            "form-name": "make-a-page",
-            ...this.formResponse
-          }),
-          axiosConfig
-      );
-    },*/
-
-    /*submit() {
-      this.empty = !this.$v.formResponse.$anyDirty;
-      this.errors = this.$v.formResponse.$anyError;
-      this.uiState = "submit clicked";
-      if (this.errors === false && this.empty === false) {
-        console.log(this.formResponse);
-        this.uiState = "form submitted";
-      }
-    },*/
     onFileChange(e) {
       const file = e.target.files[0];
       this.formResponse.logo = URL.createObjectURL(file);
     }
+
   }
 
   /*head: {
@@ -318,7 +262,6 @@ input.file-input {
   display: flex;
   text-align: center;
   margin-bottom: 20px;
-  border: 2px solid red;
   border-radius: 10px;
   padding: 10px;
   align-items: center;
@@ -393,4 +336,5 @@ h1 {
 
 
 </style>
+
 
