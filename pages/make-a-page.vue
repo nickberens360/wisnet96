@@ -185,7 +185,7 @@ export default {
     handleSubmit() {
       fetch('/', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        headers: { 'Content-Type': 'multipart/form-data' },
         body: this.encode({ 'form-name': 'make-a-page', ...this.formResponse }),
       })
           .then(() => alert('Success!'))
