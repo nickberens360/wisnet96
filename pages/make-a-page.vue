@@ -183,13 +183,24 @@ export default {
   },
 
   methods: {
-    encode (data) {
+    encode(data) {
+      const formData = new FormData();
+      for (const key of Object.keys(data)) {
+        if (key === "files") {
+          formData.append(key, data[key][0]);
+        } else {
+          formData.append(key, data[key]);
+        }
+      }
+      return formData;
+    }
+    /*encode (data) {
       return Object.keys(data)
           .map(
               key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
           )
           .join("&");
-    },
+    },*/
     handleSubmit() {
       fetch('/', {
         method: 'POST',
