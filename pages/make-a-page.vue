@@ -29,35 +29,16 @@
               >
             </div>
             <div class="form-group text-left">
-              <label for="logo">Upload Logo</label>
-              <input
-                  @change="onFileChange"
-                  accept="image/*"
-                  id="logo"
-                  name="logo"
-                  class="form-input"
-                  type="file"
-              >
-
-            </div>
-            <div class="form-group text-left">
               <label for="email">Email*</label>
               <input
-                  v-model="formResponse.email"
-                  id="email"
-                  name="email"
-                  class="form-input"
-                  type="email"
-                  placeholder="youremail@emal.com"
-              >
-<!--              <input
                   v-model.lazy="$v.formResponse.email.$model"
                   id="email"
                   name="email"
                   class="form-input"
                   type="email"
                   placeholder="youremail@emal.com"
-              >-->
+                  required
+              >
               <p v-if="errors" class="error">
                 <span v-if="!$v.formResponse.email.required">this field is required.</span>
                 <span v-if="!$v.formResponse.email.email">Needs to be a valid email.</span>
@@ -87,9 +68,19 @@
                   style="height: 150px !important; overflow-y: scroll"
               ></textarea>
             </div>
+            <div class="form-group text-left">
+              <label for="logo">Upload Logo</label>
+              <input
+                  @change="onFileChange"
+                  id="logo"
+                  name="logo"
+                  class="file-input"
+                  type="file"
+              >
+            </div>
             <div class="form-group">
               <button type="submit" class="btn" @click.prevent="handleSubmit">Send</button>
-
+              <!--              <button @click.prevent="submit" class="submit">Submit</button>-->
               <p v-if="errors" class="error">The form above has errors,
                 <br>please get your act together and resubmit
               </p>
@@ -152,6 +143,7 @@
 import InternetExplorer from "@/components/Windows95/InternetExplorer/InternetExplorer";
 import {validationMixin} from 'vuelidate';
 import {required, email} from 'vuelidate/lib/validators';
+import axios from "axios";
 
 export default {
   mixins: [validationMixin],
@@ -183,38 +175,37 @@ export default {
   },
 
   methods: {
-    encode(data) {
-      const formData = new FormData();
-      for (const key of Object.keys(data)) {
-        if (key === "files") {
-          formData.append(key, data[key][0]);
-        } else {
-          formData.append(key, data[key]);
-        }
-      }
-      return formData;
-    },
-    /*encode (data) {
+    encode (data) {
       return Object.keys(data)
           .map(
               key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
           )
           .join("&");
-    },*/
+    },
     handleSubmit() {
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: this.encode({ 'form-name': 'make-a-page', ...this.formResponse }),
       })
-          .then(() => console.log('Success!'))
-          .catch(error => console.log(error));
+          .then(() => alert('Success!'))
+          .catch(error => alert(error));
     },
-    onFileChange(e) {
-      const file = e.target.files[0];
-      this.formResponse.logo = URL.createObjectURL(file);
-      console.log(this.formResponse.logo);
-    }
+    /*handleSubmit () {
+      const axiosConfig = {
+        header: { "Content-Type": "application/x-www-form-urlencoded" }
+      };
+      console.log(this.formResponse);
+      axios.post(
+          "/",
+          this.encode({
+            "form-name": "make-a-page",
+            ...this.formResponse
+          }),
+          axiosConfig
+      );
+    },*/
+
     /*submit() {
       this.empty = !this.$v.formResponse.$anyDirty;
       this.errors = this.$v.formResponse.$anyError;
@@ -224,7 +215,10 @@ export default {
         this.uiState = "form submitted";
       }
     },*/
-
+    onFileChange(e) {
+      const file = e.target.files[0];
+      this.formResponse.logo = URL.createObjectURL(file);
+    }
   }
 
   /*head: {
@@ -299,6 +293,7 @@ input.file-input {
   display: flex;
   text-align: center;
   margin-bottom: 20px;
+  border: 2px solid red;
   border-radius: 10px;
   padding: 10px;
   align-items: center;
@@ -373,5 +368,4 @@ h1 {
 
 
 </style>
-
 
