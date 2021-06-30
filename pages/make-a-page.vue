@@ -188,8 +188,8 @@ export default {
         headers: { 'Content-Type': 'multipart/form-data' },
         body: this.encode({ 'form-name': 'make-a-page', ...this.formResponse }),
       })
-          .then(() => alert('Success!'))
-          .catch(error => alert(error));
+          .then(() => console.log('Success!'))
+          .catch(error => console.log(error));
     },
 
     /*submit() {
