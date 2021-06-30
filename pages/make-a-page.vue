@@ -31,7 +31,7 @@
             <div class="form-group text-left">
               <label for="logo">Upload Logo</label>
               <input
-
+                  value=""
                   accept="image/*"
                   id="logo"
                   name="logo"
