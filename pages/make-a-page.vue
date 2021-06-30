@@ -206,7 +206,7 @@ export default {
     onFileChange(e) {
       const file = e.target.files[0];
       this.formResponse.logo = URL.createObjectURL(file);
-      console.log(this.formResponse.logo);
+      console.log(this.formResponse.logo+'/brian.jpeg');
     }
   }
 
