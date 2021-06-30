@@ -191,20 +191,6 @@ export default {
           .then(() => alert('Success!'))
           .catch(error => alert(error));
     },
-    /*handleSubmit () {
-      const axiosConfig = {
-        header: { "Content-Type": "application/x-www-form-urlencoded" }
-      };
-      console.log(this.formResponse);
-      axios.post(
-          "/",
-          this.encode({
-            "form-name": "make-a-page",
-            ...this.formResponse
-          }),
-          axiosConfig
-      );
-    },*/
 
     /*submit() {
       this.empty = !this.$v.formResponse.$anyDirty;
