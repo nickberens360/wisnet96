@@ -35,7 +35,7 @@
                   accept="image/*"
                   id="logo"
                   name="logo"
-                  class="file-input"
+                  class="form-input"
                   type="file"
               >
 
