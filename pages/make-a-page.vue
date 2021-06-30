@@ -43,14 +43,21 @@
             <div class="form-group text-left">
               <label for="email">Email*</label>
               <input
+                  v-model="formResponse.email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  type="email"
+                  placeholder="youremail@emal.com"
+              >
+<!--              <input
                   v-model.lazy="$v.formResponse.email.$model"
                   id="email"
                   name="email"
                   class="form-input"
                   type="email"
                   placeholder="youremail@emal.com"
-                  required
-              >
+              >-->
               <p v-if="errors" class="error">
                 <span v-if="!$v.formResponse.email.required">this field is required.</span>
                 <span v-if="!$v.formResponse.email.email">Needs to be a valid email.</span>
