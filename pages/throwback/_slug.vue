@@ -108,16 +108,21 @@ export default {
       this.bgImg = `url(${this.post.ACF.background_image.url})`
     }
   },
-  /*head: {
-    title: 'wisnet96 | '+ this.metaTitle,
+  head: {
+    // title: this.metaTitle,
     meta: [
       {
         hid: 'description',
         name: 'description',
         content: 'Home page description'
-      }
+      },
+      {
+        property: "og:image",
+        content: "https://www.wisnet96.com/wisnet96-og-image-test.jpg"
+      },
     ],
-  }*/
+
+  }
 };
 </script>
 

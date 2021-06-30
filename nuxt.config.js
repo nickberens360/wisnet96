@@ -22,14 +22,15 @@ export default {
      ** Headers of the page
      */
     head: {
-        title: process.env.npm_package_name || "",
+        titleTemplate: '%s - wisnet96',
+        title: 'wisnet96',
         meta: [
             {charset: "utf-8"},
             {name: "viewport", content: "width=device-width, initial-scale=1"},
             {
                 hid: "description",
                 name: "description",
-                content: process.env.npm_package_description || ""
+                content: "Celebrating 25 years of wisnet.com "
             },
             {
                 name: "twitter:card",
