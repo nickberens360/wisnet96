@@ -82,7 +82,7 @@
             </div>
             <div class="form-group">
               <button type="submit" class="btn" @click.prevent="handleSubmit">Send</button>
-<!--              <button @click.prevent="submit" class="submit">Submit</button>-->
+
               <p v-if="errors" class="error">The form above has errors,
                 <br>please get your act together and resubmit
               </p>
@@ -193,7 +193,11 @@ export default {
           .then(() => alert('Success!'))
           .catch(error => alert(error));
     },
-
+    onFileChange(e) {
+      const file = e.target.files[0];
+      this.formResponse.logo = URL.createObjectURL(file);
+      console.log(this.formResponse.logo);
+    }
     /*submit() {
       this.empty = !this.$v.formResponse.$anyDirty;
       this.errors = this.$v.formResponse.$anyError;
@@ -203,11 +207,7 @@ export default {
         this.uiState = "form submitted";
       }
     },*/
-    onFileChange(e) {
-      const file = e.target.files[0];
-      this.formResponse.logo = URL.createObjectURL(file);
-      console.log(this.formResponse.logo+'/brian.jpeg');
-    }
+
   }
 
   /*head: {
