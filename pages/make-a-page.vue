@@ -196,8 +196,8 @@ export default {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: this.encode({ 'form-name': 'make-a-page', ...this.formResponse }),
       })
-          .then(() => alert('Success!'))
-          .catch(error => alert(error));
+          .then(() => console.log('Success!'))
+          .catch(error => console.log(error));
     },
     onFileChange(e) {
       const file = e.target.files[0];
