@@ -29,6 +29,18 @@
               >
             </div>
             <div class="form-group text-left">
+              <label for="logo">Upload Logo</label>
+              <input
+                  @change="onFileChange"
+                  :value="formResponse.logo"
+                  id="logo"
+                  name="logo"
+                  class="file-input"
+                  type="file"
+              >
+
+            </div>
+            <div class="form-group text-left">
               <label for="email">Email*</label>
               <input
                   v-model.lazy="$v.formResponse.email.$model"
@@ -67,16 +79,6 @@
                   placeholder="A paragraph or two about your organization"
                   style="height: 150px !important; overflow-y: scroll"
               ></textarea>
-            </div>
-            <div class="form-group text-left">
-              <label for="logo">Upload Logo</label>
-              <input
-                  @change="onFileChange"
-                  id="logo"
-                  name="logo"
-                  class="file-input"
-                  type="file"
-              >
             </div>
             <div class="form-group">
               <button type="submit" class="btn" @click.prevent="handleSubmit">Send</button>
@@ -191,20 +193,6 @@ export default {
           .then(() => alert('Success!'))
           .catch(error => alert(error));
     },
-    /*handleSubmit () {
-      const axiosConfig = {
-        header: { "Content-Type": "application/x-www-form-urlencoded" }
-      };
-      console.log(this.formResponse);
-      axios.post(
-          "/",
-          this.encode({
-            "form-name": "make-a-page",
-            ...this.formResponse
-          }),
-          axiosConfig
-      );
-    },*/
 
     /*submit() {
       this.empty = !this.$v.formResponse.$anyDirty;
@@ -293,7 +281,6 @@ input.file-input {
   display: flex;
   text-align: center;
   margin-bottom: 20px;
-  border: 2px solid red;
   border-radius: 10px;
   padding: 10px;
   align-items: center;
