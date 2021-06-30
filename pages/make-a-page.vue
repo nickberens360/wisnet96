@@ -185,7 +185,7 @@ export default {
           .join("&");
     },
     handleSubmit() {
-      fetch('/', {
+      fetch('/make-a-page', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: this.encode({ 'form-name': 'make-a-page', ...this.formResponse }),
