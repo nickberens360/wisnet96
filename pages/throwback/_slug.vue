@@ -115,7 +115,7 @@ export default {
         {
           hid: "og:image",
           property: "og:image",
-          content: "https://www.wisnet96.com/wisnet96-og-image-next.jpg"
+          content: "https://www.wisnet96.com/throwback-card.jpg"
         },
       ],
     }
