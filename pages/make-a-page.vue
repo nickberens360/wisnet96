@@ -9,6 +9,7 @@
 
 
       <form
+	      @submit.prevent="handleSubmit"
           name="make-a-page"
           method="post"
           data-netlify="true"
@@ -79,7 +80,7 @@
               >
             </div>
             <div class="form-group">
-              <button type="submit" class="btn" @click.prevent="handleSubmit">Send</button>
+              <button type="submit" class="btn">Send</button>
               <!--              <button @click.prevent="submit" class="submit">Submit</button>-->
               <p v-if="errors" class="error">The form above has errors,
                 <br>please get your act together and resubmit
