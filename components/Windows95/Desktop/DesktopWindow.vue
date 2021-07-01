@@ -29,7 +29,7 @@
           link="/page/about-wisconsin-networks"
       >
         <template v-slot:icon>
-          <img src="https://web.archive.org/web/20090829051611/http://www.geocities.com/santuariosfiliales/world_03.gif" alt="">
+          <img src="/world_03.gif" alt="">
         </template>
         <template v-slot:text>
           wisnet 96
@@ -40,7 +40,7 @@
           link="/make-a-page"
       >
         <template v-slot:icon>
-          <img src="https://web.archive.org/web/20090829015037/http://www.geocities.com/nukinight2001/smashingcomputer.gif" alt="">
+          <img src="/smashingcomputer.gif" alt="">
         </template>
         <template v-slot:text>
           Make a Page
