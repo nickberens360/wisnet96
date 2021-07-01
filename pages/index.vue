@@ -20,7 +20,7 @@
           <span class="emoji">🏘</span>️ community & culture <br>
           <span class="emoji">🤓</span> Geeks & <span class="emoji">🧑‍🎨 </span>Creatives</p>
 
-        <NuxtLink exact to="/desktop" class="btn btn-lg">
+        <NuxtLink exact to="/page/about-wisconsin-networks" class="btn btn-lg">
           Enjoy the Throwback!
         </NuxtLink>
         <br>
