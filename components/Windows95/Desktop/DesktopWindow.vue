@@ -10,8 +10,7 @@
           <img src="/folder.gif" alt="">
         </template>
         <template v-slot:text>
-          Throwbacks <font-awesome-icon :icon="['fas', 'adjust']"  />
-
+          Throwbacks
         </template>
       </DesktopIcon>
       <DesktopIcon
@@ -96,7 +95,6 @@
 
 
 <script>
-import ModalBig from '@/components/ModalBig.vue'
 import PageFooter from '@/components/PageFooter.vue'
 import ButtonRound from "@/components/ButtonRound";
 import DesktopNavbar from "@/components/Windows95/Desktop/DesktopNavbar";
