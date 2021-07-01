@@ -88,8 +88,6 @@ export default {
         '@nuxtjs/fontawesome',
     ],
     fontawesome: {
-        component: 'fa',
-        suffix: true,
         icons: {
             solid: [ 'faWindowMinimize'],
             regular: ['faWindowMaximize'],

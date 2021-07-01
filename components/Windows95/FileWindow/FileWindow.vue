@@ -14,8 +14,8 @@
             @click="isFullScreen = !isFullScreen"
             class="file-window__controls btn btn-sm btn-close mr-2 p-2 position-relative font-weight-bold has-fa"
             aria-hidden="true">
-          <fa  v-if="!isFullScreen" :icon="faWindowMaximize"/>
-          <fa  v-if="isFullScreen" :icon="faWindowMinimize"/>
+          <font-awesome-icon  v-if="!isFullScreen" :icon="faWindowMaximize"/>
+          <font-awesome-icon  v-if="isFullScreen" :icon="faWindowMinimize"/>
 
         </button>
         <nuxt-link to="/desktop" class="btn btn-sm btn-close p-2" aria-label="Close">
@@ -41,7 +41,7 @@ import { faWindowMaximize } from '@fortawesome/free-regular-svg-icons'
 export default {
   name: 'FileWindow',
   components: {
-    FileWindowHeader
+    FileWindowHeader,
   },
   props: {
     id: {
