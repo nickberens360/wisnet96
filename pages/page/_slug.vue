@@ -63,6 +63,11 @@ export default {
       return this.posts.find(el => el.slug === this.slug);
     }
   },
+  head() {
+    return {
+      title: '96 '+this.post.title.rendered,
+    }
+  }
 };
 </script>
 

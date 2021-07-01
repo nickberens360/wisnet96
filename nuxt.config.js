@@ -41,6 +41,7 @@ export default {
                 content: "Enjoy our Throwback"
             },
             {
+                hid: "og:image",
                 property: "og:image",
                 content: "https://www.wisnet96.com/wisnet96-og-image.jpg"
             },

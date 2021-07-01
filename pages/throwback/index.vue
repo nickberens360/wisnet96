@@ -55,6 +55,11 @@ export default {
       return this.$store.state.throwbacks;
     }
   },
+  head() {
+    return {
+      title: 'Throwbacks',
+    }
+  }
 };
 </script>
 

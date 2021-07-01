@@ -108,20 +108,17 @@ export default {
       this.bgImg = `url(${this.post.ACF.background_image.url})`
     }
   },
-  head: {
-    title: 'Yoooooo',
-    meta: [
-      {
-        hid: 'description',
-        name: 'description',
-        content: 'Test description'
-      },
-      {
-        property: "og:image",
-        content: "/wisnet96-og-image-test.jpg"
-      },
-    ],
-
+  head() {
+    return {
+      title: this.post.title.rendered,
+      meta: [
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: "https://www.wisnet96.com/wisnet96-og-image-next.jpg"
+        },
+      ],
+    }
   }
 };
 </script>
