@@ -182,11 +182,14 @@ export default {
           )
           .join("&");
     },
-    handleSubmit() {
+    handleSubmit(e) {
+      const formData = new FormData(e.target);
+      formData.append('form-nam', 'make-a-page');
+      
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'multipart/form-data' },
-        body: this.encode({ 'form-name': 'make-a-page', ...this.formResponse }),
+        body: new URLSearchParams(formData).toString(),
       })
           .then(() => console.log('Success!'))
           .catch(error => console.log(error));
