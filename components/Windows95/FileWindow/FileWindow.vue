@@ -14,8 +14,8 @@
             @click="isFullScreen = !isFullScreen"
             class="file-window__controls btn btn-sm btn-close mr-2 p-2 position-relative font-weight-bold has-fa"
             aria-hidden="true">
-          <fa v-if="!isFullScreen" :icon="['far','window-maximize']"/>
-          <fa v-if="isFullScreen" :icon="['fas','window-minimize']"/>
+          <fa-icon  v-if="!isFullScreen" :icon="faWindowMaximize"/>
+          <fa-icon  v-if="isFullScreen" :icon="faWindowMinimize"/>
 
         </button>
         <nuxt-link to="/desktop" class="btn btn-sm btn-close p-2" aria-label="Close">
@@ -34,6 +34,9 @@
 <script>
 import FileWindowHeader from "@/components/Windows95/FileWindow/FileWindowHeader";
 import dragDrop from '@/components/mixins/drag-drop';
+import { faWindowMinimize } from '@fortawesome/free-solid-svg-icons'
+import { faWindowMaximize } from '@fortawesome/free-regular-svg-icons'
+
 
 export default {
   name: 'FileWindow',
@@ -64,9 +67,20 @@ export default {
   },
   data: function () {
     return {
-      isFullScreen: false
+      isFullScreen: false,
+      faIcon: ''
     }
   },
+  computed: {
+    faWindowMinimize () {
+      return faWindowMinimize
+    },
+    faWindowMaximize () {
+      return faWindowMaximize
+    },
+
+  },
+
   mixins: [dragDrop],
   methods: {
     goFullScreen: function () {
@@ -74,6 +88,7 @@ export default {
     }
   },
   mounted: function () {
+    this.faIcon = faWindowMinimize;
     this.$nextTick(function () {
       this.dragDrop(this.id, this.titleId);
     })

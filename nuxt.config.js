@@ -85,24 +85,16 @@ export default {
      ** Nuxt.js dev-modules
      */
     buildModules: [
-        ['nuxt-fontawesome', {
-            component: 'fa', //customize component name
-            imports: [
-                {
-                    set: '@fortawesome/free-solid-svg-icons',
-                    icons: ['fas']
-                },
-                {
-                    set: '@fortawesome/free-brands-svg-icons',
-                    icons: ['faGithub']
-                },
-                {
-                    set: '@fortawesome/free-regular-svg-icons',
-                    icons: ['far']
-                },
-            ]
-        }]
+        '@nuxtjs/fontawesome',
     ],
+    fontawesome: {
+        component: 'fa',
+        suffix: true,
+        icons: {
+            solid: [ 'faWindowMinimize'],
+            regular: ['faWindowMaximize'],
+        }
+    },
     /*
      ** Build configuration
      */
