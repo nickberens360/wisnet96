@@ -176,11 +176,18 @@ export default {
 
   methods: {
     encode (data) {
-      return Object.keys(data)
-          .map(
-              key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-          )
-          .join("&");
+      const formData = new FormData()
+      Object.keys(data)
+          .map(key => {
+            if (key === 'files') {
+              for (const file of data[key]) {
+                formData.append(key, file, file.name)
+              }
+            } else {
+              formData.append(key, data[key])
+            }
+          })
+      return formData
     },
     handleSubmit() {
       fetch('/', {
