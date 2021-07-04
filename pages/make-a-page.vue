@@ -9,7 +9,6 @@
 
 
       <form
-	      @submit.prevent="handleSubmit"
           name="make-a-page"
           method="post"
           data-netlify="true"
@@ -80,7 +79,7 @@
               >
             </div>
             <div class="form-group">
-              <button type="submit" class="btn">Send</button>
+              <button type="submit" class="btn" @click.prevent="handleSubmit">Send</button>
               <!--              <button @click.prevent="submit" class="submit">Submit</button>-->
               <p v-if="errors" class="error">The form above has errors,
                 <br>please get your act together and resubmit
@@ -190,14 +189,11 @@ export default {
           })
       return formData
     },
-    handleSubmit(e) {
-      const formData = new FormData(e.target);
-      formData.append('form-name', 'make-a-page');
-      
+    handleSubmit() {
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'multipart/form-data' },
-        body: new URLSearchParams(formData).toString(),
+        body: this.encode({ 'form-name': 'make-a-page', ...this.formResponse }),
       })
           .then(() => console.log('Success!'))
           .catch(error => console.log(error));
