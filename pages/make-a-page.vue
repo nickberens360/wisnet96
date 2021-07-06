@@ -14,7 +14,6 @@
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           class="site-sidebar"
-          @submit.prevent="handleSubmit"
       >
         <input type="hidden" name="form-name" value="make-a-page" />
         <div class="site-sidebar__container">
@@ -79,8 +78,19 @@
                   type="file"
               >
             </div>
+            <div class="form-group text-left">
+              <label for="testFile">Test File</label>
+              <input
+                  @change="testChange"
+                  id="testFile"
+                  name="testFile"
+                  class="file-input"
+                  type="file"
+              >
+            </div>
+
             <div class="form-group">
-              <button type="submit" class="btn">Send</button>
+              <button type="submit" class="btn" @click.prevent="handleSubmit">Send</button>
               <!--              <button @click.prevent="submit" class="submit">Submit</button>-->
               <p v-if="errors" class="error">The form above has errors,
                 <br>please get your act together and resubmit
@@ -157,6 +167,7 @@ export default {
       errors: false,
       empty: true,
       formResponse: {
+        testFile: null,
         title: null,
         email: null,
         website: null,
@@ -177,21 +188,16 @@ export default {
 
   methods: {
     encode (data) {
-      const formData = new FormData();
+      console.log(Object.keys(data).map(
+          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+      ));
       return Object.keys(data)
-          .map(key => {
-            if (key === 'files') {
-              for (const file of data[key]) {
-                formData.append(key, file, file.name)
-              }
-            } else {
-              formData.append(key, data[key])
-            }
-          })
+          .map(
+              key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+          )
+          .join("&");
     },
     handleSubmit() {
-
-      // console.log(this.encode({ 'form-name': 'make-a-page', ...this.formResponse }));
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'multipart/form-data' },
@@ -213,7 +219,12 @@ export default {
     onFileChange(e) {
       const file = e.target.files[0];
       this.formResponse.logo = URL.createObjectURL(file);
-    }
+    },
+    testChange(e) {
+      this.formResponse.testFile = e.target.files[0];
+      // this.formResponse.logo = URL.createObjectURL(file);
+    },
+
   }
 
   /*head: {
