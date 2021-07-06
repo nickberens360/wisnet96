@@ -14,6 +14,7 @@
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           class="site-sidebar"
+          @submit.prevent="handleSubmit"
       >
         <input type="hidden" name="form-name" value="make-a-page" />
         <div class="site-sidebar__container">
@@ -79,7 +80,7 @@
               >
             </div>
             <div class="form-group">
-              <button type="submit" class="btn" @click.prevent="handleSubmit">Send</button>
+              <button type="submit" class="btn">Send</button>
               <!--              <button @click.prevent="submit" class="submit">Submit</button>-->
               <p v-if="errors" class="error">The form above has errors,
                 <br>please get your act together and resubmit
@@ -176,8 +177,8 @@ export default {
 
   methods: {
     encode (data) {
-      const formData = new FormData()
-      Object.keys(data)
+      const formData = new FormData();
+      return Object.keys(data)
           .map(key => {
             if (key === 'files') {
               for (const file of data[key]) {
@@ -187,9 +188,10 @@ export default {
               formData.append(key, data[key])
             }
           })
-      return formData
     },
     handleSubmit() {
+
+      // console.log(this.encode({ 'form-name': 'make-a-page', ...this.formResponse }));
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'multipart/form-data' },
