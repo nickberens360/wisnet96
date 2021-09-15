@@ -1,6 +1,6 @@
 ## About [wisnet96.com](https://www.wisnet96.com)
 
-A fun project to celebrate wisnet's 25th anniversary. The code is a bit rough around the edges because I was using this project to evaluate Nuxt. I'm sold ❤️.    
+A fun project to celebrate [wisnet's 25th anniversary](https://www.wisnet.com/rebuilding-a-throwback-96-website-with-modern-web-technologies/). The code is a bit rough around the edges because I was using this project to evaluate Nuxt. I'm sold ❤️.    
 
 ## Build Setup
 
