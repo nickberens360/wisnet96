@@ -1,4 +1,4 @@
-## About [wisnet96.com](https://www.wisnet96.com)
+## About [wisnet96](https://wisnet96.netlify.app/desktop)
 
 A fun project to celebrate wisnet's 25th anniversary. You can read an article detailing the project [here](https://www.wisnet.com/rebuilding-a-throwback-96-website-with-modern-web-technologies/). The code is a bit rough around the edges because I was using this project to evaluate Nuxt. I'm sold ❤️.    
 
