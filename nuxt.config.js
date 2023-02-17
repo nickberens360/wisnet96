@@ -1,14 +1,6 @@
 import axios from "axios"
 import {resolve} from 'path'
 
-/*let dynamicRoutes = () => {
-    const routes = axios
-        .get("https://apiwisnet96.wpengine.com/wp-json/wp/v2/pages?page=1&per_page=20")
-        .then(res => {
-            return res.data.map(post => `/${post.slug}`)
-        })
-    return routes
-}*/
 
 export default {
     target: 'static',
